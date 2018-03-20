@@ -1,0 +1,72 @@
+image: ruby:2.3
+
+variables:
+  JEKYLL_ENV: production
+
+cache:
+  paths:
+   - vendor/
+   - var/lib/apt/
+
+
+
+test:
+  stage: build
+  before_script:
+         - bundle install --path vendor
+  script:
+  - bundle exec jekyll build -d staging_site
+  artifacts:
+    paths:
+    - staging_site
+  only:
+  - master
+  - production
+
+deploy:
+  stage: deploy
+
+  before_script:
+
+  ## Install ssh-agent if not already installed, it is required by Docker.
+  ## (change apt-get to yum if you use an RPM-based image)
+  ##
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+
+  ## Install rysnc if not already installed
+  - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
+
+  ##
+  ## Run ssh-agent (inside the build environment)
+  ##
+  - eval $(ssh-agent -s)
+
+  ##
+  ## Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+  ## We're using tr to fix line endings which makes ed25519 keys work
+  ## without extra base64 encoding.
+  ## https://gitlab.com/gitlab-examples/ssh-private-key/issues/1#note_48526556
+  ##
+  - echo "$SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
+
+  ##
+  ## Create the SSH directory and give it the right permissions
+  ##
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+
+  ##
+  ## Add remote pub keys (SSH_KNOWN_HOSTS) to known_hosts
+  ##
+  - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+
+  script:
+
+  ##
+  ## Deploy the staging directory to the staging server
+  ##
+  - rsync -avz --delete -e ssh --progress -r staging_site/ "$SITE_USER_AND_ADDRESS"
+
+  only:
+  - production
