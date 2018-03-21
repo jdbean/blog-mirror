@@ -868,12 +868,16 @@ table tfoot td {
 }
 
 .wrapper {
-  max-width: 1250px;
+  /* max-width: 1250px; */
   position: relative;
 }
 
 .post, .article-page {
   background-color: #fff;
+}
+
+.article-page {
+  margin: auto;
 }
 
 ::-moz-selection {
@@ -1181,6 +1185,11 @@ a.newer-posts:hover {
 /* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
 .wrap-content {
   padding: 20px;
+}
+
+.post-box {
+  margin: auto;
+  max-width: 700px;
 }
 
 .header-page {
