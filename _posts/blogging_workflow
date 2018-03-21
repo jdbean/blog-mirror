@@ -1,0 +1,10 @@
+--
+layout: post
+title: "An Automated Testing and Deployment Workflow for Jekyll"
+date:  2018-03-19
+description: >
+    A description of my custom workflow for building, testing,
+    and deploying this jekyll blog into production.
+img:
+tags: [Blogging] [Workflow] [GitLab] [Jekyll] [Docker] [Rsync] [SSH]
+---
