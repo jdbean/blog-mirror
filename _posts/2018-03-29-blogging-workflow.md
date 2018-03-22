@@ -72,7 +72,7 @@ Along with simply serving as an always-on host for my Git repository GitLab has 
 
 # CI/CD
 
-My favorite feature of GitLab is its integrated continuous integration / continuous delivery features
+My favorite feature of GitLab is its integrated continuous integration / continuous delivery feature0
 
 ``` yml
 image: jekyll/builder
