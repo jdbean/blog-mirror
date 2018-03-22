@@ -11,10 +11,14 @@ layout: main
     {% endif %}
     <div class="wrap-content">
       <header class="header-page">
-        <h1 class="page-title">{{page.title}}</h1>
-        <div class="page-date"><span>{{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        <div class="post-box">
+          <h1 class="page-title">{{page.title}}</h1>
+          <div class="page-date"><span>{{page.date | date: '%Y, %b %d'}}&nbsp;&nbsp;&nbsp;&nbsp;</span></div>
+        </div class="post-box">
       </header>
-      {{page.content | markdownify}}
+        <div class="post-box">
+          {{page.content | markdownify}}
+        </div class="post-box">
       <div class="page-footer">
         <div class="page-share">
           <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}" title="Share on Twitter" rel="nofollow" target="_blank">Twitter</a>
