@@ -22,11 +22,10 @@ build:
 
 test:
   stage: test
+    before_script:
+  - bundle install --path vendor
   script:
   - bundle exec htmlproofer ./_site
-  artifacts:
-    paths:
-    - _site
   only:
   - master
   - production
