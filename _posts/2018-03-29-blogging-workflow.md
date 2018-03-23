@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "An Automated Testing and Deployment Workflow for Jekyll"
+title: "Setting Up A Jekyll Blogging Workflow"
 date:  2018-03-19
 description: > #(optional)
     A description of my custom workflow for building, testing,
@@ -72,7 +72,7 @@ Along with simply serving as an always-on host for my Git repository GitLab has 
 
 # CI/CD
 
-My favorite feature of GitLab is its integrated continuous integration / continuous delivery feature0
+My favorite feature of GitLab is its integrated continuous integration / continuous delivery feature. Along with Docker and another program called GitLab runner GitLab allows me to easily integrate building, testing, and deploying my blog with Git.
 
 ``` yml
 image: jekyll/builder
@@ -85,21 +85,35 @@ cache:
    - vendor/
    - var/lib/apt/
 
-test:
+build:
   stage: build
   before_script:
-         - bundle install --path vendor
+  - bundle install --path vendor
   script:
-  - bundle exec jekyll build -d staging_site
+  - bundle exec jekyll build -d _site
   artifacts:
     paths:
-    - staging_site
+    - _site
+  only:
+  - master
+  - production
+
+test:
+  stage: test
+  before_script:
+  - bundle install --path vendor
+  script:
+  - bundle exec htmlproofer ./_site --http-status-ignore "999"
+  artifacts:
+    paths:
+    - _site
   only:
   - master
   - production
 
 deploy:
   stage: deploy
+  environment: staging
 
   before_script:
 
@@ -129,8 +143,8 @@ deploy:
   script:
 
   ## Deploy the staging directory to the staging server
-  - rsync -avz --delete -e ssh --progress -r staging_site/ "$SITE_USER_AND_ADDRESS"
+  - rsync -avz --delete -e ssh --progress -r _site/ "$SITE_USER_AND_ADDRESS"
 
   only:
-  - production
+  - master
 ```
