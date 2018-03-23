@@ -20,18 +20,6 @@ build:
   only:
   - master
 
-build:
-  stage: build
-  before_script:
-  - bundle install --path vendor
-  script:
-  - bundle exec jekyll build -d _site
-  artifacts:
-    paths:
-    - _site
-  only:
-  - production
-
 test:
   stage: test
   script:
