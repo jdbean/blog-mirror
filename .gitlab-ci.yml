@@ -19,21 +19,12 @@ build:
     - _site
   only:
   - master
-
-build:
-  stage: build
-  before_script:
-  - bundle install --path vendor
-  script:
-  - bundle exec jekyll build -d _site
-  artifacts:
-    paths:
-    - _site
-  only:
   - production
 
 test:
   stage: test
+  before_script:
+  - bundle install --path vendor
   script:
   - bundle exec htmlproofer ./_site --http-status-ignore "999"
   artifacts:
