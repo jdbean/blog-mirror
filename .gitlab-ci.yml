@@ -45,7 +45,7 @@ test:
 
 deploy:
   stage: deploy
-  environtment: staging
+  environment: staging
 
   before_script:
 
@@ -90,4 +90,4 @@ deploy:
   - rsync -avz --delete -e ssh --progress -r _site/ "$SITE_USER_AND_ADDRESS"
 
   only:
-  - production
+  - master
