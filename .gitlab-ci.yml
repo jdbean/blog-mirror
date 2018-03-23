@@ -35,7 +35,7 @@ build:
 test:
   stage: test
   script:
-  - bundle exec htmlproofer ./_site
+  - bundle exec htmlproofer ./_site --http-status-ignore "999"
   artifacts:
     paths:
     - _site
