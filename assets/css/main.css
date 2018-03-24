@@ -1150,6 +1150,10 @@ footer .copyright {
   font-weight: 400;
 }
 
+.post-title {
+  line-height: 1;
+}
+
 .post .post-content .post-title a {
   font-family: 'PT Serif', serif;
   text-decoration: none;
