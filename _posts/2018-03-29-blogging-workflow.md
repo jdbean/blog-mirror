@@ -5,7 +5,7 @@ date:  2018-03-19
 description: > #(optional)
     A description of my custom workflow for building, testing,
     and deploying this Jekyll blog into production.
-img: #(optional)
+img: software.jpg
 tags: [Blogging, Workflow, GitLab, Jekyll, Docker, Rsync, SSH]  #(optional)
 ---
 
@@ -70,9 +70,13 @@ While something like GitHub would have worked well, I was already running a self
 GitLab is a really fantastic company which, in addition to a hosted service at [GitLab.com](https://gitlab.com) also offers enterprise and personal versions of its software for users to deploy on their own.
 Along with simply serving as an always-on host for my Git repository GitLab has a ton of project management features that are useful for organizing my blogging.
 
+![GitLab secret variables screen](/assets/img/gitlab-blog-repo.png)
+
 # CI/CD
 
-My favorite feature of GitLab is its integrated continuous integration / continuous delivery feature. Along with Docker and another program called GitLab runner GitLab allows me to easily integrate building, testing, and deploying my blog with Git.
+My favorite feature of GitLab is its integrated continuous integration / continuous delivery feature.
+Along with Docker and another program called GitLab Runner, GitLab allows me to easily integrate the process of building, testing, and deploying my blog with Git.
+In order to get this set up all I needed to do was to setup the following simple YAML file, `.gitlab-ci.yml` in the root directory of my site's repository:
 
 ``` yml
 image: jekyll/builder
@@ -127,7 +131,7 @@ deploy:
   ## Run ssh-agent (inside the build environment)
   - eval $(ssh-agent -s)
 
-  ## Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
+  ## Add the SSH key stored in SSH_KEY variable to the agent store
   ## We're using tr to fix line endings which makes ed25519 keys work
   ## without extra base64 encoding.
   - echo "$SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
@@ -148,3 +152,31 @@ deploy:
   only:
   - master
 ```
+
+This file sets up three jobs for the repository which are executed by my GitLab Runner each time a commit is merged into a specified git branch such as master or production.
+The first job builds the site by cloning the repo into a new Docker container pre-configured with the necessary tools like Ruby and the Jekyll Gem, running `bundle install` and then running the Jekyll build command.
+In order to speed up subsequent jobs, the installed Gems are cached between jobs so that they do not need to be downloaded from Rubygems.com and installed each and every time a job is run.
+If the build completes, the complete website is sent back GitLab where it can be reviewed and the next job is run.
+
+
+The second job is the test job.
+This job spins up a new Docker Container but this time, instead of building the site it runs the [HTMLProofer](https://github.com/gjtorikian/html-proofer) which runs a set of tests to validate the site's HTML such as checking for invalid links.
+If this test job passes then the third job runs.
+
+The third job is the deploy job which is responsible for deploying my code to a live webstie.
+This job has access to secret variables:
+
+`$SSH_KEY`
+:  A Private SSH Key trusted by web server,
+
+`$SSH_KNOWN_HOSTS`
+:  The public-key for my webserver.
+
+`$SITE_USER_AND_ADDRESS`
+:  The site's remote username and the address of my webserver.
+
+This sensitivie data is stored by GitLab and only provided to the Runner to ensure that it is not inadvertently exposed.
+
+![GitLab secret variables screen](/assets/img/gitlab-ci-cd-secret-vars.png)
+
+The deploy job uses this data to configure SSH to securely accessed the site's remote webserver and then, using Rsync efficiently transmits any updated site files to the webserver.
