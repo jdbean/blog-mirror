@@ -23,6 +23,7 @@ html {
 body {
   margin: 0;
   font-size: 120%;
+  overflow-x: hidden;
 }
 
 /**
@@ -878,7 +879,8 @@ table tfoot td {
 }
 
 .article-page {
-  margin: auto;
+  margin: 0 auto;
+  width: 100%;
 }
 
 ::-moz-selection {
@@ -1190,12 +1192,14 @@ a.newer-posts:hover {
 /* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
 .wrap-content {
   padding: 20px;
+  margin: 0 auto;
+  max-width: 750px;
+  /* width: 100%; */
 }
 
-.post-box {
-  margin: auto;
-  max-width: 700px;
-}
+/* .post-box {
+
+} */
 
 .header-page {
   text-align: center;
@@ -1281,11 +1285,13 @@ a.newer-posts:hover {
   color: #263959;
   text-transform: uppercase;
   border: 1px solid #263959;
+  white-space: nowrap;
 }
 
 .page-footer .page-tag a:hover {
   text-decoration: underline;
 }
+
 
 /* - - - - - - - - - - Tag Styles - - - - - - - - - - */
 .blog-tags {
