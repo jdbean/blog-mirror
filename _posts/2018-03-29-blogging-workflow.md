@@ -65,6 +65,8 @@ $ jekyll serve
 
 This command serves the site locally so it can be accessed in the browser at `http://127.0.0.1:4000/`. Adding the `--watch` flag watches the project's directory and rebuilds the site each time a file is updated.
 
+![Jekyll Build --Serve](/assets/img/jekyll-build.png)
+
 I selected  one of the many beautiful open source Jekyll themes, made a few tweaks to the CSS and HTML to suit my preferences and configured my new site.
 Along with a web server to upload the site to, I had a great blogging platform all set up and ready to go in no time.
 
@@ -108,7 +110,7 @@ build:
     - _site
   only:
   - master
-  - production
+  - develop
 
 test:
   stage: test
@@ -121,42 +123,70 @@ test:
     - _site
   only:
   - master
-  - production
+  - develop
 
-deploy:
+deploy_staging:
   stage: deploy
   environment: staging
-
   before_script:
 
   ## Install ssh-agent if not already installed, it is required by Docker.
   ## (change apt-get to yum if you use an RPM-based image)
+  ##
   - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
 
   ## Install rysnc if not already installed
   - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
 
+  ##
   ## Run ssh-agent (inside the build environment)
+  ##
   - eval $(ssh-agent -s)
 
-  ## Add the SSH key stored in SSH_KEY variable to the agent store
+  ##
+  ## Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
   ## We're using tr to fix line endings which makes ed25519 keys work
   ## without extra base64 encoding.
+  ## https://gitlab.com/gitlab-examples/ssh-private-key/issues/1#note_48526556
+  ##
   - echo "$SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
 
+  ##
   ## Create the SSH directory and give it the right permissions
+  ##
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
 
+  ##
   ## Add remote pub keys (SSH_KNOWN_HOSTS) to known_hosts
+  ##
   - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
   - chmod 644 ~/.ssh/known_hosts
 
   script:
 
+  ##
   ## Deploy the staging directory to the staging server
+  ##
   - rsync -avz --delete -e ssh --progress -r _site/ "$SITE_USER_AND_ADDRESS"
 
+  only:
+  - develop
+
+deploy_prod:
+  stage: deploy
+  environment: production
+  before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
+  - eval $(ssh-agent -s)
+  - echo "$SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+  script:
+  - rsync -avz --delete -e ssh --progress -r _site/ "$PROD_SITE_USER_AND_ADDRESS"
   only:
   - master
 ```
@@ -188,3 +218,14 @@ This sensitive data is stored by GitLab and only provided to the Runner to ensur
 ![GitLab secret variables screen](/assets/img/gitlab-ci-cd-secret-vars.png)
 
 The deploy job uses this data to configure SSH to securely access the site's remote web server and uses Rsync efficiently transmits any new or updated site files from the build process to the web server.
+
+Thanks to these jobs, when I merge feature branches into my remote development branch the site is built, validated, and deployed to a staging site automattically.
+Logs from the job are stored in Gitlab and I am alerted immediatly via slack and email of any failures.
+
+Deploying to production is as simple as merging the development branch into master.
+
+![Blog GitLab CI Pipelines](/assets/img/gitlab-jobs.png)
+
+## Final Thoughts
+
+I think it's
