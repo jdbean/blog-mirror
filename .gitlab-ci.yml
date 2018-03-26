@@ -34,7 +34,7 @@ test:
   - master
   - production
 
-deploy:
+deploy_staging:
   stage: deploy
   environment: staging
 
@@ -83,7 +83,7 @@ deploy:
   only:
   - master
 
-deploy:
+deploy_prod:
   stage: deploy
   environment: production
   before_script:
