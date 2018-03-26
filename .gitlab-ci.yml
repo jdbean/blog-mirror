@@ -19,7 +19,7 @@ build:
     - _site
   only:
   - master
-  - production
+  - develop
 
 test:
   stage: test
@@ -32,7 +32,7 @@ test:
     - _site
   only:
   - master
-  - production
+  - develop
 
 deploy:
   stage: deploy
@@ -81,21 +81,21 @@ deploy:
   - rsync -avz --delete -e ssh --progress -r _site/ "$SITE_USER_AND_ADDRESS"
 
   only:
-  - master
+  - develop
 
-  deploy:
-    stage: deploy
-    environment: production
-    before_script:
-    - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-    - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
-    - eval $(ssh-agent -s)
-    - echo "$SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
-    - mkdir -p ~/.ssh
-    - chmod 700 ~/.ssh
-    - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
-    - chmod 644 ~/.ssh/known_hosts
-    script:
-    - rsync -avz --delete -e ssh --progress -r _site/ "$PROD_SITE_USER_AND_ADDRESS"
-    only:
-    - production
+deploy:
+  stage: deploy
+  environment: production
+  before_script:
+  - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
+  - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
+  - eval $(ssh-agent -s)
+  - echo "$SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
+  - mkdir -p ~/.ssh
+  - chmod 700 ~/.ssh
+  - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
+  - chmod 644 ~/.ssh/known_hosts
+  script:
+  - rsync -avz --delete -e ssh --progress -r _site/ "$PROD_SITE_USER_AND_ADDRESS"
+  only:
+  - master
