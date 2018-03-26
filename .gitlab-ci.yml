@@ -83,7 +83,7 @@ deploy_staging:
   only:
   - develop
 
-deploy:
+deploy_prod:
   stage: deploy
   environment: production
   before_script:
