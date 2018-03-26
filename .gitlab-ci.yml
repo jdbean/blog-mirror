@@ -19,7 +19,7 @@ build:
     - _site
   only:
   - master
-  - production
+  - develop
 
 test:
   stage: test
@@ -32,7 +32,7 @@ test:
     - _site
   only:
   - master
-  - production
+  - develop
 
 deploy_staging:
   stage: deploy
@@ -81,9 +81,9 @@ deploy_staging:
   - rsync -avz --delete -e ssh --progress -r _site/ "$SITE_USER_AND_ADDRESS"
 
   only:
-  - master
+  - develop
 
-deploy_prod:
+deploy:
   stage: deploy
   environment: production
   before_script:
@@ -98,4 +98,4 @@ deploy_prod:
   script:
   - rsync -avz --delete -e ssh --progress -r _site/ "$PROD_SITE_USER_AND_ADDRESS"
   only:
-  - production
+  - master
