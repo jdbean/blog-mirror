@@ -1233,6 +1233,14 @@ a.newer-posts:hover {
   height: 100%;
 }
 
+.image-caption {
+  text-align: center;
+  font-size: .7rem;
+  color: a0a0a0;
+  line-height: 0;
+  font-weight: 300;
+}
+
 .page-footer {
   display: -webkit-box;
   display: -webkit-flex;
