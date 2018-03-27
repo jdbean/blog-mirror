@@ -11,8 +11,8 @@ tags: [Blogging, Workflow, GitLab, Jekyll, Docker, Rsync, SSH]  #(optional)
 
 When I decided to start blogging my first order of business was to select which tools or platform I wanted to use for my blog.
 After asking around and doing some research I found that some of the most popular hosted blogging options were WordPress, SquareSpace, Medium, GitHub Pages, and Ghost.
-
-While I'm sure any of these tools would have worked well I wanted to find a solution which was flexible and would give me the opportunity to do get my hands dirty and do some deeper learning about software development, testing, and deployment.
+While I'm sure any of these tools would have worked well I couldn't help want to get my hands dirty setting up something of my own.
+I wanted to find a solution that was flexible and would give me the opportunity to do some deeper learning about software development, testing, and deployment.
 
 After laying out my requirements and investigating some of my options I decided that I wanted to set up a blogging workflow using: [Jekyll], [Git], [GitLab], [Docker], [GitLab Runner], [Rsync], [SSH], and a Web server.
 I could write a post about each of these tools individually but I want to focus this post on a high-level overview of how I integrated each component into my blogging workflow.
@@ -25,20 +25,6 @@ I could write a post about each of these tools individually but I want to focus 
 [Rsync]: https://rsync.samba.org/
 [SSH]: https://www.openssh.com/s
 
-## Summary / Benefits
-
-The toolchain I employ gives me the following benefits over some/all of the alternatives I considered:
-
-  * Complete control over the entire blogging process.
-  * An opportunity to learn about development and web technologies.
-  * A reproducible and consistent build environment.
-  * My site is lean and static.
-  * The ability to test my site and deploy it for review before deploying in to production.
-  * Based entirely in plain text which allows me to utilize familiar development tools such as version control and editors.
-  * The ability to write from any machine without the need to set up a local build environment.
-  * A centralized and automated deployment process.
-  * The satisfaction of "rolling-my-own".
-
 ## Jekyll
 
 Jekyll is probably the best known among the array of static site generators that have become popular over the last decade or so.
@@ -46,7 +32,7 @@ Jekyll's popularity is, at least in part, due to its adoption by GitHub as the
 backend for its [GitHub Pages](https://pages.github.com) feature.
 Jekyll is written in Ruby and outputs a static website site from YAML configuration files, html templates, and markdown formatted posts, along with other assets such as javascript, fonts, and images.
 
-![Jekyll post in editior](/assets/img/jekyll_post_markdown.png)
+![Jekyll post in editor](/assets/img/jekyll_post_markdown.png)
 
 {:.image-caption}
 *Editing this post in markdown*
@@ -75,17 +61,18 @@ This command serves the site locally so it can be accessed in the browser at `ht
 *Serving the  site locally*
 
 I selected  one of the many beautiful open source Jekyll themes, made a few tweaks to the CSS and HTML to suit my preferences and configured my new site.
-Along with a web server to upload the site to, I had a great blogging platform all set up and ready to go in no time.
+Along with a web server to upload the site to, I had a great blogging platform set up and ready to go in no time.
 
 ## Git / GitLab
 
 Once I had the fundamentals of my site taken care of I started thinking about what I could do to make my blog and my blogging workflow as professional and flexible as possible.
 It was an obvious next step to manage my blogging workflow through a Git repository in order to gain the benefits afforded by a version control system (VCS).
-In order to be able to work on the blog from multiple machines I decided to upload by local repository to a Git server.
+I develop new blog post drafts or site-wide changes in feature branches until they are ready to merge.
 
+In order to be able to work on the blog from multiple machines I decided to upload by local repository to a Git server.
 While something like GitHub would have worked well, I was already running a self-hosted GitLab server in my home lab which was a perfect fit for the job.
-GitLab is a really fantastic company which, in addition to a hosted service at [GitLab.com](https://gitlab.com) also offers enterprise and personal versions of its software for users to deploy on their own.
-Along with simply serving as an always-on host for my Git repository GitLab has a ton of project management features that are useful for organizing my blogging.
+GitLab is a really fantastic company which, in addition to a hosted service at [GitLab.com](https://gitlab.com), also offers enterprise and personal versions of its software for users to self-host.
+Along with simply serving as an always-on host for my Git repository, GitLab has a ton of project management features that are useful for organizing my blogging such as issue management and a wiki for documentation.
 
 ![GitLab secret variables screen](/assets/img/gitlab-blog-repo.png)
 
@@ -94,9 +81,9 @@ Along with simply serving as an always-on host for my Git repository GitLab has 
 
 ## CI/CD
 
-My favorite feature of GitLab is its integrated continuous integration / continuous delivery feature.
-Along with Docker and another program called GitLab Runner, GitLab allows me to easily integrate the process of building, testing, and deploying my blog with Git.
-In order to get this set up all I needed to do was to setup the following simple YAML file, `.gitlab-ci.yml` in the root directory of my site's repository:
+One of my favorite features of GitLab is its continuous integration / continuous delivery tools.
+Along with installs of Docker and another program called GitLab Runner, GitLab allows me to easily integrate the process of building, testing, and deploying my blog with Git.
+In order to get this integration set up all I needed to do was to create the following simple YAML file, `.gitlab-ci.yml` in the root directory of my site's repository:
 
 ``` yml
 image: jekyll/builder
@@ -201,17 +188,20 @@ deploy_prod:
   - master
 ```
 
-This file sets up three jobs for the repository which are executed by my GitLab Runner each time a commit is merged into a specified git branch such as master or production.
+This file sets up three jobs for the repository which are executed by my GitLab Runner each time a commit is merged into a specified git branch such as master or develop.
+If a job fails, the merge request is rejected.
+
+
 The first job builds the site by cloning the repo into a new Docker container pre-configured with the necessary tools like Ruby and the Jekyll Gem, running `bundle install` and then running the Jekyll build command.
 In order to speed up subsequent jobs, the installed Gems are cached between jobs so that they do not need to be downloaded from Rubygems.com and installed each and every time a job is run.
 If the build completes, the complete website is sent back GitLab where it can be reviewed and the next job is run.
 
-
 The second job is the test job.
-This job spins up a new Docker Container but this time, instead of building the site it runs the [HTMLProofer](https://github.com/gjtorikian/html-proofer) which runs a set of tests to validate the site's HTML such as checking for invalid links.
+This job spins up a new Docker Container but this time instead of building the site it runs the [HTMLProofer](https://github.com/gjtorikian/html-proofer) which runs a set of tests to validate the site's HTML such as checking for invalid links.
 If this test job passes then the third job runs.
 
 The third job is the deploy job which is responsible for deploying my code to a live website.
+In the case of commits to the develop branch the deploy the target site is a staging environment and in the case of the master branch the deploy target is the production environment.
 This job has access to the following secret variables:
 
 `$SSH_KEY`
@@ -232,9 +222,8 @@ This sensitive data is stored by GitLab and only provided to the Runner to ensur
 
 The deploy job uses this data to configure SSH to securely access the site's remote web server and uses Rsync efficiently transmits any new or updated site files from the build process to the web server.
 
-Thanks to these jobs, when I merge feature branches into my remote development branch the site is built, validated, and deployed to a staging site automattically.
-Logs from the job are stored in Gitlab and I am alerted immediatly via slack and email of any failures.
-
+Thanks to these jobs, when I merge feature branches into my remote development branch the site is built, validated, and deployed to a staging site automatically.
+Logs from the job are stored in Gitlab and I am alerted immediately via slack and email of any failures.
 Deploying to production is as simple as merging the development branch into master.
 
 ![Blog GitLab CI Pipelines](/assets/img/gitlab-jobs.png)
@@ -245,3 +234,17 @@ Deploying to production is as simple as merging the development branch into mast
 ## Final Thoughts
 
 I think it's fair to say that my setup may be a bit over-engineered for the task at hand but it was a really fun experience to set up and let me practice some important skills and to learn more about using a few tools that I expect will come in handy as begin developing and deploying more complex applications.
+
+The toolchain I employ gives me the following benefits over some/all of the alternatives I considered:
+
+  * Complete control over the entire blogging process.
+  * An opportunity to learn about development and web technologies.
+  * A reproducible and consistent build environment.
+  * My site is lean and static.
+  * The ability to test my site and deploy it to a staging envrionment before deploying in to production.
+  * Based entirely in plain text which allows me to utilize familiar development tools such as version control and editors.
+  * The ability to write from any machine without the need to set up a local build environment.
+  * A centralized and automated deployment process.
+  * The satisfaction of "rolling-my-own".
+
+I'm very happy with set what I've set up. Now all I have to do is keep posting!
