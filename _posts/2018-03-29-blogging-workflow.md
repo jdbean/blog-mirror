@@ -23,7 +23,7 @@ I could write a post about each of these tools individually but I want to focus 
 [Docker]: https://docker.com
 [GitLab Runner]: https://docs.gitlab.com/runner/
 [Rsync]: https://rsync.samba.org/
-[SSH]: https://www.openssh.com/s
+[SSH]: https://www.openssh.com/
 
 ## Jekyll
 
