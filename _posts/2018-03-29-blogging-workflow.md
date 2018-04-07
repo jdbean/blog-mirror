@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setting Up A Jekyll Blogging Workflow"
-date:  2018-03-19
+date:  2018-03-29
 description: > #(optional)
     A description of my custom workflow for building, testing,
     and deploying this Jekyll blog into production.

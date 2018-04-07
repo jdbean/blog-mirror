@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "A FOSS Basics"
-date:  2018-04-17
+title: "FOSS Basics"
+date:  2018-04-07
 description: > #(optional)
     An introduction to free and open source software
     for new developers.
@@ -15,7 +15,7 @@ tags: [FOSS, Free and Open Source Software, Copyright]  #(optional)
 >
 > \- FSF (RMS?)
 
-*DISCLAIMER: Nothing in this post should be construed as legal advice and is not a substitute for the advice of a competent attorney.*
+*DISCLAIMER: Nothing in this post should be construed as legal advice and it is not a substitute for the advice of a competent attorney. This post is intentionally written as introductory material intended for those wholly unfamiliar with concepts such as FOSS and software licensing. It is intentionally over-simplified.*
 
 Free and open source software (“FOSS”) is hard to escape in the modern software development landscape. The majority of the tools I’m using to learn software development are FOSS: GNU/Linux, Atom, Ruby, PostgreSQL, SQLite, Git, Firefox, Bash and so forth and so on. Coming from my background working with FOSS developers I’m familiar with the minutiae of FOSS; for many of the folks that I’m learning alongside of however, FOSS is probably a somewhat hazy concept that might be hard to distinguish from something like freeware.  I thought I’d use this post to provide a brief introduction to the basics of FOSS for new developers.
 
@@ -23,8 +23,8 @@ Free and open source software (“FOSS”) is hard to escape in the modern softw
 
 It is quite common to assume that FOSS describes software that is both free of cost and for which the source code is available to the public for review. While these characteristics are both common for FOSS, neither is actually a necessary condition to be considered FOSS.
 Free software and open source software are basically two schools of philosophy for describing the same thing. Most of the time, software which qualifies as “free” is also “open source’: hence “free and open source”.
-The “free” in free software, contrary to popular belief, does not refer to pricing. Instead, the “free” in free software refers to being free from restriction. Proponents of the free software movement are fond of the sayings “free as in speech not as in beer” or “free as in freedom” to describe free software. In fact, charging for free software is an entirely acceptable practice.
-Open source was a term coined in 1998 as an effort to rebrand some of the concepts free software in a form that emphasized business value over social activism.
+The “free” in free software, contrary to popular belief, does not refer to pricing. Instead, the “free” in free software refers to being free from restriction. Proponents of the free software movement are fond of the sayings “free as in speech not as in beer” or “free as in freedom” to describe free software. In fact, charging for free software is an entirely acceptable practice. The free software movement (also sometimes called the free/libre software movement) is a social movement predicated on ensuring the rights of individuals with respect to the software that they use.
+Open source was a term coined in 1998 as an effort to rebrand some of the concepts free software. Open source has come to represent a pragmatic reimagining of free software in a form that emphasizes business advantages and technical-merit over ethical questions.
 
 The Free Software Foundation (“FSF”) and the Open Source Initiative (“OSI”), are each well-regarded authorities for defining the boundaries of their respective movements. For FSF, free software must provide users with the following four freedoms:
 
@@ -81,40 +81,67 @@ For OSI, open source software must be distributed on terms that meet the followi
 >
 >No provision of the license may be predicated on any individual technology or style of interface.
 
-Each group maintains a list of software licenses that meet their standards and, despite their distinct philosophical approaches, FSF’s and OSI’s lists commonly align. Before delving deeper into FOSS licenses lets take a moment to discuss the relevance of licenses in general.
+Each group maintains a list of software licenses that meet their standards and, despite their distinct philosophical approaches, FSF’s and OSI’s lists commonly align. Before delving deeper into FOSS licenses lets take a moment to discuss the relevance of licenses to software in general.
 
 # Copyright and Licenses
-A common misconception among developers is that source code one finds on the internet can be used in any way that one wishes.  Along with other expressive works like writing, photos, music, and paintings, computer software is automatically protected by copyright which means that permission is required for most use-cases. A public Git repository without a license is, despite appearances, far from an open invitation for reuse. A license file provides permission for using software and defines any limitations on the scope of that permission;  using someone else’s software without a license risks infringing copyright as does using that software outside of the scope of what its license permits.
+A common misconception among developers is that source code one finds on the internet can be used in any way that one wishes.  Along with other expressive works like writing, photos, music, and paintings, computer software is automatically protected by copyright which means that permission is required for most use-cases. A public Git repository without a license is, despite appearances, far from an open invitation for reuse. A license file provides permission for using software and defines any limitations on the scope of that permission;  using someone else’s software without a license risks infringing copyright as would using that software outside of the scope of what its license permits.
 
 # FOSS/Cookie Licenses
 There are a good selection of established and approved FOSS licenses that software projects can choose from. These licenses typically fall into one of three broad categories: 1.) permissive (ex. 3-clause BSD, MIT, Apache 2.0) 2. weak copyleft (ex. LGPL, MPL, CDDL), and 3. strong copyleft (ex. GPL, AGPL). Rather than speak about these types of licenses in any technical or legal detail I find that an analogy serves as a far better introductory teaching tool even if it glazes over many of the finer points. For this post I’m going to use cookies, my all time favorite FOSS licensing analogy borrowed from Jim Jagielski. As a brief aside it is worth noting that [recipes are considered uncopyrightable subject matter](https://www.copyright.gov/circs/circ33.pdf) but I will kindly ask the reader to suspend disbelief.
 
-## Chocolate Chip Cookies as Software
+## The Permissive Licensed Cookie
+
 To understand the basics of how a permissive FOSS license works imagine a dedicated baker’s really exceptional chocolate chip cookie recipe. Unlike many home cooks who guard their secret recipes zealously, the creator of this cookie decides to share their recipe with others but isn’t sure what license to choose.
 
-## The Permissive License
+![Chocolate Chip Cookies](/assets/img/gianna-ciaramello-461814-unsplash.jpg)
+
+{:.image-caption}
+*Photo by [Gianna Ciaramello](https://unsplash.com/photos/Bh-soXo84Gg)*
+
 Consider what would occur if the recipe were shared with a permissive license. The main requirement of a permissive license is that future users of the recipe must give credit to the recipe’s creator. Anyone who manages to get a copy of the recipe is otherwise free to do with it as they wish; they could make as many batches of the cookies a they like, and they could even change the recipe or package and sell the cookies in stores.
 
-## Weak Copyleft
-The cookie’s creator might not be happy with some of the outcomes from using a permissive license for her recipe. Under a permissive license someone might improve on the original recipe by adding a pinch of cinnamon and make a fortune selling these modified cookies in stores. It might bother the initial creator of the cookie to go to the store and buy a box of cookies based on her recipe but not be shown how her recipe was changed. In fact, the cookie’s original creator might be prohibited from even trying to figure out on her own what was changed in the recipe to improve the cookie.
+## The Weak Copyleft Cookie
+The cookie’s creator might not be happy with some of the outcomes from using a permissive license for her recipe. Under a permissive license someone might improve on the original recipe by adding a hint of orange zest and make a fortune selling these modified cookies in stores. It might bother the initial creator of the cookie to go to the store and buy a box of cookies based on her recipe but not be shown how her recipe was changed. In fact, the cookie’s original creator might be prohibited from even trying to figure out on her own what changes were made to improve upon her original recipe.
+
+![Orange and Chocolate Chip Cookies](/assets/img/jade-wulfraat-96025-unsplash.jpg)
+
+{:.image-caption}
+*Photo by [Jade Wulfraat](https://unsplash.com/photos/Wo_JUaWp7Dg)*
+
 In this case, the cookie creator might opt to choose a weak copyleft license for her recipe instead. Under a weak copyleft license the scope of the permission granted is a little more complex. Users of the recipe are permitted to make the cookies or modified versions of them freely but they must share the recipe under the same license terms with anyone that they give their cookies to. This reciprocal sharing requirement is the heart of copyleft.
 
-## Strong Copyleft
+## The Strong Copyleft Cookie
 
 For some creators, weak copyleft is a step in the right direction but doesn’t go quite far enough. In the abstract, a recipe is merely an instruction for collecting a set of ingredients, combing them in specific way, and treating that combination with a particular process that transforms it into something greater than the sum of its parts. Just as the cookie is made of ingredients, it can also be an ingredient itself. Consider:
 
-[Cookies and cream ice-cream] [ice cream sandwich][cookie w/frosting]
+[Cookies and cream ice-cream]
+
+![Ice Cream Sandwich](/assets/img/Ice_Cream_Sandwich.jpg)
+
+[cookie w/frosting]
+
 A weak copyleft license ensures that the cookie recipe itself is shared with recipients but its requirements do not extend to a greater product which is based upon the cookie recipe. A strong copyleft program, on the other-hand, extends the reciprocal sharing requirement to cover these cases.
 
 # FOSS in Practice
 Now that we’ve got a sense of the broad categories of FOSS licenses lets take a quick look at  how a program can be impacted by the preexisting FOSS tools it is based on.
 For the beginner developer, discovering how to add and use additional libraries in a program is a watershed moment that unlocks a world of potential. Sometimes the excitement of this moment can make it seem as if all of these tools are magical gifts bestowed by fairies or elves.
-[Keebler Elves]
+
+![Keebler Elves](/assets/img/keebler-logo.jpg)
+
+{:.image-caption}
+*This is not the dude to thank for that sweet web framework you just started using*
+
 In fact, libraries are created and shared by developers like anyone else under terms of their choosing which can have a real impact on the software we use them in. Let’s take the ruby gem ecosystem as an example. Ruby gems can be installed from public git repos or gem servers in addition to the popular catalog on rubygems.org. Even on [rubygems.org](http://guides.rubygems.org/specification-reference/#license=), there is no restriction on a gem’s choice of license terms or even a requirement to have a license in the first place.
-Gems on rubygems.org frequently use FOSS licenses and provide metadata about their licenses that can be referenced by running `gem licenses` to display an overview of the licenses provided by each of one’s install gems. Here is the `gem licenses` out put for a sample program.
+Gems on rubygems.org frequently use FOSS licenses and provide metadata about their licenses that can be referenced by running "gem licenses" to display an overview of the licenses provided by each of one’s install gems. Here is the "gem licenses" out put for a sample program.
+
 [sample `gem licenses`]
-Let’s say that I want to make a command-line application with an intuitive and visually rich interface. The first feature I want to employ is adding color to my program’s console output. To do that I add a new line to my gem file `{FIXME} colorize`. Now when I check `gem licenses` I see that the license of colorize is “GPLv2+”, a strong copyleft license.
+
+Let’s say that I want to make a command-line application with an intuitive and visually rich interface. The first feature I want to employ is adding color to my program’s console output. To do that I add a new line to my gem file "{FIXME} colorize". Now when I check "gem licenses" I see that the license of colorize is “GPLv2+”, a strong copyleft license.
+
 [`gem licenses` with colorize gem]
+
  As a result of using this gem I’m now accountable for abiding by the license for that gem including licensing it to recipients under the same or compatible license terms.
-#Conclusion
-While I could happily keep writing about this topic for days, I think this gives a pretty solid introduction to what FOSS is, the different types of FOSS, and the issues to consider when using FOSS in program.
+
+# Conclusion
+
+While I could happily keep writing about this topic for days, I think this gives a pretty solid introduction to what FOSS is, the different types of FOSS, and some of the issues to look out for when using FOSS in program.
