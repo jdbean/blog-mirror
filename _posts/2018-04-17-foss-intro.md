@@ -132,14 +132,14 @@ Gems on rubygems.org frequently use FOSS licenses and provide metadata about the
 
 ![Initial Bundle Licenses Output](/assets/img/bundle_license-1.png)
 
-Let’s say that I want to make a command-line application with an intuitive and visually rich interface. The first feature I want to employ is adding color to my program’s console output. To do that I add a new line to my gem file "{FIXME} colorize". Now when I check "bundle licenses" I see that the license of colorize is "GPLv2+", a strong copyleft license.
+The licenses here are mostly MIT with a couple of other libraries licensed under other permissive licenses. Let’s say that I want to make a command-line application with an intuitive and visually rich interface the displays colored console text. I have no idea how to do that but I do know that there is a great Gem that can help me out. After requiring the colorize gem, I can check the output of "bundle licenses" to see if anything has changed.
 
 ![Bundle Licenses Output With Colorize Gem](/assets/img/bundle_license-2.png)
 
- As a result of using this gem I’m now accountable for abiding by the license for that gem including licensing it to recipients under the same or compatible license terms.
+ As you can see, the license of colorize is "GPL-2.0", a strong copyleft license (technically the license is GPLv2+ but we don't need to get into that). As a result of using this gem I’m now accountable for abiding by it's license including licensing my program to users under the same or compatible license terms.
 
 # Conclusion
 
-While I could happily keep writing about this topic for days, I think this gives a pretty solid introduction to what FOSS is, the different types of FOSS, and some of the issues to look out for when using FOSS in program.
+While I could happily keep writing about this topic for days, I think this post gives a good taste of what FOSS is, the different types of FOSS, and some of the issues to look out for when using FOSS in program.
 
-FOSS is an incredibly powerful resource for software developers and it is important to have a basic concept of what FOSS is all about and what using it requires of us.
+FOSS is an incredibly powerful resource for software developers and it is important to have a basic concept of what FOSS is all about and what using it requires of us in return.
