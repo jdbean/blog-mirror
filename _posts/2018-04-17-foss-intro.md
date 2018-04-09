@@ -13,7 +13,7 @@ tags: [FOSS, Free and Open Source Software, Copyright]  #(optional)
 
 > Free as in ‘speech’ not as in ‘beer’
 >
-> \- FSF (RMS?)
+> \-\- *FSF (RMS?)*
 
 *DISCLAIMER: Nothing in this post should be construed as legal advice and it is not a substitute for the advice of a competent attorney. This post is intentionally written as introductory material intended for those wholly unfamiliar with concepts such as FOSS and software licensing. It is intentionally over-simplified.*
 
@@ -84,7 +84,7 @@ For OSI, open source software must be distributed on terms that meet the followi
 Each group maintains a list of software licenses that meet their standards and, despite their distinct philosophical approaches, FSF’s and OSI’s lists commonly align. Before delving deeper into FOSS licenses lets take a moment to discuss the relevance of licenses to software in general.
 
 # Copyright and Licenses
-A common misconception among developers is that source code one finds on the internet can be used in any way that one wishes.  Along with other expressive works like writing, photos, music, and paintings, computer software is automatically protected by copyright which means that permission is required for most use-cases. A public Git repository without a license is, despite appearances, far from an open invitation for reuse. A license file provides permission for using software and defines any limitations on the scope of that permission;  using someone else’s software without a license risks infringing copyright as would using that software outside of the scope of what its license permits.
+A common misconception among developers is that source code one finds on the internet can be used in any way that one wishes.  Along with other expressive works like writing, photos, music, and paintings, computer software is automatically protected by copyright which means that permission is required for most use-cases. A public Git repository without a license is, despite appearances, far from an open invitation for reuse. A license, on the other hand, provides permission for using software and defines any limitations on the scope of that permission;  using someone else’s software without a license risks infringing copyright as would using that software outside of the scope of what its license permits.
 
 # FOSS/Cookie Licenses
 There are a good selection of established and approved FOSS licenses that software projects can choose from. These licenses typically fall into one of three broad categories: 1.) permissive (ex. 3-clause BSD, MIT, Apache 2.0) 2. weak copyleft (ex. LGPL, MPL, CDDL), and 3. strong copyleft (ex. GPL, AGPL). Rather than speak about these types of licenses in any technical or legal detail I find that an analogy serves as a far better introductory teaching tool even if it glazes over many of the finer points. For this post I’m going to use cookies, my all time favorite FOSS licensing analogy borrowed from Jim Jagielski. As a brief aside it is worth noting that [recipes are considered uncopyrightable subject matter](https://www.copyright.gov/circs/circ33.pdf) but I will kindly ask the reader to suspend disbelief.
@@ -112,15 +112,11 @@ In this case, the cookie creator might opt to choose a weak copyleft license for
 
 ## The Strong Copyleft Cookie
 
-For some creators, weak copyleft is a step in the right direction but doesn’t go quite far enough. In the abstract, a recipe is merely an instruction for collecting a set of ingredients, combing them in specific way, and treating that combination with a particular process that transforms it into something greater than the sum of its parts. Just as the cookie is made of ingredients, it can also be an ingredient itself. Consider:
-
-[Cookies and cream ice-cream]
+For some creators, weak copyleft is a step in the right direction but doesn’t go quite far enough in some circumstances. A weak copyleft license ensures that the cookie recipe itself is shared with recipients but its requirements do not extend to a greater product which is based upon the cookie recipe. Is frosting completely independent from the cookie it tops?
 
 ![Ice Cream Sandwich](/assets/img/Ice_Cream_Sandwich.jpg)
 
-[cookie w/frosting]
-
-A weak copyleft license ensures that the cookie recipe itself is shared with recipients but its requirements do not extend to a greater product which is based upon the cookie recipe. A strong copyleft program, on the other-hand, extends the reciprocal sharing requirement to cover these cases.
+ A strong copyleft license extends the reciprocal sharing requirement of weak copyleft to cover not only the cookie itself but.  In the abstract, a recipe is merely an instruction for collecting a set of ingredients, combing them in specific way, and treating that combination with a particular process that transforms it into something greater than the sum of its parts. Just as the cookie is made of ingredients, it can also become an ingredient itself in a larger recipe.
 
 # FOSS in Practice
 Now that we’ve got a sense of the broad categories of FOSS licenses lets take a quick look at  how a program can be impacted by the preexisting FOSS tools it is based on.
