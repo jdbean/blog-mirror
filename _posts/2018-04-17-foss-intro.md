@@ -17,16 +17,16 @@ tags: [FOSS, Free and Open Source Software, Copyright]  #(optional)
 
 *DISCLAIMER: Nothing in this post should be construed as legal advice and it is not a substitute for the advice of a competent attorney. This post is intentionally written as introductory material intended for those wholly unfamiliar with concepts such as FOSS and software licensing. It is intentionally over-simplified.*
 
-Free and open source software (“FOSS”) is hard to escape in the modern software development landscape. The majority of the tools I’m using to learn software development are FOSS: GNU/Linux, Atom, Ruby, PostgreSQL, SQLite, Git, Firefox, Bash and so forth and so on. Coming from my background working with FOSS developers I’m familiar with the minutiae of FOSS; for many of the folks that I’m learning alongside of however, FOSS is probably a somewhat hazy concept that might be hard to distinguish from something like freeware.  I thought I’d use this post to provide a brief introduction to the basics of FOSS for new developers.
+Free and open source software ("FOSS") is hard to escape in the modern software development landscape. The majority of the tools I’m using to learn software development are FOSS: GNU/Linux, Atom, Ruby, PostgreSQL, SQLite, Git, Firefox, Bash and so forth and so on. Coming from my background working with FOSS developers I’m familiar with the minutiae of FOSS; for many of the folks that I’m learning alongside of however, FOSS is probably a somewhat hazy concept that might be hard to distinguish from something like freeware.  I thought I’d use this post to provide a brief introduction to the basics of FOSS for new developers.
 
-# “Free” and “Open Source”
+# "Free" and "Open Source"
 
 It is quite common to assume that FOSS describes software that is both free of cost and for which the source code is available to the public for review. While these characteristics are both common for FOSS, neither is actually a necessary condition to be considered FOSS.
-Free software and open source software are basically two schools of philosophy for describing the same thing. Most of the time, software which qualifies as “free” is also “open source’: hence “free and open source”.
-The “free” in free software, contrary to popular belief, does not refer to pricing. Instead, the “free” in free software refers to being free from restriction. Proponents of the free software movement are fond of the sayings “free as in speech not as in beer” or “free as in freedom” to describe free software. In fact, charging for free software is an entirely acceptable practice. The free software movement (also sometimes called the free/libre software movement) is a social movement predicated on ensuring the rights of individuals with respect to the software that they use.
+Free software and open source software are basically two schools of philosophy for describing the same thing. Most of the time, software which qualifies as "free" is also "open source’: hence "free and open source".
+The "free" in free software, contrary to popular belief, does not refer to pricing. Instead, the "free" in free software refers to being free from restriction. Proponents of the free software movement are fond of the sayings "free as in speech not as in beer" or "free as in freedom" to describe free software. In fact, charging for free software is an entirely acceptable practice. The free software movement (also sometimes called the free/libre software movement) is a social movement predicated on ensuring the rights of individuals with respect to the software that they use.
 Open source was a term coined in 1998 as an effort to rebrand some of the concepts free software. Open source has come to represent a pragmatic reimagining of free software in a form that emphasizes business advantages and technical-merit over ethical questions.
 
-The Free Software Foundation (“FSF”) and the Open Source Initiative (“OSI”), are each well-regarded authorities for defining the boundaries of their respective movements. For FSF, free software must provide users with the following four freedoms:
+The Free Software Foundation ("FSF") and the Open Source Initiative ("OSI"), are each well-regarded authorities for defining the boundaries of their respective movements. For FSF, free software must provide users with the following four freedoms:
 
 > FOUR FREEDOMS
 >
@@ -132,7 +132,7 @@ Gems on rubygems.org frequently use FOSS licenses and provide metadata about the
 
 [sample `gem licenses`]
 
-Let’s say that I want to make a command-line application with an intuitive and visually rich interface. The first feature I want to employ is adding color to my program’s console output. To do that I add a new line to my gem file "{FIXME} colorize". Now when I check "gem licenses" I see that the license of colorize is “GPLv2+”, a strong copyleft license.
+Let’s say that I want to make a command-line application with an intuitive and visually rich interface. The first feature I want to employ is adding color to my program’s console output. To do that I add a new line to my gem file "{FIXME} colorize". Now when I check "gem licenses" I see that the license of colorize is "GPLv2+", a strong copyleft license.
 
 [`gem licenses` with colorize gem]
 
