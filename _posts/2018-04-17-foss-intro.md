@@ -101,7 +101,7 @@ To understand the basics of how a permissive FOSS license works imagine a dedica
 Consider what would occur if the recipe were shared with a permissive license. The main requirement of a permissive license is that future users of the recipe must give credit to the recipe’s creator. Anyone who manages to get a copy of the recipe is otherwise free to do with it as they wish; they could make as many batches of the cookies a they like, and they could even change the recipe or package and sell the cookies in stores.
 
 ## The Weak Copyleft Cookie
-The cookie’s creator might not be happy with some of the outcomes from using a permissive license for her recipe. Under a permissive license someone could sell the cookies in their bakery but refuse to share the recipe with their customers. It might bother the initial creator of the cookie to go to the store and buy a box of cookies based on her recipe but not be shown how her recipe was changed. In fact, the cookie’s original creator might be prohibited from even trying to figure out on her own what changes were made to improve upon her original recipe.
+The cookie’s creator might not be happy with some of the outcomes from using a permissive license for her recipe. Under a permissive license someone could sell the cookies in their bakery but refuse to share the recipe with their customers. Perhaps someone might improve on the recipe by adding a hint of orange zest and it might bother the initial creator of the cookie to go to the store and buy a box of cookies based on her recipe but not be told what changes were made. In fact, the cookie’s original creator might even be prohibited from trying to figure out on her own what changes were made to improve upon her original recipe.
 
 ![Orange and Chocolate Chip Cookies](/assets/img/jade-wulfraat-96025-unsplash.jpg)
 
@@ -112,11 +112,11 @@ In this case, the cookie creator might opt to choose a weak copyleft license for
 
 ## The Strong Copyleft Cookie
 
-For some creators, weak copyleft is a step in the right direction but doesn’t go quite far enough in some circumstances. A weak copyleft license ensures that the cookie recipe itself is shared with recipients but its requirements do not extend to a greater product which is based upon the cookie recipe. Is frosting completely independent from the cookie it tops?
+For some creators, weak copyleft is a step in the right direction but doesn’t go quite far enough. A weak copyleft license ensures that the cookie recipe itself is shared with recipients of the cookie but its requirements do not extend to a greater product which is based upon the cookie recipe. Just as the cookie is made of ingredients, it can also become an ingredient itself in a larger recipe.
 
 ![Ice Cream Sandwich](/assets/img/Ice_Cream_Sandwich.jpg)
 
- A strong copyleft license extends the reciprocal sharing requirement of weak copyleft to cover not only the cookie itself but.  In the abstract, a recipe is merely an instruction for collecting a set of ingredients, combing them in specific way, and treating that combination with a particular process that transforms it into something greater than the sum of its parts. Just as the cookie is made of ingredients, it can also become an ingredient itself in a larger recipe.
+ Is frosting completely independent from the cookie it tops? What about the ice cream in an ice cream cookie sandwich? A strong copyleft license extends the reciprocal sharing requirement of weak copyleft to cover any and all recipes which are based on the cookie recipe even if the cookie itself is only one part of it.
 
 # FOSS in Practice
 Now that we’ve got a sense of the broad categories of FOSS licenses lets take a quick look at  how a program can be impacted by the preexisting FOSS tools it is based on.
@@ -141,3 +141,5 @@ Let’s say that I want to make a command-line application with an intuitive and
 # Conclusion
 
 While I could happily keep writing about this topic for days, I think this gives a pretty solid introduction to what FOSS is, the different types of FOSS, and some of the issues to look out for when using FOSS in program.
+
+FOSS is an incredibly powerful resource for software developers and it is important to have a basic concept of what FOSS is all about and what using it requires of us.
