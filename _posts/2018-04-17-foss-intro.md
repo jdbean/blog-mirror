@@ -128,13 +128,13 @@ For the beginner developer, discovering how to add and use additional libraries 
 *This is not the dude to thank for that sweet web framework you just started using*
 
 In fact, libraries are created and shared by developers like anyone else under terms of their choosing which can have a real impact on the software we use them in. Let’s take the ruby gem ecosystem as an example. Ruby gems can be installed from public git repos or gem servers in addition to the popular catalog on rubygems.org. Even on [rubygems.org](http://guides.rubygems.org/specification-reference/#license=), there is no restriction on a gem’s choice of license terms or even a requirement to have a license in the first place.
-Gems on rubygems.org frequently use FOSS licenses and provide metadata about their licenses that can be referenced by running "gem licenses" to display an overview of the licenses provided by each of one’s install gems. Here is the "gem licenses" out put for a sample program.
+Gems on rubygems.org frequently use FOSS licenses and provide metadata about their licenses that can be referenced by running "bundle licenses" to display an overview of the licenses provided by each of one’s install gems. Here is the "bundle licenses" output for a sample program.
 
-[sample `gem licenses`]
+![Initial Bundle Licenses Output](/assets/img/bundle_license-1.png)
 
-Let’s say that I want to make a command-line application with an intuitive and visually rich interface. The first feature I want to employ is adding color to my program’s console output. To do that I add a new line to my gem file "{FIXME} colorize". Now when I check "gem licenses" I see that the license of colorize is "GPLv2+", a strong copyleft license.
+Let’s say that I want to make a command-line application with an intuitive and visually rich interface. The first feature I want to employ is adding color to my program’s console output. To do that I add a new line to my gem file "{FIXME} colorize". Now when I check "bundle licenses" I see that the license of colorize is "GPLv2+", a strong copyleft license.
 
-[`gem licenses` with colorize gem]
+![Bundle Licenses Output With Colorize Gem](/assets/img/bundle_license-2.png)
 
  As a result of using this gem I’m now accountable for abiding by the license for that gem including licensing it to recipients under the same or compatible license terms.
 
