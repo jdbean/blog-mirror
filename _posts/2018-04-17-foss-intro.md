@@ -6,7 +6,7 @@ description: > #(optional)
     An introduction to free and open source software
     for new developers.
 img: alvaro-serrano-133380-unsplash.jpg
-tags: [FOSS, Free and Open Source Software, Copyright]  #(optional)
+tags: [FOSS, "Free and Open Source Software", Copyright]  #(optional)
 ---
 
 # An Introduction Free and Open Source for New Developers
