@@ -9,7 +9,7 @@ img: alvaro-serrano-133380-unsplash.jpg
 tags: [FOSS, "Free and Open Source Software", Copyright]  #(optional)
 ---
 
-# An Introduction Free and Open Source for New Developers
+# An Introduction To Free and Open Source for New Developers
 
 *DISCLAIMER: Nothing in this post should be construed as legal advice and it is not a substitute for the advice of a competent attorney. This post is intentionally written as introductory material intended for those wholly unfamiliar with concepts such as FOSS and software licensing. It is intentionally over-simplified.*
 
