@@ -10,7 +10,9 @@ tags: [Programming, Security, Privacy]  #(optional)
 ---
 ## The Choices We Make And The Trouble They Cause
 
->A computer lets you make more mistakes faster than any invention in human history - with the possible exceptions of handguns and tequila. -- Mitch Radcliffe
+>A computer lets you make more mistakes faster than any invention in human history - with the possible exceptions of handguns and tequila.
+>
+>-- Mitch Radcliffe
 
 The art and science of developing software requires a constant stream of decision making. The more I work with software the more I begin to understand how each small decision can build up to a major consequence for program. Learning to think about the consequences of our design decisions early on helps us to anticipate possible problems before they can cause real damage.
 
@@ -40,7 +42,7 @@ After a bit of thinking it seems to me that nine times out ten designing an appl
 
 Admittedly there are some circumstances that I can imagine where this would a perfectly reasonable design choice with regards to privacy. One such example is an application where users explicitly opt-in to share their high-precision present locations with each other. Among small trusted groups, this kind of  sharing is often a desirable and expected feature. Most of the time, however, location-enabled applications are aiming to achieve a far more generalized degree of location sharing and users would likely be quite disturbed to learn that such precise data was being disclosed without their knowledge.
 
-The popular location-based dating application Tinder publicly confronted this very issue in late 2013–2014. In order to conveniently facilitate romantic connections between singles, Tinder provided a potential match’s rough distance from the user. In the summer of 2013, [reports surfaced](http://blog.includesecurity.com/2014/02/how-i-was-able-to-track-location-of-any.html) that Tinder’s API had, for an unknown but relatively brief period, been disclosing highly sensitive date about potential matches including their most-recent location coordinates. . Early the following year, security researches at IncludeSecurity publicly disclosed that although the Tinder API was no longer disclosing precise location coordinates for prospective matches, but that it was providing precise distance measurements. Combined with the basic high-school level trigonometry method of trilateration, this data could easily be used to determine the exact location of the individual (within about 100ft).
+The popular location-based dating application Tinder publicly confronted this very issue in late 2013–2014. In order to conveniently facilitate romantic connections between singles, Tinder provided a potential match’s rough distance from the user. In the summer of 2013, [reports surfaced](https://qz.com/106731/tinder-exposed-users-locations/) that Tinder’s API had, for an unknown but relatively brief period, been disclosing highly sensitive date about potential matches including their most-recent location coordinates. Early the following year, security researches at IncludeSecurity [publicly disclosed](http://blog.includesecurity.com/2014/02/how-i-was-able-to-track-location-of-any.html) that although the Tinder API was no longer disclosing precise location coordinates for prospective matches, but that it was providing precise distance measurements. Combined with the basic high-school level trigonometry method of trilateration, this data could easily be used to determine the exact location of the individual (within about 100ft).
 
 ![Trilateration](/assets/img/trilateration.png)
 
