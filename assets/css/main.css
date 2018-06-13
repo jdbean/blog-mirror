@@ -22,8 +22,6 @@ html {
  */
 body {
   margin: 0;
-  font-size: 120%;
-  overflow-x: hidden;
 }
 
 /**
@@ -779,6 +777,8 @@ body {
   color: #515151;
   background-color: #fbfbfb;
   margin: 0;
+  font-size: 120%;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -795,6 +795,15 @@ img {
   display: block;
 }
 
+img + em {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+}
+
 blockquote {
   border-left: 5px solid #000;
   padding-left: 1.1rem;
@@ -805,13 +814,14 @@ blockquote {
 
 pre {
   padding: 1rem 2rem;
-  overflow-x: auto;
+  overflow: auto;
 }
 
 pre code {
   border: 0;
   padding-right: 0;
   padding-left: 0;
+  overflow: auto;
 }
 
 table {
@@ -872,7 +882,6 @@ table tfoot td {
 }
 
 .wrapper {
-  /* max-width: 1250px; */
   position: relative;
 }
 
@@ -1154,10 +1163,6 @@ footer .copyright {
   font-weight: 400;
 }
 
-.post-title {
-  line-height: 1;
-}
-
 .post .post-content .post-title a {
   font-family: 'PT Serif', serif;
   text-decoration: none;
@@ -1166,6 +1171,10 @@ footer .copyright {
 
 .post .post-content p {
   margin-top: 0;
+}
+
+.post-title {
+  line-height: 1;
 }
 
 a.older-posts, a.newer-posts {
@@ -1199,10 +1208,6 @@ a.newer-posts:hover {
   /* width: 100%; */
 }
 
-/* .post-box {
-
-} */
-
 .header-page {
   text-align: center;
   margin: 10px 0;
@@ -1228,6 +1233,23 @@ a.newer-posts:hover {
   max-height: 500px;
   background-color: #fafafa;
   overflow: hidden;
+}
+
+.page-cover-image figure {
+  position: relative;
+  margin: 0;
+}
+
+.page-cover-image figcaption {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding-left: 20px;
+  color: rgba(255, 255, 255, 0.7);
+  text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 10px;
 }
 
 .page-cover-image .page-image {
@@ -1301,7 +1323,6 @@ a.newer-posts:hover {
 .page-footer .page-tag a:hover {
   text-decoration: underline;
 }
-
 
 /* - - - - - - - - - - Tag Styles - - - - - - - - - - */
 .blog-tags {

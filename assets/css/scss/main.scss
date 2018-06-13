@@ -15,6 +15,8 @@ body {
   color: $body-color;
   background-color: #fbfbfb;
   margin: 0;
+  font-size: 120%;
+  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -25,8 +27,19 @@ h1 {
 
 img {
   max-width: 100%;
+  margin: auto;
   vertical-align: middle;
-  display: inline-block;
+  /* display: inline-block; */
+  display: block;
+}
+
+img + em {
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
 }
 
 blockquote {
@@ -39,12 +52,19 @@ blockquote {
 
 pre {
   padding: 1rem 2rem;
-  overflow-x: auto;
+  overflow: auto;
+  // white-space: pre-wrap;
+  // word-wrap: break-word;
+  // word-break: break-all;
 
   code {
     border: 0;
     padding-right: 0;
     padding-left: 0;
+    overflow: auto;
+    // white-space: pre-wrap;
+    // word-wrap: break-word;
+    // word-break: break-all;
   }
 }
 
@@ -93,13 +113,19 @@ table tfoot td {
 }
 
 .wrapper {
-  max-width: 1250px;
+  // max-width: 1250px;
   position: relative;
 }
 
 .post, .article-page {
   background-color: #fff;
 }
+
+.article-page {
+  margin: 0 auto;
+  width: 100%;
+}
+
 
 ::-moz-selection {
   background: rgba(38, 57, 89, 0.8);
