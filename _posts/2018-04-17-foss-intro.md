@@ -84,10 +84,10 @@ Each group maintains a list of software licenses that meet their standards and, 
 A common misconception among developers is that source code one finds on the internet can be used in any way that one wishes.  Along with other expressive works like writing, photos, music, and paintings, computer software is automatically protected by copyright which means that permission is required for most use-cases. A public Git repository without a license is, despite appearances, far from an open invitation for reuse. A license, on the other hand, provides permission for using software and defines any limitations on the scope of that permission;  using someone else’s software without a license risks infringing copyright as would using that software outside of the scope of what any license for it permits.
 
 # FOSS/Cookie Licenses
-There are a good selection of established and approved FOSS licenses that software projects can choose from. These licenses typically fall into one of three broad categories: 
- 1. permissive (ex. 3-clause BSD, MIT, Apache 2.0) 
- 2. weak copyleft (ex. LGPL, MPL, CDDL); and 
- 3. strong copyleft (ex. GPL, AGPL). 
+There are a good selection of established and approved FOSS licenses that software projects can choose from. These licenses typically fall into one of three broad categories:
+ 1. permissive (ex. 3-clause BSD, MIT, Apache 2.0)
+ 2. weak copyleft (ex. LGPL, MPL, CDDL); and
+ 3. strong copyleft (ex. GPL, AGPL).
 
 Rather than speak about these types of licenses in any technical or legal detail I find that an analogy serves as a far better introductory teaching tool even if it glazes over many of the finer points. For this post I’m going to use cookies, my all time favorite FOSS licensing analogy borrowed from Jim Jagielski. As a brief aside it is worth noting that [recipes are considered uncopyrightable subject matter](https://www.copyright.gov/circs/circ33.pdf) but I will kindly ask the reader to suspend disbelief.
 
@@ -98,7 +98,7 @@ To understand the basics of how a permissive FOSS license works, imagine a dedic
 ![Chocolate Chip Cookies](/assets/img/gianna-ciaramello-461814-unsplash.jpg)
 
 {:.image-caption}
-*Photo by [Gianna Ciaramello](https://unsplash.com/photos/Bh-soXo84Gg)*
+*Photo by [Gianna Ciaramello](https://www.giannaciaramello.com)*
 
 Consider what would occur if the recipe were shared with a permissive license. The main requirement of a permissive license is that future users of the recipe must give credit to the recipe’s creator. Anyone who manages to get a copy of the recipe is otherwise free to do with it as they wish; they could make as many batches of the cookies a they like, and they could even change the recipe or package and sell the cookies in stores.
 
