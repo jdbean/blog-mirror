@@ -881,6 +881,11 @@ table tfoot td {
   font-size: 14px;
 }
 
+.pagination-container {
+  width: 100%;
+  text-align: center;
+}
+
 .wrapper {
   position: relative;
 }
