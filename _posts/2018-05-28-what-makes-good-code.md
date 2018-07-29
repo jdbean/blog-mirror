@@ -85,4 +85,4 @@ not only about what works for us in the moment but that we invest in the softer
 elements of our code to ensure that it will be usable by ourselves and others
 in the future. After a good deal of thinking on this subject, the maxim "make it work, make it right, make it fast" is finally starting to sink in.
 
-As I continue to develop as a programmer I'm going to get focus on getting better at seeing where I can create the most impact with the least effort in my code. The goal is that eventually writing "good" code will be more automatic than intentional.
+As I continue to develop as a programmer I'm going to focus on getting better at seeing where I can create the most impact with the least effort in my code. The goal is that eventually writing "good" code will be more automatic than deliberate.
