@@ -7,6 +7,7 @@ description: My very first post on my brand new blog!
 tags1: ["Ruby", "Gem", "Jekyll", "Sinatra", "JavaScript", "React", "Redux", "Thunk", "Fetch", "WebSockets", "API", HTML, "SCSS", "Semantic UI", Self-hosted ]
 tags2: ["Ruby", "Rails", "Bootstrap", "Analytics", "CRUD", "Authentication", "Authorization", "PostgreSQL", CSS, HTML, "Responsive Design",  "Heroku"]
 tags3: ["JavaScript", "Ruby", "Rails", "PostgreSQL", "WebSockets", "Action Cable", "Fetch", "Google Translate API", "Authentication", "Authorization", "bcrypt", "HTML", "CSS"]
+tags4: ["HTML", "SCSS", "Gulp", "Ruby", "Liquid", "Jekyll", "Ex-Static", "Docker", " Git", "GitLab", "Flexible-Jekyll", "Testing", "Continuous Integration", "Responsive Design"]
 # permalink: projects.md
 ---
 
@@ -73,6 +74,27 @@ Protocol is a real-time multi-party messaging application that automatically tra
   <div class="project-tag">
     <div class="tags">
       {% for tag in page.tags3 %}
+        <li class="tag">
+            {{ tag }}
+        </li>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+## JDBean.net
+
+![JDBean.net](/assets/img/jdbean-net.png)
+
+JDBean.net is a technical blog and portfolio site created using the Jekyll static site builder. It is built, tested, and deployed using a custom built self-hosted GitLab CI system and is edited using Ex-Static.
+
+<div class="project-footer">
+  <div class="project-share">
+    <a href="/blogging-workflow/" title="Spotlight"  target="_blank"><i class="fa fa-search" aria-hidden="true"> Spotlight </i></a>
+  </div>
+  <div class="project-tag">
+    <div class="tags">
+      {% for tag in page.tags4 %}
         <li class="tag">
             {{ tag }}
         </li>
