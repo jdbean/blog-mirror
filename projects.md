@@ -4,9 +4,9 @@ title: "Project Portfolio"
 # date:  2018-03-19
 description: My very first post on my brand new blog!
 # img: pen_and_paper.jpg
-tags1: ["Ruby", "Gem", "Jekyll", "Sinatra", "JavaScript", "React", "Redux", "Thunk", "Fetch", "WebSockets", "API", "SCSS", "Semantic UI", Self-hosted ]
-tags2: ["Ruby", "Rails", "Bootstrap", "Analytics", "CRUD", "Authentication", "PostgreSQL", "Authorization", "Responsive Design",  "Heroku"]
-tags3: ["JavaScript", "Ruby", "Rails", "PostgreSQL", "WebSockets", "Action Cable", "Google Translate API", "bcrypt", "CSS"]
+tags1: ["Ruby", "Gem", "Jekyll", "Sinatra", "JavaScript", "React", "Redux", "Thunk", "Fetch", "WebSockets", "API", HTML, "SCSS", "Semantic UI", Self-hosted ]
+tags2: ["Ruby", "Rails", "Bootstrap", "Analytics", "CRUD", "Authentication", "Authorization", "PostgreSQL", CSS, HTML, "Responsive Design",  "Heroku"]
+tags3: ["JavaScript", "Ruby", "Rails", "PostgreSQL", "WebSockets", "Action Cable", "Fetch", "Google Translate API", "Authentication", "Authorization", "bcrypt", "HTML", "CSS"]
 # permalink: projects.md
 ---
 
