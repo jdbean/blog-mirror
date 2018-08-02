@@ -15,6 +15,7 @@ social-twitter: bean_jd
 social-github: jdbean # add your Github handle
 social-linkedin: bean-jonathan
 social-email: jonathandbean@gmail.com
+portfolio-page: "/projects"
 
 # Disqus
 # discus-identifier: mr-brown # add your discus identifier
@@ -44,3 +45,4 @@ exclude:
   - "README.md"
   - "LICENSE"
   - "package-lock.json"
+  - "config.ru"
