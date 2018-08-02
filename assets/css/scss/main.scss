@@ -18,7 +18,7 @@ body {
   font-size: 120%;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing:  grayscale;
 }
 
 h1 {
@@ -157,8 +157,14 @@ table tfoot td {
 /* - - - - - - - - - - Home Page Styles - - - - - - - - - - */
 @import 'parts/home-page';
 
+/* - - - - - - - - - - Embedded Video Styles - - - - - - - - - - */
+@import 'parts/_video';
+
 /* - - - - - - - - - - Post Page Styles - - - - - - - - - - */
 @import 'parts/post-page';
+
+/* - - - - - - - - - - Project Page Styles - - - - - - - - - - */
+@import 'parts/projects-page.scss';
 
 /* - - - - - - - - - - Tag Styles - - - - - - - - - - */
 @import 'parts/tag';
