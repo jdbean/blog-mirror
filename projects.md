@@ -18,10 +18,16 @@ tags4: ["HTML", "SCSS", "Gulp", "Ruby", "Liquid", "Jekyll", "Ex-Static", "Docker
 
 Ex-Static instantly turns any Jekyll blog into a Content Management System with a user-friendly interface for authors and editors.
 
+
+
 <div class="project-footer">
   <div class="project-share">
-    <a href="https://github.com/jdbean/Ex-Static" title="Source Code"  target="_blank"><i class="fa fa-github" aria-hidden="true"> Source Code</i></a>
-    <a href="https://office.johannabearman.duckdns.org" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"> Live Demo</i></a>
+    <a href="https://github.com/jdbean/Ex-Static" title="Source Code"  target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Source Code</a>
+    <a href="https://office.johannabearman.duckdns.org" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
+    <div class="credentials">
+      <li>Demo Username: <em>demo</em></li>
+      <li>Demo Password: <em>exstatic password</em></li>
+    </div>
   </div>
   <div class="project-tag">
     <div class="tags">
@@ -39,13 +45,17 @@ Ex-Static instantly turns any Jekyll blog into a Content Management System with 
 ![Lend-to-Friend](/assets/img/Lend-to-Friend.png)
 
 
-Lend-to-Friend provides a platform for peer-to-peer lending of items where users can post books, movies, music, clothing, or household items available for loan other users and browse for items to borrow themselves.
+Lend-to-Friend provides a platform for peer-to-peer lending of items where users can post books, movies, music, clothing, or household items available for loan other users and browse for items to borrow themselves. *Live demo may take a few moments to wake up on first load.*
 
 
 <div class="project-footer">
   <div class="project-share">
-    <a href="https://github.com/jdbean/lend-to-friend" title="Source Code"  target="_blank"><i class="fa fa-github" aria-hidden="true"> Source Code</i></a>
-    <a href="https://pacific-earth-11787.herokuapp.com" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"> Live Demo</i></a>
+    <a href="https://github.com/jdbean/lend-to-friend" title="Source Code"  target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Source Code</a>
+    <a href="https://pacific-earth-11787.herokuapp.com" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
+    <div class="credentials">
+      <li>Demo Username: <em>lf@lf.com</em></li>
+      <li>Demo Password: <em>password</em></li>
+    </div>
   </div>
   <div class="project-tag">
     <div class="tags">
@@ -68,8 +78,8 @@ Protocol is a real-time multi-party messaging application that automatically tra
 
 <div class="project-footer">
   <div class="project-share">
-    <a href="https://github.com/jdbean/protocol-frontend" title="Front-End Source Code"  target="_blank"><i class="fa fa-github" aria-hidden="true"> Source Code (Front-End) </i></a>
-    <a href="https://github.com/jdbean/protocol-backend" title="Back-End Source Code"  target="_blank"><i class="fa fa-github" aria-hidden="true"> Source Code (Back-End)</i></a>
+    <a href="https://github.com/jdbean/protocol-frontend" title="Front-End Source Code"  target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Source Code (Front-End)</a>
+    <a href="https://github.com/jdbean/protocol-backend" title="Back-End Source Code"  target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Source Code (Back-End)</a>
   </div>
   <div class="project-tag">
     <div class="tags">
@@ -90,7 +100,7 @@ JDBean.net is a technical blog and portfolio site created using the Jekyll stati
 
 <div class="project-footer">
   <div class="project-share">
-    <a href="/blogging-workflow/" title="Spotlight"  target="_blank"><i class="fa fa-search" aria-hidden="true"> Spotlight </i></a>
+    <a href="/blogging-workflow/" title="Spotlight"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
   </div>
   <div class="project-tag">
     <div class="tags">
