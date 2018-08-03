@@ -1364,9 +1364,22 @@ a.newer-posts:hover {
 }
 
 .project-footer .project-share {
-  text-align: left;
+  text-align: center;
   vertical-align: center;
   margin: 0px auto 20px auto;
+}
+
+.project-footer .project-share .credentials li {
+  font-size: 10px;
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+  margin-top: 5px;
+  list-style: none;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #ecf0f1;
 }
 
 .project-footer .project-share a {
@@ -1379,7 +1392,7 @@ a.newer-posts:hover {
   margin-right: 3px;
   margin-top: 5px;
   color: #263959;
-  font-size: 12px;
+  font-size: 13px;
   -webkit-transition: background-color .3s;
   -o-transition: background-color .3s;
   transition: background-color .3s;
@@ -1389,13 +1402,17 @@ a.newer-posts:hover {
   background-color: #ecf0f1;
 }
 
+.project-footer .project-share a i {
+  margin-right: 2px;
+}
+
 .project-footer .project-tag .tags {
   padding: 5px;
 }
 
 .project-footer .project-tag .tag {
   text-decoration: none;
-  font-size: 10px;
+  font-size: 11px;
   padding: 5px 5px;
   margin-left: 5px;
   color: #263959;
