@@ -24,11 +24,7 @@ Ex-Static instantly turns any Jekyll blog into a Content Management System with 
 
 <div class="project-footer">
   <div class="project-share">
-<<<<<<< HEAD
-    <a href="https://github.com/jdbean/Ex-Static" title="Source Code"  target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Source Code</a>
-=======
     <a href="https://github.com/jdbean/Ex-Static" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
->>>>>>> develop
     <a href="https://office.johannabearman.duckdns.org" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
     <div class="credentials">
       <li>Demo Username: <em>demo</em></li>
@@ -56,11 +52,7 @@ Lend-to-Friend provides a platform for peer-to-peer lending of items where users
 
 <div class="project-footer">
   <div class="project-share">
-<<<<<<< HEAD
-    <a href="https://github.com/jdbean/lend-to-friend" title="Source Code"  target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Source Code</a>
-=======
     <a href="https://github.com/jdbean/lend-to-friend" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
->>>>>>> develop
     <a href="https://pacific-earth-11787.herokuapp.com" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
     <div class="credentials">
       <li>Demo Username: <em>lf@lf.com</em></li>
@@ -88,13 +80,8 @@ Protocol is a real-time multi-party messaging application that automatically tra
 
 <div class="project-footer">
   <div class="project-share">
-<<<<<<< HEAD
-    <a href="https://github.com/jdbean/protocol-frontend" title="Front-End Source Code"  target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Source Code (Front-End)</a>
-    <a href="https://github.com/jdbean/protocol-backend" title="Back-End Source Code"  target="_blank"><i class="fa fa-github" aria-hidden="true"></i> Source Code (Back-End)</a>
-=======
     <a href="https://github.com/jdbean/protocol-frontend" title="Front-End Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code (Front-End)</a>
     <a href="https://github.com/jdbean/protocol-backend" title="Back-End Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code (Back-End)</a>
->>>>>>> develop
   </div>
   <div class="project-tag">
     <div class="tags">
@@ -115,10 +102,7 @@ JDBean.net is a technical blog and portfolio site created using the Jekyll stati
 
 <div class="project-footer">
   <div class="project-share">
-<<<<<<< HEAD
-=======
     <a href="https://gitlab.com/jdbean/blog-mirror" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
->>>>>>> develop
     <a href="/blogging-workflow/" title="Spotlight"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
   </div>
   <div class="project-tag">
