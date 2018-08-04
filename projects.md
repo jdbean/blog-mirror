@@ -16,9 +16,7 @@ tags4: ["HTML", "SCSS", "Gulp", "Ruby", "Liquid", "Jekyll", "Ex-Static", "Docker
 
 ![Ex-Static](/assets/img/Ex-Static.png)
 
-Ex-Static instantly turns any Jekyll blog into a Content Management System with a user-friendly interface for authors and editors. *Live demo does not currently have WebSockets functionality enabled*
-
-
+Ex-Static instantly turns any Jekyll blog into a Content Management System with a user-friendly interface for authors and editors. *Live demo does not currently have WebSockets functionality enabled.8*
 
 
 
@@ -46,9 +44,7 @@ Ex-Static instantly turns any Jekyll blog into a Content Management System with 
 
 ![Lend-to-Friend](/assets/img/Lend-to-Friend.png)
 
-
-Lend-to-Friend provides a platform for peer-to-peer lending of items where users can post books, movies, music, clothing, or household items available for loan other users and browse for items to borrow themselves. *Live demo may take a few moments to wake up on first load.*
-
+Lend-to-Friend provides a platform for peer-to-peer lending of items where users can post books, movies, music, clothing, or household items available for loan to other users and browse for items to borrow themselves. *Live demo may take a few moments to wake up on first load.*
 
 <div class="project-footer">
   <div class="project-share">
@@ -98,7 +94,7 @@ Protocol is a real-time multi-party messaging application that automatically tra
 
 ![JDBean.net](/assets/img/jdbean-net.png)
 
-JDBean.net is a technical blog and portfolio site created using the Jekyll static site builder. It is built, tested, and deployed using a custom built self-hosted GitLab CI system and is edited using Ex-Static.
+JDBean.net is a technical blog and portfolio site created using the Jekyll static site builder. It is built, tested, and deployed using a custom implemented self-hosted GitLab CI system and is edited using Ex-Static.
 
 <div class="project-footer">
   <div class="project-share">
