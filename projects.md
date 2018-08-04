@@ -16,7 +16,7 @@ tags4: ["HTML", "SCSS", "Gulp", "Ruby", "Liquid", "Jekyll", "Ex-Static", "Docker
 
 ![Ex-Static](/assets/img/Ex-Static.png)
 
-Ex-Static instantly turns any Jekyll blog into a Content Management System with a user-friendly interface for authors and editors. *Live demo does not currently have WebSockets functionality enabled.8*
+Ex-Static instantly turns any Jekyll blog into a Content Management System with a user-friendly interface for authors and editors. *Live demo does not currently have WebSockets functionality enabled.*
 
 <div class="project-footer">
   <div class="project-share">
