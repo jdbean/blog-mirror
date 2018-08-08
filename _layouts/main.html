@@ -41,6 +41,9 @@ layout: default
         {% else %}
           <li class="email"><a href="mailto:example.david@blog.com"><i class="fa fa-envelope-o" title="Email" aria-hidden="true"></i></a></li>
         {% endif %}
+        {% if site.social-resume %}
+          <li class="resume"><a href="{{site.social-resume}}" target="_blank" title="Resume"><i class="fa fa-book"></i></a></li>
+        {% endif %}
         {% if site.portfolio-page %}
           <li class="portfolio"><a href="{{site.portfolio-page}}" title="Projects Portfolio"><i class="fa fa-eye"></i></a></li>
         {% endif %}
