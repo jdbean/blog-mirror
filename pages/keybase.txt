@@ -1,0 +1,76 @@
+---
+permalink: /.well-known/keybase.txt
+---
+==================================================================
+https://keybase.io/jdbean
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://jdbean.net
+  * I am jdbean (https://keybase.io/jdbean) on keybase.
+  * I have a public key with fingerprint 94A3 C69D FD2D 0FAE FF04  B9F5 50FB B5B2 3537 62FB
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "012097695fb622a290b068310ffe77cdfb56ecfba7ada091c619f7274d9f7c39aab40a",
+      "fingerprint": "94a3c69dfd2d0faeff04b9f550fbb5b2353762fb",
+      "host": "keybase.io",
+      "key_id": "50fbb5b2353762fb",
+      "kid": "01015bd047bf5de97ef36e5a4449eeda69ac4bdf35c5fa84057590d13c8564cc9ad90a",
+      "uid": "d0938ab4e5dee89b4616f55a601fd819",
+      "username": "jdbean"
+    },
+    "service": {
+      "hostname": "jdbean.net",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1533742674,
+  "expire_in": 157680000,
+  "prev": "71e249c26b4236c1cf06185021c45cb1f2dc296d76ce7a9e071a563921e800a4",
+  "seqno": 17,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+
+owJ4nG2SfVBUVRjGF1prFthg0BJBzK5ZmHyc+713GZjcWRQKZUALkZzt3HvPXW7g
+3W13QTcwZEAhMCZJpKGotEa+KmaIgoGoGUAhGraJrIAsnSRYYFJQqMBp7C4TfzTT
++eed857n+Z3nPXNe19+nCfDLqqge3+q9bvT7eobXZOc+qBRivE10Y8ZCLBetFpQn
+IqfLkiuLmBEDOAE4luFoiWcIAhIc4AFjIHEgSYhlBVHiaQYJEg9ZKELA4QKDcxJL
+sJSoFoHkIOQpALFoTJIVK3LYHbLiUrEcBUmB4URJJEQgQSRJgOI5iaaBxPM0T5A0
+yTKExKvGHJvT51DD8dCJYmWb2lM3ltV4/6Nfyw1wmhcBxfISLSKORRLJIBpSFMUh
+JEKGgwLFixJJC7QEDRSgWZoDIk4KBpqhBIGDIreaO38VJwKONKijIJWFDBxPMTij
+poUMwCXRgHM+oRM5FHgEqeoXRR5BBTsejam9AllAvmf1zfGf81gFuVSf3WFz2QRb
+ntrPcbnsTqPP53LbfcKjiLf8i7DwsiKqb6g6CpDDKdsUzIirSsEl+5g4TZIsRTAs
+FY2hY3bZgSyyT0GzjAGoy3cPKlCRLI4IihMIhqeeJUhGwAUJMLiBBgQuULTA4xIh
+CgTHiCwjIBZyCLA4pBmSI3CkkiCF+aZ6SbGpcFYNCq0q1ClbFejKdyDseMCr/qRW
+4xegiXz4Ue3nX6ZVb2iqbww8H5W+9vHW+ft+nSZAF7LWOXc5+N7BjgNvDIeP58V0
+vZURpTEv7P3B2pMaRDo3nqhJbQqJdLhnCzfv+yJd7v0Juud+WW/0RAyPHZ08WPZI
+Vf8dZeDG4PJAbsSbcntlQXxRe3N/xv7g6cd2Vex790y4NWpzzsjHOal9iVLvaNWG
+tE++O9axw23b7R9m2RS6t6T6oxbvpmtS27bk99+7Pf9NhiW9MauhKCVxx2DPWLcO
+ePY8/5Cucntp+UQ6tWe34wIb84G1DpiGHC/PL3RpVrb8fXinV2PW5hhnwVPerl3+
+U85a8cRz3oagq25za2ly1adbw7LjPjsZr+sLH7/sCfw+ODAf9s/cCFmeWvEH2srJ
+xQY4tL00seWFkQeSZuHbMxUXTLcuObVpI56YTFPZXP3pD2MQmO+7dMWOX7zbuWVn
+R0pc0MBfxuabsVWvFfUUlCbxpnNP13giySunwoz63tHEdQk3Tbyxdf/VooT69kPm
+kjbCFpywMXvJ79YK3RV05PCv+sFvu63ax88PBYQXdx9quT/HFhqpgPK2H8umlc6G
+/LOn/sz0EmU6S9CdxbonT11MGjNHvdP1R11oo1nUzLwSs76GDZuu1T8zF16bezal
+/7epkuSstieW9cVM2t3rt5vOeEy96ORQZpync/H36KHxXv3CyIHG6IWI8olt8crp
+e80/ty5NVs8M12jHJpb9l4quVSfqvmKV4tF/AEMexr4=
+=8VbN
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/jdbean
+
+==================================================================
