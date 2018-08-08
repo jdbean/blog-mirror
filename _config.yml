@@ -22,7 +22,7 @@ portfolio-page: "/projects"
 # discus-identifier: mr-brown # add your discus identifier
 
 # Tracker
-analytics: # Google Analytics
+analytics: UA-123652140-1
 
 # Build Settings
 markdown: kramdown
