@@ -15,6 +15,7 @@ social-twitter: bean_jd
 social-github: jdbean # add your Github handle
 social-linkedin: bean-jonathan
 social-email: jdbean@jdbean.net
+social-resume: "/resume.pdf"
 portfolio-page: "/projects"
 
 # Disqus
