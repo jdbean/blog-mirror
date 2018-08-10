@@ -937,7 +937,7 @@ table tfoot td {
   top: 0;
   left: 0;
   bottom: 0;
-  width: 260px;
+  width: 240px;
   height: 100%;
   padding: 20px 10px;
   background-color: #ffffff;
@@ -1026,6 +1026,10 @@ table tfoot td {
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
+}
+
+.contact {
+  margin: inherit;
 }
 
 .contact .contact-title {
@@ -1592,5 +1596,12 @@ a.newer-posts:hover {
   }
   .post .post-content .post-title a {
     font-size: 21px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 345px) {
+  .contact {
+    margin: 0 55px;
   }
 }

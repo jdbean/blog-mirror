@@ -12,7 +12,8 @@ author-img: avatar.jpg # add your photo
 about-author: Lawyer turned full-stack developer. Passionate about free and open source software, privacy, and security. Always hungry to keep learning. # add description
 social-twitter: bean_jd
 # social-facebook: # add your Facebook handle
-social-github: jdbean # add your Github handle
+social-github: jdbean # add your GitHub handle
+social-gitlab: jdbean # add your GitLab handle
 social-linkedin: bean-jonathan
 social-email: jdbean@jdbean.net
 social-resume: "/resume.pdf"
