@@ -23,8 +23,8 @@ Ex-Static instantly turns any Jekyll blog into a Content Management System with 
     <a href="https://github.com/jdbean/Ex-Static" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
     <a href="https://office.johannabearman.duckdns.org" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
     <div class="credentials">
-      <li>Demo Username: <em>demo</em></li>
-      <li>Demo Password: <em>exstatic password</em></li>
+      <li>Demo Username: <em>user</em></li>
+      <li>Demo Password: <em>exstatic-password</em></li>
     </div>
   </div>
   <div class="project-tag">
