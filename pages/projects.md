@@ -5,7 +5,7 @@ title: "Project Portfolio"
 description: My very first post on my brand new blog!
 # img: pen_and_paper.jpg
 tags1: ["Ruby", "Gem", "Jekyll", "Sinatra", "JavaScript", "React", "Redux", "Thunk", "Fetch", "WebSockets", "API", HTML, "SCSS", "Semantic UI", Self-hosted ]
-tags2: ["Ruby", "Rails", "Bootstrap", "Analytics", "CRUD", "Authentication", "Authorization", "PostgreSQL", CSS, HTML, "Responsive Design",  "Heroku"]
+tags2: ["Ruby", "Rails", "Bootstrap", "Analytics", "CRUD", "Authentication", "Authorization", "PostgreSQL", CSS, HTML, "Responsive Design",  "Heroku", "Action Mailer", "Devise", "Letter Opener", "Mailgun"]
 tags3: ["JavaScript", "Ruby", "Rails", "PostgreSQL", "WebSockets", "Action Cable", "Fetch", "Google Translate API", "Authentication", "Authorization", "bcrypt", "HTML", "CSS"]
 tags4: ["HTML", "SCSS", "Gulp", "Ruby", "Liquid", "Jekyll", "Ex-Static", "Docker", " Git", "GitLab", "Flexible-Jekyll", "Testing", "Continuous Integration", "Responsive Design"]
 permalink: /projects/
@@ -25,8 +25,8 @@ Ex-Static instantly turns any Jekyll blog into a Content Management System with 
     <a href="https://github.com/jdbean/Ex-Static" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
     <a href="https://office.johannabearman.duckdns.org" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
     <div class="credentials">
-      <li>Demo Username: <em>demo</em></li>
-      <li>Demo Password: <em>exstatic password</em></li>
+      <li>Demo Username: <em>user</em></li>
+      <li>Demo Password: <em>exstatic-password</em></li>
     </div>
   </div>
   <div class="project-tag">
