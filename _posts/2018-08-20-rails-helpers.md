@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rails Helpers
-date: '2018-08-20 20:45:00'
+date: 2018-08-20
 description: Discovering Rails helpers.
 tags:
 - Programming
