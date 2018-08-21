@@ -1,8 +1,8 @@
 ---
 layout: post
 title: Rails Helpers
-date: '2018-05-28 16:19:46'
-description: What is a rails helper and how does it work?
+date: '2018-08-20 20:45:00'
+description: Discovering Rails helpers.
 tags:
 - Programming
 - Ruby
