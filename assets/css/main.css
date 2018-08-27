@@ -1237,13 +1237,14 @@ a.newer-posts:hover {
 
 .header-page .page-title {
   font-weight: 400;
-  margin: 0 0 5px;
+  margin: 0 0 10px;
   line-height: 1.3;
 }
 
 .header-page .page-subtitle {
-  font-weight: 400;
-  margin: 0 0 10px;
+  font-style: italic;
+  font-weight: 300;
+  margin: -15px 0 5px;
   line-height: 1.3;
 }
 
@@ -1294,6 +1295,19 @@ a.newer-posts:hover {
   font-weight: 300;
 }
 
+.footnotes {
+  font-size: 0.8em;
+  line-height: 1.2;
+}
+
+.footnotes ol {
+  padding-left: 2em;
+}
+
+.footnotes ol li {
+  color: #a0a0a0;
+}
+
 .page-footer {
   display: -webkit-box;
   display: -webkit-flex;
@@ -1312,7 +1326,6 @@ a.newer-posts:hover {
 }
 
 .page-footer .page-share {
-  margin-bottom: 10px;
   text-align: left;
 }
 
