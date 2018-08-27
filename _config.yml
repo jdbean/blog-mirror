@@ -26,6 +26,7 @@ analytics: UA-123652140-1
 
 # Build Settings
 markdown: kramdown
+excerpt_separator: "<!-- more -->"
 plugins:
   - jekyll-sitemap
   - jekyll-paginate
