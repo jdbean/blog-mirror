@@ -44,8 +44,6 @@ When I first started to dip my toe into the world of software development I beli
 ### Ease of Review
 
 ![Code Quality](/assets/img/code_quality_2_2x.png)
-
-{:.image-caption}
 *It seems that a lot of developers have the sneaking suspicion that this is how anyone who sees their code will react. Comic courtesy of [XKCD](https://xkcd.com/1695/)*
 
 Chances are that someone, at some point in the future, is going to need to review your code without the benefit of having you walk them through it step by step. Maybe that person is your boss or coworker, or maybe that person is your future self. Readablity of code is therefore critical. Readable code should be well commented and include descriptive naming of variables and functions. Readable code should also be well-organized and well-formatted. Although there is a degree of subjectivity in one's choice of style or convention, remaining consistent within one's code can be a major factor in ensuring that code is easy to read and to understand. This is where conforming to well-defined style guides and using common patterns/conventions can be incredibly valuable down the road.
@@ -76,8 +74,6 @@ Following these sorts of practices may not always feel convenient in the moment 
 ## Bringing it All Together
 
 ![Code Quality](/assets/img/good_code.png)
-
-{:.image-caption}
 *Do it right or do it fast?. Comic courtesy of [XKCD](https://xkcd.com/844/)*
 
 Writing great code isn't necessarily about writing complex code. It is often, more than anything, about cultivating good habits and ensuring that we think

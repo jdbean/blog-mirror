@@ -44,8 +44,6 @@ The top two lines had me stumped and unfortunately seemed to be the most likely 
 I had two theories on how to better understand the provinence and function of these two 'mystery' methods. One idea was that these method were features that came in through Rails like `form_for`, `form_with`, `form_tag`, and `link_to` which I had used extensively in the past. A quick search of the rails docs came up dry so I moved on to my second theory: The methods were some how being passed in to the views from the corresponding controller. I tracked down the controller and navigated up its inheritance chain all the way to to the main application controller but didn't find any trace of the methods called in the view file. Finally, I resorted to rule number one of Eric Raymond's [How To Ask Questions The Smart Way](http://catb.org/~esr/faqs/smart-questions.html#before): Try to find an answer by searching.
 
 ![Search First!](/assets/img/search_first.gif)
-
-{:.image-caption}
 *The first rule of online fora: Search before starting a new post.*
 
 ## Rails Helpers
