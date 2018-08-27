@@ -11,11 +11,11 @@ tags:
 img: help.jpg
 ---
 
-## Introduction
+This week I began work on my first substantial technical contribution to a Free and Open Source Software project.
+<!-- more -->
+It's been particularly meaningful for me to be able to apply my engineering expertise in an area that I've spent so much time working already. The experience really merits a post of its own so in this post I'm going to focus on one particular technical learning experience I had: Rails Helpers.
 
-This week I began work on my first substantial technical contribution to a Free and Open Source software project. It's been particularly meaningful for me to be able to apply my engineering expertise in an area that I've spent so much time working already. The experience really merits a post of its own so in this post I'm going to focus on one particular technical learning experience I had: Rails Helpers.
-
-## Navigating a New Codebase
+# Navigating a New Codebase
 
 I picked out what seemed like an approachable issue for the project, got my development environment up and running, and went off to hunt for the cause of the bug in question. I had poked at the code for this project in the past and have done a few projects using rails but I was nonetheless intially overwhelmed by the formidable size and scope of the code base I was working with. Thanks to a few deep breaths and a little determination, I found that I was able to start to get my bearings fairly quickly. After some sleuthing, I was faily confident that I had found the view file responsible for the bug I was hunting for and I was relieved to see that it was a marvelously brief Haml file:
 
@@ -44,11 +44,9 @@ The top two lines had me stumped and unfortunately seemed to be the most likely 
 I had two theories on how to better understand the provinence and function of these two 'mystery' methods. One idea was that these method were features that came in through Rails like `form_for`, `form_with`, `form_tag`, and `link_to` which I had used extensively in the past. A quick search of the rails docs came up dry so I moved on to my second theory: The methods were some how being passed in to the views from the corresponding controller. I tracked down the controller and navigated up its inheritance chain all the way to to the main application controller but didn't find any trace of the methods called in the view file. Finally, I resorted to rule number one of Eric Raymond's [How To Ask Questions The Smart Way](http://catb.org/~esr/faqs/smart-questions.html#before): Try to find an answer by searching.
 
 ![Search First!](/assets/img/search_first.gif)
-
-{:.image-caption}
 *The first rule of online fora: Search before starting a new post.*
 
-## Rails Helpers
+# Rails Helpers
 
 After searching through the repository for the names of the methods, I realized that the methods were defined in files under the `app/helpers` directory. After a bit of research on Rails helpers I learned that my first theory on the 'mystery' methods wasn't that far off afterall. Although the methods are not standard Rails methods they are acessible in the view file thanks to the same rails 'magic' as the `form_with` and `link_to` helper methods I was already familiar with. Rails helper methods are basically just auto-included modules.
 
@@ -70,6 +68,6 @@ One thing to keep in mind about helpers in Rails is that by default each helper 
 config.action_controller.include_all_helpers = false.
 ```
 
-## Conclusion
+# Conclusion
 
 This experience was really fantastic. Navigating a code base of this size and ferreting out some more advanced topics in Rails was exciting, challenging, empowering, and ultimately a really powerful vehicle for learning.

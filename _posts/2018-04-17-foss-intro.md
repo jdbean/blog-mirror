@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "FOSS Basics"
+subtitle: >
+  An Introduction to Free and Open Source Software
+  for New Developers.
 date:  2018-04-07
 description: > #(optional)
     An introduction to free and open source software
@@ -9,11 +12,8 @@ img: alvaro-serrano-133380-unsplash.jpg
 tags: [FOSS, "Free and Open Source Software", Copyright]  #(optional)
 ---
 
-# An Introduction To Free and Open Source for New Developers
-
-*DISCLAIMER: Nothing in this post should be construed as legal advice and it is not a substitute for the advice of a competent attorney. This post is intentionally written as introductory material intended for those wholly unfamiliar with concepts such as FOSS and software licensing. It is intentionally over-simplified.*
-
-Free and open source software ("FOSS") is hard to escape in the modern software development landscape. The majority of the tools I’m using to learn software development are FOSS: GNU/Linux, Atom, Ruby, PostgreSQL, SQLite, Git, Firefox, Bash and so forth and so on. Coming from my background working with FOSS developers I’m familiar with the minutiae of FOSS; for most starting out in software development however, FOSS is somewhat hazy concept that can be hard to distinguish from something like freeware. I thought I’d use this post to provide a brief introduction to the basics of FOSS for new developers.
+Free and open source software ("FOSS") is hard to escape in the modern software development landscape.<!-- more -->
+The majority of the tools I’m using to learn software development are FOSS: GNU/Linux, Atom, Ruby, PostgreSQL, SQLite, Git, Firefox, Bash and so forth and so on. Coming from my background working with FOSS developers I’m familiar with the minutiae of FOSS; for most starting out in software development however, FOSS is somewhat hazy concept that can be hard to distinguish from something like freeware. I thought I’d use this post to provide a brief introduction to the basics of FOSS for new developers.[^1]
 
 # "Free" and "Open Source"
 
@@ -96,8 +96,6 @@ Rather than speak about these types of licenses in any technical or legal detail
 To understand the basics of how a permissive FOSS license works, imagine a dedicated baker’s really exceptional chocolate chip cookie recipe. Unlike many home cooks who guard their secret recipes zealously, the creator of this cookie decides to share her recipe with others but isn’t sure what license to choose.
 
 ![Chocolate Chip Cookies](/assets/img/gianna-ciaramello-461814-unsplash.jpg)
-
-{:.image-caption}
 *Photo by [Gianna Ciaramello](https://www.giannaciaramello.com)*
 
 Consider what would occur if the recipe were shared with a permissive license. The main requirement of a permissive license is that future users of the recipe must give credit to the recipe’s creator. Anyone who manages to get a copy of the recipe is otherwise free to do with it as they wish; they could make as many batches of the cookies a they like, and they could even change the recipe or package and sell the cookies in stores.
@@ -106,8 +104,6 @@ Consider what would occur if the recipe were shared with a permissive license. T
 The cookie’s creator might not be happy with some of the outcomes from using a permissive license for her recipe. Under a permissive license someone could sell the cookies in their bakery but refuse to share the recipe with their customers. Perhaps someone might improve on the recipe by adding a hint of orange zest and it might bother the initial creator of the cookie to go to the store and buy a box of cookies based on her recipe but not be told what changes were made. In fact, the cookie’s original creator might even be prohibited from trying to figure out on her own what changes were made to improve upon her original recipe.
 
 ![Orange and Chocolate Chip Cookies](/assets/img/jade-wulfraat-96025-unsplash.jpg)
-
-{:.image-caption}
 *Photo by [Jade Wulfraat](https://unsplash.com/photos/Wo_JUaWp7Dg)*
 
 In this case, the cookie creator might opt to choose a weak copyleft license for her recipe instead. Under a weak copyleft license the scope of the permission granted is a little more complex than under a permissive license. Users of the recipe are permitted to make the cookies or modified versions of them freely but they must share the recipe under the same license terms with anyone that they give their cookies to. This reciprocal sharing requirement is the heart of what is known as copyleft.
@@ -125,8 +121,6 @@ Now that we’ve got a sense of the broad categories of FOSS licenses lets take 
 For the beginner developer, discovering how to add and use additional libraries in a program is a watershed moment that unlocks a world of potential. Sometimes the excitement of this moment can make it seem as if all of these tools are magical gifts bestowed by fairies or elves.
 
 ![Keebler Elves](/assets/img/keebler-logo.jpg)
-
-{:.image-caption}
 *This is not the dude to thank for that sweet web framework you just started using*
 
 In fact, libraries are created and shared by developers like anyone else under terms of their choosing which can have a real impact on the software we use them in. Let’s take the Ruby gem ecosystem as an example. Ruby gems can be installed from public Git repositories or gem servers in addition to the popular catalog on rubygems.org. Even on rubygems.org there is [no restriction on a gem’s choice of license terms or even a requirement to have a license in the first place](http://guides.rubygems.org/specification-reference/#license=).
@@ -145,3 +139,5 @@ As you can see, the license of colorize is "GPL-2.0", a strong copyleft license 
 While I could happily keep writing about this topic for days, I think this post gives a good taste of what FOSS is, the different types of FOSS, and some of the issues to look out for when using FOSS in a program.
 
 FOSS is an incredibly powerful resource for software developers and it is important to have a basic concept of what FOSS is all about and what using it requires of us in return.
+
+[^1]: **DISCLAIMER**: Nothing in this post should be construed as legal advice and it is not a substitute for the advice of a competent attorney. This post is intentionally written as introductory material intended for those wholly unfamiliar with concepts such as FOSS and software licensing. It is intentionally over-simplified. **TLDR**: This stuff is complicated. Talk to your lawyer.

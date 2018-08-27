@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "On Unintended Consequences"
+subtitle: The Choices We Make and the Trouble They Cause
 date:  2018-05-08
 description: > #(optional)
     Investigating the security and privacy implications of software engineering
@@ -8,9 +9,10 @@ description: > #(optional)
 img: daniel-mccullough-348489-unsplash.jpg
 tags: [Programming, Security, Privacy]  #(optional)
 ---
-## The Choices We Make And The Trouble They Cause
 
->A computer lets you make more mistakes faster than any invention in human history - with the possible exceptions of handguns and tequila.
+>A computer lets you make more mistakes faster than any invention in human history
+<!-- more -->
+>\- with the possible exceptions of handguns and tequila.
 >
 >-- Mitch Radcliffe
 
@@ -45,8 +47,6 @@ Admittedly there are some circumstances that I can imagine where this would a pe
 The popular location-based dating application Tinder publicly confronted this very issue in late 2013–2014. In order to conveniently facilitate romantic connections between singles, Tinder provided a potential match’s rough distance from the user. In the summer of 2013, [reports surfaced](https://qz.com/106731/tinder-exposed-users-locations/) that Tinder’s API had, for an unknown but relatively brief period, been disclosing highly sensitive date about potential matches including their most-recent location coordinates. Early the following year, security researches at IncludeSecurity [publicly disclosed](http://blog.includesecurity.com/2014/02/how-i-was-able-to-track-location-of-any.html) that although the Tinder API was no longer disclosing precise location coordinates for prospective matches, but that it was providing precise distance measurements. Combined with the basic high-school level trigonometry method of trilateration, this data could easily be used to determine the exact location of the individual (within about 100ft).
 
 ![Trilateration](/assets/img/trilateration.png)
-
-{:.image-caption}
 *An example of how trilateration might be used to determine a individual user's location*
 
 IncludeSecurity even created a proof of concept web-application that could return the location for any supplied Tinder user. Tinder has since fixed the issue but the breach of trust undoubtedly scared off some number of current or prospective Tinder users. Its important to note that Tinder got lucky in that it discovered what was going on from a well-intentioned security researcher that approached the company privately, alerted them to the vulnerability, and disclosed it to the public only after the issue had been mitigated. It doesn’t take too much imagination to see how much worse that story could have been for both Tinder and its Users.
@@ -63,7 +63,7 @@ One issue jumped out at me as particularly interesting because it seemed so stra
 
 > [a]void exposing numerical/sequential record IDs in URLs, form HTML source and APIs. Consider using slugs (A.K.A. friendly IDs, vanity URLs) to identify records instead of numerical IDs […].
 
-Lend-a-Friend assigns users an ID by incrementing a simple counter and user’s ID can be found in URLs and in HTML source. As a result, if my application were released into production it would leak information such as my total number of users and my application’s user growth rate to competitors. Perhaps exposing user number and growth-rate isn’t a problem that matters for my application, but if I’m hadn't been aware that I had a leak in the first place, I can’t make an informed decisions about whether or not it is worth it to me to fix.
+Lend-to-Friend assigns users an ID by incrementing a simple counter and user’s ID can be found in URLs and in HTML source. As a result, if my application were released into production it would leak information such as my total number of users and my application’s user growth rate to competitors. Perhaps exposing user number and growth-rate isn’t a problem that matters for my application, but if I’m hadn't been aware that I had a leak in the first place, I can’t make an informed decisions about whether or not it is worth it to me to fix.
 
 # Final Thoughts
 
