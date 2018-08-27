@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "On Unintended Consequences"
+subtitle: The Choices We Make and the Trouble They Cause
 date:  2018-05-08
 description: > #(optional)
     Investigating the security and privacy implications of software engineering
@@ -8,9 +9,10 @@ description: > #(optional)
 img: daniel-mccullough-348489-unsplash.jpg
 tags: [Programming, Security, Privacy]  #(optional)
 ---
-## The Choices We Make And The Trouble They Cause
 
->A computer lets you make more mistakes faster than any invention in human history - with the possible exceptions of handguns and tequila.
+>A computer lets you make more mistakes faster than any invention in human history
+<!-- more -->
+>\- with the possible exceptions of handguns and tequila.
 >
 >-- Mitch Radcliffe
 
@@ -61,7 +63,7 @@ One issue jumped out at me as particularly interesting because it seemed so stra
 
 > [a]void exposing numerical/sequential record IDs in URLs, form HTML source and APIs. Consider using slugs (A.K.A. friendly IDs, vanity URLs) to identify records instead of numerical IDs […].
 
-Lend-a-Friend assigns users an ID by incrementing a simple counter and user’s ID can be found in URLs and in HTML source. As a result, if my application were released into production it would leak information such as my total number of users and my application’s user growth rate to competitors. Perhaps exposing user number and growth-rate isn’t a problem that matters for my application, but if I’m hadn't been aware that I had a leak in the first place, I can’t make an informed decisions about whether or not it is worth it to me to fix.
+Lend-to-Friend assigns users an ID by incrementing a simple counter and user’s ID can be found in URLs and in HTML source. As a result, if my application were released into production it would leak information such as my total number of users and my application’s user growth rate to competitors. Perhaps exposing user number and growth-rate isn’t a problem that matters for my application, but if I’m hadn't been aware that I had a leak in the first place, I can’t make an informed decisions about whether or not it is worth it to me to fix.
 
 # Final Thoughts
 

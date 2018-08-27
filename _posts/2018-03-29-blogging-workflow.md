@@ -10,6 +10,7 @@ tags: [Blogging, Workflow, GitLab, Jekyll, Docker, Rsync, SSH]  #(optional)
 ---
 
 When I decided to start blogging my first order of business was to select the tools or platform I wanted to use for my blog.
+
 After asking around and doing some research I found that some of the most popular hosted blogging options were WordPress, SquareSpace, Medium, GitHub Pages, and Ghost.
 While I'm sure any of these tools would have worked well I couldn't shake the urge to get my hands dirty setting up something of my own.
 I wanted to find a solution that was flexible, lightweight, and would give me the opportunity to do some deeper learning about software development, testing, and deployment.
@@ -26,7 +27,7 @@ I could write a post about each of these tools individually but I want to focus 
 [Rsync]: https://rsync.samba.org/
 [SSH]: https://www.openssh.com/
 
-## Jekyll
+# Jekyll
 
 The corner stone of my blog is Jekyll.
 Jekyll is probably the best known among the selection of static site generators that have become popular over the last decade or so.
@@ -62,7 +63,7 @@ This makes it easy to preview the rendered site while drafting new posts or maki
 To bootstrap my site, I selected one of the many beautiful open source Jekyll themes, made a few tweaks to the CSS and HTML to suit my preferences, and filled out some basic configuration in `_config.yml`.
 Along with a web server to upload the site to, I had a great blogging platform set up and ready to go in no time.
 
-## Git / GitLab
+# Git / GitLab
 
 Once I had the fundamentals of my site taken care of I started thinking about what I could do to make my blog and my blogging workflow as professional and flexible as possible.
 It was an obvious next step to manage my blogging workflow through a Git repository in order to gain the benefits afforded by a version control system (VCS).
@@ -76,7 +77,7 @@ Along with simply serving as an always-on host for my Git repository, GitLab has
 ![GitLab secret variables screen](/assets/img/gitlab-blog-repo.png)
 *The blog's repository on my GitLab server*
 
-## CI/CD
+# CI/CD
 
 One of my favorite features of GitLab is its continuous integration / continuous delivery tools.
 These tools allows me to easily integrate the process of building, testing, and deploying my blog with Git.
@@ -227,7 +228,7 @@ If at any point something should slip into production that does not belong there
 ![Blog GitLab CI Pipelines](/assets/img/gitlab-jobs.png)
 *GiLab CI/CD Pipeline Overview*
 
-## Final Thoughts
+# Final Thoughts
 
 I think it's fair to say that my setup may be a bit over-engineered for the task at hand but it was a really fun experience to set up and gave me an excuse to practice some important skills and to learn more about using a few tools that I expect will come in handy as I begin developing and deploying more complex applications of my own.
 

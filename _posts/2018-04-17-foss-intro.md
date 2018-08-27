@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "FOSS Basics"
+subtitle: >
+  An Introduction to Free and Open Source Software
+  for New Developers.
 date:  2018-04-07
 description: > #(optional)
     An introduction to free and open source software
@@ -9,11 +12,8 @@ img: alvaro-serrano-133380-unsplash.jpg
 tags: [FOSS, "Free and Open Source Software", Copyright]  #(optional)
 ---
 
-# An Introduction To Free and Open Source for New Developers
-
-*DISCLAIMER: Nothing in this post should be construed as legal advice and it is not a substitute for the advice of a competent attorney. This post is intentionally written as introductory material intended for those wholly unfamiliar with concepts such as FOSS and software licensing. It is intentionally over-simplified.*
-
-Free and open source software ("FOSS") is hard to escape in the modern software development landscape. The majority of the tools I’m using to learn software development are FOSS: GNU/Linux, Atom, Ruby, PostgreSQL, SQLite, Git, Firefox, Bash and so forth and so on. Coming from my background working with FOSS developers I’m familiar with the minutiae of FOSS; for most starting out in software development however, FOSS is somewhat hazy concept that can be hard to distinguish from something like freeware. I thought I’d use this post to provide a brief introduction to the basics of FOSS for new developers.
+Free and open source software ("FOSS") is hard to escape in the modern software development landscape.<!-- more -->
+The majority of the tools I’m using to learn software development are FOSS: GNU/Linux, Atom, Ruby, PostgreSQL, SQLite, Git, Firefox, Bash and so forth and so on. Coming from my background working with FOSS developers I’m familiar with the minutiae of FOSS; for most starting out in software development however, FOSS is somewhat hazy concept that can be hard to distinguish from something like freeware. I thought I’d use this post to provide a brief introduction to the basics of FOSS for new developers.[^1]
 
 # "Free" and "Open Source"
 
@@ -139,3 +139,5 @@ As you can see, the license of colorize is "GPL-2.0", a strong copyleft license 
 While I could happily keep writing about this topic for days, I think this post gives a good taste of what FOSS is, the different types of FOSS, and some of the issues to look out for when using FOSS in a program.
 
 FOSS is an incredibly powerful resource for software developers and it is important to have a basic concept of what FOSS is all about and what using it requires of us in return.
+
+[^1]: **DISCLAIMER**: Nothing in this post should be construed as legal advice and it is not a substitute for the advice of a competent attorney. This post is intentionally written as introductory material intended for those wholly unfamiliar with concepts such as FOSS and software licensing. It is intentionally over-simplified. **TLDR**: This stuff is complicated. Talk to your lawyer.
