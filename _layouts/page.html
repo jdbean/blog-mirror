@@ -19,7 +19,7 @@ layout: main
       <header class="header-page">
           <h1 class="page-title">{{page.title}}</h1>
           {% if page.img %}
-          <p class="page-subtitle">{{page.subtitle}}</h1>
+          <div class="page-subtitle"><span>{{page.subtitle}}<span></div>
           {% endif %}
       </header>
           {{content | markdownify}}
