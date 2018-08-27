@@ -2,7 +2,7 @@
 layout: post
 title: Serving Two Masters
 subtitle: Adding a User Tour to Ex-Static's React Front End
-date: '2018-08-19 20:00:00'
+date: '2018-08-27'
 description: Adding a user tour to my react application.
 tags:
 - Development
