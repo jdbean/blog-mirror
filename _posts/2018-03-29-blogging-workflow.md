@@ -21,11 +21,11 @@ I could write a post about each of these tools individually but I want to focus 
 
 [Jekyll]: https://jekyllrb.com
 [Git]: https://git-scm.com
-[GitLab]: https://about.gitlab.com/
+[GitLab]: https://about.gitlab.com
 [Docker]: https://docker.com
-[GitLab Runner]: https://docs.gitlab.com/runner/
-[Rsync]: https://rsync.samba.org/
-[SSH]: https://www.openssh.com/
+[GitLab Runner]: https://docs.gitlab.com/runner
+[Rsync]: https://rsync.samba.org
+[SSH]: https://www.openssh.com
 
 # Jekyll
 
