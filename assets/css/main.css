@@ -1283,7 +1283,8 @@ a.newer-posts:hover {
   text-align: center;
   font-size: .7rem;
   color: a0a0a0;
-  line-height: 0;
+  margin: 0;
+  line-height: 1.0;
   font-weight: 300;
 }
 
