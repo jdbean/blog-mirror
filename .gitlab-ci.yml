@@ -33,6 +33,7 @@ test:
   only:
   - master
   - develop
+  allow_failure: true
 
 deploy_staging:
   stage: deploy
