@@ -12,7 +12,9 @@ tags:
 img: presentation.jpg
 ---
 
-In a [recent blog post I wrote about my dive into Rails helpers](/rails-helpers) while working on some of my first code contributions to a substantial FOSS project. While working on a new issue this week I came upon a different but somewhat related concept: Rails presenters. Unlike Rails helpers, presenters seem to be more of an independent design pattern than a feature built in to the Rails framework. Before diving in much further it's probably worth noting that some of the issues I'm going to try to discuss here are fairly complex and many are certainly up for debate.
+While working on a new issue this week I came upon and interesting concept: Rails presenters.
+<!-- more -->
+In a [recent blog post](/rails-helpers) I wrote about my dive into Rails helpers while working on some of my first code contributions to a substantial FOSS project. Presenters are different from Rails helpers but appear somewhat similar at first glance. Unlike Rails helpers though, presenters seem to be more of an independent design pattern than a feature built in to the Rails framework. Before diving in much further it's probably worth noting that some of the issues I'm going to try to discuss here are fairly complex and many are certainly up for debate. In fact, it is entirely possible that I don't have the slightest idea what I'm talking about. So take that as you will.
 
 As a quick introduction for any readers who might be unfamiliar, the Rails framework subscribes to the model-view-controller (MVC) pattern of developing user interfaces. In the MVC paradigm, models are tasked with managing the data of an application's resources while views are responsible for presentation of the model to the user and the controller handles receiving user input and translating it into commands for the models. Some would argue that the kind of paradigm Rails encourages doesn't technically qualify as genuine OG MVC but I don't see the benefit of engaging with that debate for the purposes of this post.
 
