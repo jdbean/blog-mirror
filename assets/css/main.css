@@ -450,7 +450,7 @@ template {
   -webkit-border-radius: 3px;
           border-radius: 3px;
   padding: 0.0rem 0.1rem;
-  white-space: pre-wrap;
+  white-space: pre;
 }
 
 .highlight .hll {
