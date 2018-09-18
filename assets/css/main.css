@@ -450,7 +450,6 @@ template {
   -webkit-border-radius: 3px;
           border-radius: 3px;
   padding: 0.0rem 0.1rem;
-  white-space: pre;
 }
 
 .highlight .hll {
@@ -815,8 +814,10 @@ blockquote {
 }
 
 pre {
-  padding: 1rem 2rem;
+  padding: 1rem 1rem;
   overflow: auto;
+  line-height: normal;
+  font-size: .9em;
 }
 
 pre code {
