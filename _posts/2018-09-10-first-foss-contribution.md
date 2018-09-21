@@ -2,8 +2,8 @@
 layout: post
 title: First FOSS Contribution Pt. I
 subtitle:  #add subtitle (optional)
-date: '2018-09-03'
-description: My first taste of the Rails presenter pattern. #(optional)
+date: '2018-09-10'
+description: My first technical contribution to a major FOSS project. #(optional)
 tags:
 - FOSS
 - Open Source
