@@ -40,4 +40,6 @@ GitLab's contribution workflow emphasizes providing new tests for most merge req
 
 On last thing I needed before having my change merged was a changelog entry. Adding changelog entries in merge requests can be kind of a pain because it can often cause merge conflicts when multiple developers modify the same line in the changelog file. GitLab developed an elegant solution to this problem: Placing new entries in their own YAML file. I created a new changelog YAML file with my name, a description of my change, and the id of my Merge Request. When the request was merged my YAML file was used to automatically generate a new changelog entry.
 
-#
+# Merging
+
+Once my merge request was approved it was set to merge and about a day later, I logged in to GitLab.com to submit a new issue and I saw this:
