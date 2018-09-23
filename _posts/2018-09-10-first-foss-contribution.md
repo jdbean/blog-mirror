@@ -3,7 +3,7 @@ layout: post
 title: First FOSS Contribution Pt. I
 subtitle:  #add subtitle (optional)
 date: '2018-09-10'
-description: My first technical contribution to a major FOSS project. #(optional)
+description: My first technical contributions to a major FOSS project. #(optional)
 tags:
 - FOSS
 - Open Source
@@ -118,4 +118,4 @@ I felt good! *Really* good. Like, [Carleton-dance](https://www.youtube.com/watch
 
 Then I remembered that there was plenty more for me to do before having successful merge request ready. I needed to run the test suite to make sure that I hadn't broken anything in the process of implementing my fix and I needed to add a changelog entry. Critically I needed to implement some tests to make sure that the issue stayed fixed.
 
-I'll cover all of that and more in Part II.
+I'll cover all of that and more in [Part II](/first-foss-contribution-ptii).
