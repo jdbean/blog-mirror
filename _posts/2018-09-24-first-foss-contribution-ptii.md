@@ -12,7 +12,7 @@ tags:
 - GitLab
 - Development
 - Programming
-img: rawpixel-678089-unsplash.jpg
+img: rawpixel-653764-unsplash.jpg
 fig-caption: # Add figcaption for img (optional)
 ---
 
@@ -40,6 +40,20 @@ GitLab's contribution workflow emphasizes providing new tests for most merge req
 
 On last thing I needed before having my change merged was a changelog entry. Adding changelog entries in merge requests can be kind of a pain because it can often cause merge conflicts when multiple developers modify the same line in the changelog file. GitLab developed an elegant solution to this problem: Placing new entries in their own YAML file. I created a new changelog YAML file with my name, a description of my change, and the id of my Merge Request. When the request was merged my YAML file was used to automatically generate a new changelog entry.
 
-# Merging
+# Merging/Deployment
+
+When I began working on this issue the `New Issue` page looked like this:
+
+![New Issues Breadcrumb Issue](/assets/img/gitlab-new-issues-issue.png)
+*The GitLab "New Issue" page before my contribution*
 
 Once my merge request was approved it was set to merge and about a day later, I logged in to GitLab.com to submit a new issue and I saw this:
+
+![New Issues Breadcrumb Issue Resolution](/assets/img/gitlab-new-issues-fixed.png)
+*The GitLab "New Issue" page after my contribution*
+
+Admittedly, in the grand scheme of things the change is pretty small but it felt awfully good to see my change in production to rapidly. When the GitLab's monthly release for its self-hosted edition rolle around on September 22nd, I updated my own installation of the software and had my fix running live on my own production system.
+
+# Conclusion
+
+Seeing my change up live on heavily trafficked site so quickly was incredibly gratifying and the whole process of making this contriution was an excellent learning experience for me. I've since gone on to report and [fix simlar issues](https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21502) [on other pages](https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21661) and also moved on to work with some more substantial issues such as a [bug in GitLab's automated project license recognition code](https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21508) and [adding project license data to the GitLab API](https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21606).
