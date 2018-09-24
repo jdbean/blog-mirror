@@ -34,11 +34,45 @@ Once I was confident that I had a fix in place that was consistent with style gu
 
 GitLab's contribution workflow emphasizes providing new tests for most merge requests. In order to have my fix submitted, therefore, I needed to write new tests to make sure that developers don't accidentially break my changes in the future. In many ways, this was the most overwhelming part of my contribution. Prior to beginning work on GitLab I didn't have a lot of experience with such a thorough and wide-ranging test suite. Although GitLab does offer pretty rigorous [documentation for testing](https://docs.gitlab.com/ce/development/testing_guide/index.html) it can be a little intense to digest right off the bat. Ultimately, I was successful in implementing tests for my merge request by working with Rémy Coutable at GitLab who provided me with some really helpful feedback.
 
- After combing through the test suite and looking for analagous tests I was able to put together some [proposed feature tests](After combing through the test suite and looking for analagous tests I was able to). Rémy gave me some great feedback on style and efficiency improvements for these tests and also suggested that I might want to move all of these tests into the view tests directory. After spending quite a while trying to figure out how to test the breadcrumbs section of the `New Issue` page I finally decided I needed to ask Rémy for more help. I let him know about the trouble I was running into and he decided that the feature tests may have been the right way to go after all. Once I had the proposed tests in place we were good to go.
+ After combing through the test suite and looking for analagous tests I was able to put together some [proposed feature tests](https://gitlab.com/gitlab-org/gitlab-ce/blob/f59e3438ef8faee5b03de221db78107ef6c06c67/spec/features/issues/user_sees_breadcrumb_links_spec.rb). Rémy gave me some great feedback on style and efficiency improvements for these tests and also suggested that I might want to move all of these tests into the view tests directory. After spending quite a while trying to figure out how to test the breadcrumbs section of the `New Issue` page I finally decided I needed to ask Rémy for more help. I let him know about the trouble I was running into and he decided that the feature tests may have been the right way to go after all. I ultimately ended up with some fairly simple tests that looked like this:
+
+ ```ruby
+ equire 'rails_helper'
+
+describe 'New issue breadcrumbs' do
+  let(:project) { create(:project) }
+  let(:user)    { project.creator }
+
+  before do
+    sign_in(user)
+    visit new_project_issue_path(project)
+  end
+
+  it 'display a link to project issues and new issue pages' do
+    page.within '.breadcrumbs' do
+      expect(find_link('Issues')[:href]).to end_with(project_issues_path(project))
+      expect(find_link('New')[:href]).to end_with(new_project_issue_path(project))
+    end
+  end
+end
+ ```
+
+Once I had the proposed tests in place we were good to go.
 
 # Changelog Entry
 
-On last thing I needed before having my change merged was a changelog entry. Adding changelog entries in merge requests can be kind of a pain because it can often cause merge conflicts when multiple developers modify the same line in the changelog file. GitLab developed an elegant solution to this problem: Placing new entries in their own YAML file. I created a new changelog YAML file with my name, a description of my change, and the id of my Merge Request. When the request was merged my YAML file was used to automatically generate a new changelog entry.
+On last thing I needed before having my change merged was a changelog entry. Adding changelog entries in merge requests can be kind of a pain because it can often cause merge conflicts when multiple developers modify the same line in the changelog file. GitLab developed an elegant solution to this problem: Placing new entries in their own YAML file. I created a new changelog YAML file with my name, a description of my change, and the id of my Merge Request like so:
+
+```yaml
+---
+title: "Fix breadcrumb link to issues on new issue page"
+merge_request: 21305
+author: J.D. Bean
+type: fixed
+
+```
+
+When the request was merged my YAML file was used to automatically generate a new changelog entry.
 
 # Merging/Deployment
 
