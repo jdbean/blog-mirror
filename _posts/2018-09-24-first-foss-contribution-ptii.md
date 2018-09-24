@@ -37,7 +37,7 @@ GitLab's contribution workflow emphasizes providing new tests for most merge req
  After combing through the test suite and looking for analagous tests I was able to put together some [proposed feature tests](https://gitlab.com/gitlab-org/gitlab-ce/blob/f59e3438ef8faee5b03de221db78107ef6c06c67/spec/features/issues/user_sees_breadcrumb_links_spec.rb). Rémy gave me some great feedback on style and efficiency improvements for these tests and also suggested that I might want to move all of these tests into the view tests directory. After spending quite a while trying to figure out how to test the breadcrumbs section of the `New Issue` page I finally decided I needed to ask Rémy for more help. I let him know about the trouble I was running into and he decided that the feature tests may have been the right way to go after all. I ultimately ended up with some fairly simple tests that looked like this:
 
  ```ruby
- equire 'rails_helper'
+require 'rails_helper'
 
 describe 'New issue breadcrumbs' do
   let(:project) { create(:project) }
