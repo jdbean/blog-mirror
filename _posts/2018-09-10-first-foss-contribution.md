@@ -93,16 +93,16 @@ I also found another instance of the same confusing pattern as the `Issues` reso
 The patch that ultimately resolved the issue looks like this:
 
 ```diff
-+- add_to_breadcrumbs "Issues", project_issues_path(@project)
--- breadcrumb_title "Issues"
-+- breadcrumb_title "New"
- - page_title "New Issue"
++ - add_to_breadcrumbs "Issues", project_issues_path(@project)
+- - breadcrumb_title "Issues"
++ - breadcrumb_title "New"
+  - page_title "New Issue"
 
- %h3.page-title
-   New Issue
- %hr
+  %h3.page-title
+    New Issue
+  %hr
 
- = render "form"
+  = render "form"
 ```
 I'd love to report that fixing this problem was as easy at it looks. Unfortunately, however, this seemingly minor change to a brief file represents hours of work.
 
