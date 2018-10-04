@@ -16,23 +16,25 @@ fig-caption: # Add figcaption for img (optional)
 
 Web scraping is the practice of parsing a site's HTML (or even DOM) and extracting meaningful data from it.
 <!-- more -->
-Scraping can be a bit tricky and it can be a divisive topic among developers. Scraping can be a really powerful tool for obtaining data that isn't available in a more convenient structured form such as a JSON API. However, scraping can also be really tricky to implement and prone to sudden failure when, for example, a website is updated without notice. This sometimes makes scraping applications feel like a bit like a cludge. After all, scraping is typically something one does when there is no better alternative. We usually think of Web pages as something that is built to be viewed and processed one at a time by human beings rather than being analyzed en-mass by a machine. Thus, building a web scraper usually means putting a web site to a task that is neither intended nor supported by it's maintainer.
+Scraping can be a bit tricky and it can be a divisive topic among developers. Scraping has the potential to be really powerful tool for obtaining data that isn't available in a more convenient structured form such as a JSON API. However, scraping can also be really tricky to implement and prone to sudden failure when, for example, a website is updated without notice. This sometimes makes scraping applications feel like a bit like a cludge. Typically, scraping is a last resort. We usually think of Web pages as something that are built to be viewed and processed one at a time by human beings rather than being analyzed en-mass by a machine. Thus, building a web scraper usually means putting a web site to a task that is neither intended nor supported by its maintainer.
 
 A lot of my early experience with programming concepts came from trying to implement rudimentary scraping tools to ease some pain points in my typical work flow. Lately, I've been working on refreshing myself on how to add scraping into my Ruby toolbox using the popular Nokogiri gem. In this post, I'll introduce what web scraping is and how to perform it using Ruby and Nokogiri.
 
 # What is Scraping and Why Use it?
 
-As I mentioned, scraping is a technique for isolating data out of a web page's HTML. Scraping can be difficult to accomplish––in order to get the data one wants, one needs to closely analyze the HTML and identify exactly which page elements contain the sought-after information. It requires a great deal of precision which is further exacerbated by the challenge of scraping multiple similar pages on a website which may contain unforeseen differences.
+As I mentioned, scraping is a technique for isolating data from a web page's HTML. Scraping can be difficult to accomplish––in order to get the data one wants, one needs to closely analyze the HTML and identify exactly which page elements contain the sought-after information. It requires a great deal of precision which is further exacerbated by the challenge of scraping multiple similar pages on a website which may contain unforeseen differences.
 
-Despite its challenges, scraping opens up a substantial world of potential data sources for developers to work with. For example, imagine one wanted some information on the grizzly deaths of some of your favorite characters in the expansive universe of Game of Thrones (not to be confused with A Song of Fire and Ice of course)? Assuming that nobody has put up a structured data source for this data, one might still be able to programmatically obtain that data by writing a scraper to extract that data from the pages of the [Game of Thrones Wikia](http://gameofthrones.wikia.com/wiki/Robb_Stark).
+Despite its challenges, scraping opens up a substantial world of potential data sources for developers to work with. For example, imagine one wanted some information on the grizzly deaths of some of your favorite characters in the expansive universe of Game of Thrones (not to be confused with A Song of Fire and Ice of course). Assuming that nobody has put up a structured data source for this information, one might still be able to programmatically obtain that data by writing a scraper to extract that data from the pages of the [Game of Thrones Wikia](http://gameofthrones.wikia.com/wiki/Robb_Stark).
 
 Now that we've established the *what* let's get into the *how* of web scraping.
 
 # Scraping HTML Using Nokogiri and Open-URI
 
+Ruby has some powerful tools that we'll want to make use when scraping.
+
 ## Open-URI
 
-Before we can begin the delicate work of parsing a web page, we need to obtain that web page. In Ruby, the Open-URI module is a great place to start. Open-URI, among many other features, provides the `open` method which takes a URL as an argument, and returns the HTML content at that URL.
+Before we can begin the delicate work of parsing a web page, we need to obtain that web page from the internet. In Ruby, the Open-URI module is a great place to start. Open-URI provides the `open` method which takes a URL as an argument, and returns the HTML content of that URL.
 
 For example, running
 
@@ -44,14 +46,13 @@ requests the GoT Wikia page for Robb Stark and makes it available through a vari
 
 ## Nokogiri
 
-Nokogiri is a popular Ruby gem for parsing HTML so that information can ultimately be extracted from it. Nokogiri empowers programmers to interact with an a huge string of HTML as structured hierarchy. Nokogiri's act of parsing HTML is similar to some of the functions of a web browser when rendering a web site. In addition to parsing the HTML, Nokogiri also provides a number of methods that are useful for locating and extract *just* the desired information from this parsed HTML.
-
+Nokogiri is a popular Ruby gem for parsing HTML so that information can ultimately be extracted from it. Nokogiri empowers programmers to interact with an a huge string of HTML as a structured hierarchy. Nokogiri's function of parsing HTML is similar to some of the functions of a web browser when rendering a web site. In addition to parsing HTML for us, Nokogiri also provides a number of methods that are useful for locating and extracting *just* the desired information from this parsed HTML.
 
 ## Installing Nokogiri
 
-While Open-URI is built in to Ruby, Nokogiri needs to be installed separately. Typically all this installation will require is executing `gem install nokogiri`. If you run into any issues with this, check out the the [*Nokogiri Installation Guide*](http://www.nokogiri.org/tutorials/installing_nokogiri.html).
+While Open-URI is built in to Ruby, Nokogiri needs to be installed separately. Typically all this installation will require is executing `gem install nokogiri`. If you run into any issues with this, check out the [*Nokogiri Installation Guide*](http://www.nokogiri.org/tutorials/installing_nokogiri.html).
 
-## Opening a Web Page as HTML with Nokogiri and open-uri
+## Opening a Web Page as HTML with Nokogiri and Open-URI
 
 **Please note that the examples in this post are highly dependent upon the website they are scraping. In the future, if the website changes the examples in this post may no longer yield the results described.**
 
@@ -60,7 +61,6 @@ Let's say we have a file, `main.rb` which is responsible for running the scrapin
 ```ruby
 require 'nokogiri'
 require 'open-uri'
-
 ```
 
 We can use the following line to grab the HTML that makes up the Nokogiri Project's landing page at nokogiri.org:
@@ -69,11 +69,12 @@ We can use the following line to grab the HTML that makes up the Nokogiri Projec
 html = open("http://www.nokogiri.org/")
 ```
 
-Next, we'll use the `Nokogiri::HTML` method to take the string of HTML returned by open-uri's `open` method and convert it into what Nokogiri terms a "NodeSet" and store it as a variable named "page".
+Next, we'll use the `Nokogiri::HTML` method to take the string of HTML returned by Open-URI's `open` method and convert it into what Nokogiri terms a "NodeSet" and store it as a variable named "page".
 
 ```ruby
 page = Nokogiri::HTML(html)
 ```
+
 So what does this look like? The output of `puts page` is something like this:
 
 ```html
@@ -100,19 +101,19 @@ So what does this look like? The output of `puts page` is something like this:
   <body>
   /* And so forth and so on */
 ```
-The truncated text is a parsed representation of the HTML that makes up the Nokogiri website's landing page. If you don't believe me, visit [Nokogiri Project landing page](http://nokogiri.org/) and use your browser's developer tools to inspect the page.
+The truncated text above is a parsed representation of the HTML that makes up the Nokogiri website's landing page. If you don't believe me, visit [Nokogiri Project landing page](http://nokogiri.org/) and use your browser's developer tools to inspect the page.
 
 You should see something like this:
 
-![](/assets/img/nokogiri-inspector.png)
+![nokogiri.org in web inspector](/assets/img/nokogiri-inspector.png)
 
-This element inspector view displays the browser's own representation of the page's HTML to us! In fact, the HTML it is showing us is *exactly the same* as the HTML `put` out to our terminal by `main.rb` with the help of Nokogiri and open-uri.
+This element inspector view displays the browser's own representation of the page's HTML to us! In fact, the HTML it is showing us is *exactly the same* as the HTML `put` out to our terminal by `main.rb` with the help of Nokogiri and Open-URI.
 
-This is good, but Nokogiri can do a lot more to make working with this page easier.! This NodeSet's nested structure allows it to be worked with using many of the same techniques that one might use to work with a nested object in Ruby such as iterators and `[]` notation.
+This is good, but Nokogiri can do a lot more to make working with this page easier! This NodeSet's nested structure allows it to be worked with using many of the same techniques that one might use to work with a nested object in Ruby such as iterators and `[]` notation.
 
 ## Using CSS Selectors to Get Data
 
-Nokogiri allows you to use CSS selectors in order to retrieve specific pieces of information out of an HTML document.
+Nokogiri allows you to use CSS selectors in order to retrieve specific pieces of information from an HTML document.
 
 ### What is a CSS Selector
 
@@ -126,15 +127,15 @@ Consider the following code:
 </div>
 ```
 
-The id and class attributes of the HTML elements are examples of useful CSS selectors. One might 'select' or refer to the div element with the selector: `#the-div`. The `#` in this case indicates that it is referring to an id attribute. All together `#the-div` is a selector for HTML elements with an id attribute of "the-div". Similarly, the paragraph element might be selected using the selector `.my-paragraph`. The `.` in this selector to denotes that the selected elements should have a class attribute equal to "my-paragraph".
+The "id" and "class" attributes of the HTML elements are examples of useful CSS selectors. One might 'select' or refer to the "div" element with the selector: `#the-div`. The `#` in this case indicates that it is referring to an id attribute. All together `#the-div` is a selector for HTML elements with an id attribute of "the-div". Similarly, the paragraph element might be selected using the selector `.my-paragraph`. The `.` in this selector to denotes that the selected elements should have a class attribute equal to "my-paragraph".
 
 ### Nokogiri's `.css` Method
 
-Nokogiri's `css` method can be called on the `page` variable that is assigned to the NodeSet that Nokogiri provided. The Nokogiri `css` method takes in an argument of a CSS selector and returns the selected element(s).
+Nokogiri's `css` method can be called on the `page` variable that is assigned to the NodeSet that Nokogiri provides. The Nokogiri `css` method takes in an argument of a CSS selector and returns the selected element(s).
 
 ### Choosing a CSS Selector
 
-So let's imagine that one the Nokogiri site one wants to extract the statement in the right hand corner that reads "Powered by [Octopress](http://octopress.org/). Theme is [Oscailte](http://github.com/coogie/oscailte)." How would one do that? A good place to start would be examining that area of the page in a browser inspector and seeing what CSS selectors might be available. This sentence is all in a single element with a class of "pull-right". While using Nokogiri's `css` method with a selector argument of `.pull-right` would return the desired element it would also return a good deal of the top navigation bar which shares the "pull-right" class. This semantically makes sense because both elements are, indeed, have css styling which pulls them to the right of the page. In order to obtain only the site engine/theme statement from the bottom right a more specific selector is needed. Re-running the command with an argument that limits the selector only to span elements (`span.pull-right`) should return only the desired portion of the page
+So let's imagine that one the Nokogiri site one wants to extract the statement in the right hand corner that reads "Powered by [Octopress](http://octopress.org/). Theme is [Oscailte](http://github.com/coogie/oscailte)." How would one do that? A good place to start would be examining that area of the page in a browser inspector and seeing what CSS selectors might be available. This sentence is all in a single element with a class of "pull-right". Not so fast! While using Nokogiri's `css` method with a selector argument of `.pull-right` would return the desired element it would also return a good deal of the top navigation bar which is also of the "pull-right" class. This semantically makes sense because both elements have css styling that, indeed, pulls them to the right of the page. In order to obtain only the site engine/theme statement from the bottom right of the page, a more specific selector is needed. Re-running the command with an argument that limits the selector only to span elements (`span.pull-right`) should return only the desired portion of the page.
 
 ### Calling the `.css` method
 
@@ -147,7 +148,6 @@ require 'open-uri'
 html = open('http://www.nokogiri.org')
 
 page = Nokogiri::HTML(html)
-
 ```
 
 The next step is to call the `css` method on `page` with the CSS selector from above by adding:
@@ -183,7 +183,7 @@ eng_theme_el.text
 Running `puts` on the result of that method call should display:
 
 ```
-  Powered by Octopress. Theme is Oscailte.
+Powered by Octopress. Theme is Oscailte.
 ```
 
 There it is!
@@ -234,7 +234,7 @@ The return type of this method will be `Nokogiri::XML::NodeSet` which acts a bit
 /* AND SO FORTH */
 ```
 
-While this can look a bit intimidating at first, one can start to pick out what's going. We've got a series of "li" `Nokogiri:XML:Element` objects each of which has an "a" element child with an "href" attribute and a child of type `Nokogiri:XML:Text`.
+While this can look a bit intimidating at first, if we look closely we can start to pick out what's going. We've got a series of "li" `Nokogiri:XML:Element` objects each of which has an "a" element child with an "href" attribute and a child of type `Nokogiri:XML:Text`.
 
 In HTML terms this corresponds nicely to the actual HTML which looks like this:
 
