@@ -8,13 +8,13 @@ tags:
   - Algorithms
   - Recursion
   - Programming
-img: rawpixel-584296-unsplash.jpg
+img: tine-ivanic-679622-unsplash.jpg
 fig-caption: # Add figcaption for img (optional)
 ---
 
 I find designing recursive alogrithms to be a real challenge.
 <!-- more -->
-If it wasn't absolutely clear from my last post on [recursion](/recursion), I think that it is a really tricky subject at this point. In preparation for my earlier post I put in a good chunk of time to trying to get myself comfortable with recursive concepts and most importantly firming up my grasp on what how the execution of recursive alogrithms operate. Recently, however, someone tossed me a bit of a curve ball that has me taking another dip into recursion. I was asked to design an alogrithm to solve a pretty simple problem: Take an input of a string representing a single word and return the reverse of that string. There was just one extra requirement, the algorithm had to be implemented recursively. No matter how hard I tried, I kept getting dragged back toward thinking iteratively.
+If it wasn't absolutely clear from my last post on [recursion](/recursion), I find thinking recursively to be a real challenge. In preparation for my earlier post I put in a good chunk of time to trying to get myself comfortable with recursive concepts and most importantly firming up my grasp on what how the execution of recursive alogrithms operate. Recently, however, someone tossed me a bit of a curve ball that has me taking another dip into recursion. I was asked to design an alogrithm to solve a pretty simple problem: Take an input of a string representing a single word and return the reverse of that string. There was just one extra requirement, the algorithm had to be implemented recursively. No matter how hard I tried, I kept getting dragged back toward thinking iteratively.
 
 While I feel pretty decently about my ability to work with recurive alogrithms that I encounter, I still get blocked when it comes to trying to *think* recursively. I get how recursion works. I know that I need a base case to reduce down toward. For some reason, however, I just couldn't seem to put it all together and come up with a recursive solution to the problem. Recursion, it seems, simply isn't yet a natural way for me to approach solving problems. In this post I'm going to return to the topic of recursion and spend a bit of time working through a recursive solution to this particular string reversal problem in order to get some more practice in with this challenging topic.
 
