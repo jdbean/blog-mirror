@@ -14,9 +14,9 @@ fig-caption: # Add figcaption for img (optional)
 
 I find designing recursive alogrithms to be a real challenge.
 <!-- more -->
-If it wasn't absolutely clear from my last post on [recursion](/recursion), I definitely struggle when it comes to thinking recursively. In preparation for my earlier post I put in a good chunk of time to trying to get myself comfortable with recursive concepts and most importantly firming up my grasp on what how the execution of recursive alogrithms operate. Writing that post was a great help and had me feeling much better about recursion. Recently, however, someone tossed me a bit of a curve ball that has me taking another dip into recursion. I was asked to design an alogrithm to solve a pretty simple problem: Take an input of a string representing a single word and return the reverse of that string. There was just one extra requirement, the algorithm had to be implemented recursively. No matter how hard I tried to think recursively, I kept finding myself dragged back toward my familiar habits of iteration.
+If it wasn't absolutely clear from my last post on [recursion](/recursion), I definitely struggle when it comes to thinking recursively. In preparation for my earlier post I put in a good chunk of time to trying to get myself comfortable with recursive concepts and most importantly firming up my grasp on how the execution of recursive alogrithms operates. Writing that post was a great help and had me feeling much better about recursion. Recently, however, someone tossed me a bit of a curve ball that has me taking another dip into recursion. I was asked to design an alogrithm to solve a pretty simple problem: Take an input of a string representing a single word and return the reverse of that string. There was just one extra requirement---the algorithm had to be implemented recursively. No matter how hard I tried to think recursively, I kept finding myself dragged back toward my familiar habit of iteration.
 
-While I feel pretty decently about my ability to work with recurive alogrithms that I encounter, I still get blocked when it comes to trying to think recursively when designing an alogrithm myself. I get how recursion works. I know that I need a base case to reduce down toward. For some reason, however, I seem struggle when it comes to putting it all together and creating a recursive solution to a problem. Recursion, it seems, simply isn't yet a natural way for me to approach solving problems. In this post I'm going to return to the topic of recursion and spend a bit of time working through a recursive solution to this particular string reversal problem in order to get some more practice with this challenging topic.
+While I feel pretty decently about my ability to work with recurive alogrithms that I encounter, I still get blocked when it comes to designing an original recursive alogrithm myself. I understand how recursion works. I know that I need a base case to reduce down toward. For some reason, however, I seem struggle when it comes to putting it all together and developing my own recursive solution to a problem. Recursion, it seems, simply isn't yet a natural way for me to approach problem solving. In this post I'm going to return to the topic of recursion and spend a bit of time working through a recursive solution to the particular string reversal problem that had me so stumped.
 
 To review, the problem is this: *Design a recursive algorithm that takes a string representing a single word and returns the string in reverse.*
 
@@ -30,7 +30,7 @@ function reverseStringRecursively(str) {
 }
 ```
 
-So, what am I trying to do with a base case of an empty string? How does one usefully reduce down toward an empty string? I think the best way to figure that out is to try to model out what I might do if I were asked to reverse a string myself by hand. If given a very long string to reverse I would probably construct a revsered string by successively removing the first charachter from the start of the intial string (crossing each charachter off) and prepending that charachter to the start of the reversed string. Once I had removed the last charachter from the initial string, I would stop. Iteratively speaking this would be equivalent to something like this:
+What am I trying to do with a base case of an empty string? How does one usefully reduce down toward an empty string in order to return a reversed string? I think the best way for me to figure that out is to try to model out what I might do if I were asked to reverse a string myself by hand. If given a very long string to reverse I would probably construct a revsered string by successively removing the first charachter from the start of the intial string (crossing each charachter off) and prepending that charachter to the start of the reversed string. Once I had removed the last charachter from the initial string, I would stop. Iteratively speaking this would be equivalent to something like this in code:
 
 ```javascript
 function reverseStringIteratively(str) {
@@ -57,7 +57,7 @@ function reverseStringRecursively(str) {
   }
 }
 ```
-Here, instead of storing the reversedString in a variable (`reversed` in my iterative solution), I employ recursion to apply the addition of each charachter all at once. If one uncomments the logging line and executes the function with an argument of "recursive", it should print the following output:
+Here, instead of storing the reversedString in a variable (`reversed` in my iterative solution), I employ recursion to apply the addition of each charachter all at once. If one uncomments the logging line and executes the function with an argument of `"recursive"`, it should print the following output:
 
 ```console
 ecursive + r
@@ -72,7 +72,7 @@ e + v
 => 'evisrucer'
 ```
 
-As you can see, the function reduces the initial string down until it is empty and therefore triggers the base case. The function then resolves back up adding each charachter to a new empty string. Interestingly, my initial instinct about the base case might not have been so off base after all. I can easily tweak the function to use `str.length <= 1` as the base case.
+As you can see, the function reduces the initial string down until it is empty and therefore triggers the base case. The function then resolves back up adding each charachter to a new empty string. Interestingly, my initial instinct about the base case might not have been so off base after all. I can easily tweak this function to use `str.length <= 1` as the base case.
 
 ```javascript
 function reverseStringRecursively(str) {
@@ -84,7 +84,7 @@ function reverseStringRecursively(str) {
 }
 ```
 
-This change to the code actually eliminates one extraneous recursive function call by starting to resolve when the string contains only its last charachter. The execution of this modified funtion should now behave like this:
+This change to the code not only returns the correct reversed string but it also has the benefit of avoiding one extraneous recursive function call by starting to resolve when the string contains only its last charachter instead of none. The execution of this modified funtion should now behave like this:
 
 ```console
 ecursive + r
