@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ruby Quicksort
+title: Implementing Sorting Algorithms
 subtitle:  #add subtitle (optional)
 date: '2018-10-29'
 description: Implementing Quicksort in Ruby #(optional)
