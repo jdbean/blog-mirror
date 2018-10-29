@@ -10,7 +10,7 @@ tags:
   - Bubblesort
   - Quicksort
   - Algorithms
-img: marco-secchi-549646-unsplash.jpg
+img: william-felker-38344-unsplash.jpg
 fig-caption: # Add figcaption for img (optional)
 ---
 
