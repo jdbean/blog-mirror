@@ -14,18 +14,18 @@ img: marco-secchi-549646-unsplash.jpg
 fig-caption: # Add figcaption for img (optional)
 ---
 
-Lately, I've been spending some time trying to better understand some fundamental algorithms.
+Lately, I've been spending some time trying to better understand the basics of some fundamental sorting algorithms.
 <!-- more -->
-Sorting algorithms have been a particularly interesting area of study. Sorting and array is a common task and there are a wide variety of well-established sorting algorithms to dig into.
+Sorting algorithms have been a particularly interesting area of study. Sorting an array is a common task and there are a wide variety of well-established sorting algorithms to dig into.
 
-#Bubble Sort
+# Bubble Sort
 
-I started out looking at bubble sort. Bubble sort is a fairly simple concept---just step through an array comparing each pair of values and swap if them if the value at the higher index is less than the value at the lower index. This ends up functioning like this:
+I started out looking at bubble sort. Bubble sort is a fairly simple concept---just step through an array comparing each pair of values and swap them if the value at the higher index is less than the value at the lower index. This ends up functioning like this:
 
 ![Bubblesort example](/assets/img/Bubble-sort-example-300px.gif)
 *[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) courtesy of Swfung8 on [wikipedia.org](https://wikipedia.org).*
 
-As a visual learner, I rigged up a setup for visualizing array changes in javascript and implemented my bubblesort algorithm like this:
+As a visual learner, I rigged up a setup for visualizing array changes in javascript and implemented my bubble sort algorithm like this:
 
 ```javascript
 function bubbleSort(arr) {
@@ -44,7 +44,7 @@ function bubbleSort(arr) {
 }
 ```
 
-In this code, I iterate through the array *n* times where *n* is the numer of items the array and, on each loop compare each pair of adjacent values and swap them if the greater value is located in the lower index of the pair. Here is a neat visualization of this exact code executing in my browser:
+In this code, I iterate through the array *n* times where *n* is the numer of items in the array. On each loop my code compares each pair of adjacent values and swaps them if the greater value is located in the lower index of the pair. Here is a neat visualization of this exact code executing in a browser-based visualization:
 
 
 ![Bubblesort](/assets/img/bubblesort.gif)
@@ -54,7 +54,7 @@ Not bad huh? Bubble sort is nice and straight forward but, as you might have rea
 
 # Quick Sort
 
-Quick sort, on the other hand, seems to be on of the most commonly recommended general purpose sorting algorithms with its average runtime complexity of *O(n log n)*. Although in its worst case, quick sort can perform far slower, it is still quite an improvement over bubblesort for the vast majority of workloads. How does quicksort manage such impressive performance gains over bubble sort?
+Quick sort, on the other hand, seems to be on of the most commonly recommended general purpose sorting algorithms with its average runtime complexity of *O(n log n)*. Although in its worst case, quick sort can perform far slower, it is still quite an improvement over bubble sort for the vast majority of workloads. How does quicksort manage such impressive performance gains over bubble sort?
 
 Here is an example demonstrating how quick sort would function on a random array of numbers:
 
@@ -67,12 +67,12 @@ What quick sort is doing here can be broken down into three steps:
 2. Partitioning: reorder the array through sucessive swaps so that all elements with values less than that of the pivot element come before the pivot in the array, while all elements with values greater than that of the pivot come after it.
 3. Recursively apply steps one and two to the pair of sub-array of elements with values smaller than the pivot and values larger than the pivot respectively.
 
-Quick sort is classified as divide and conquer algorithm because it breaks efficiently problem down into smaller and smaller problems until it can be trivially solved. This animation can be really helpful in wrapping your head around how that works in practice:
+Quick sort is classified as a "divide and conquer" algorithm because it efficiently breaks a complex problem down into smaller and smaller problems until they can each be trivially solved a reassembled. This animation can be really helpful in wrapping your head around how that works in practice:
 
 ![Quick sort animation](/assets/img/Sorting_quicksort_anim.gif)
 *[CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0) courtesy of RolandH on [wikipedia.org](https://wikipedia.org).*
 
-Quicksort is a bit more complex to implement than bubble sort. I spent a while playing with different approaches to implementing this algorithm and found one in Ruby that was far and a way the most simple and elegant:
+Quicksort is a bit more complex to implement than bubble sort. I spent a while playing with different approaches to implementing this algorithm and found one in Ruby that was far and away the most simple and elegant:
 
 ```ruby
 def quicksort(arr)
@@ -90,7 +90,7 @@ That's it! To understand what this code does let's take a look at it line by lin
 return [] if arr.empty?
 ```
 
-This line is really just good hygene to return the array if its length is zero or one because such an array would, by definition, already be sorted.
+This is good hygene to return the array if its length is zero or one because such an array would, by definition, already be sorted but it is also a base case for resolving a recursive call.
 
 ```ruby
 pivot = arr.delete_at(rand(arr.size))
