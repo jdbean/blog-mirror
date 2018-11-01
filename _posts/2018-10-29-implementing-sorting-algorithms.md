@@ -76,8 +76,9 @@ Quicksort is a bit more complex to implement than bubble sort. I spent a while p
 
 ```ruby
 def quicksort(arr)
-  return arr if arr.length <= 1
-  pivot = arr.delete_at(rand(arr.size))
+  l = arr.size
+  return arr if l <= 1
+  pivot = arr.delete_at(rand(l))
   left, right = arr.partition {|int| int < pivot }
 
   return *quicksort(left), pivot, *quicksort(right)
@@ -87,13 +88,19 @@ end
 That's it! To understand what this code does let's take a look at it line by line.
 
 ```ruby
-return [] if arr.empty?
+l = arr.size
 ```
 
-This is good hygene to return the array if its length is zero or one because such an array would, by definition, already be sorted but it is also a base case for resolving a recursive call.
+Here we simply store the size of the array in a variable `l`.
 
 ```ruby
-pivot = arr.delete_at(rand(arr.size))
+return arr if l <= 1
+```
+
+This is good hygene to return the array if its size is zero or one because such an array would, by definition, already be sorted but it is also a base case for resolving a recursive call.
+
+```ruby
+pivot = arr.delete_at(rand(l))
 ```
 This is where things get a bit more fun. In this line, a random element in the array is removed and silmultaneously assigned to the `pivot` variable. The pivot does not need to be randomly selected but that is what I've choosen to do for this implementation.
 
