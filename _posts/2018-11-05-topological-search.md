@@ -20,17 +20,15 @@ The problem didn't seem so complicated at first glance:
 
 Solving this problem, however, isn't quite so straightforward as many of the string and array manipulation questions I typically get confronted with on a day to day basis. The question really requires diving into the topic of topological sorting of graphs. This question really excited me so I decided to sit down, put in the time, and work my way through a solution.
 
-What captured my attention about this problem is that its practical application was immediatly clear to me: this is dependency resolution. In other words, the problem solved by this excercise is the same fundamental problem that many of the tools I rely on every single day address such as Bundler to install Ruby gem dependencies, Apt to manage package dependencies on my Debian GNU/Linux laptop, and Systemd to manage process initialization on my servers.
+What captured my attention about this problem is that its practical application was immediatly clear: this is dependency resolution. In other words, the problem solved by this excercise is the same fundamental problem that many of the tools I rely on every single day address such as Bundler to install Ruby gem dependencies, Apt to manage package dependencies on my Debian GNU/Linux laptop, and Systemd to manage process initialization on my servers.
 
-Although the inputs in this excercise are Arrays, they are ultimately describing the edges of a directed graph, *i.e.* a graph in which nodes have a one-way or directional relationship to adjacent nodes. In this case the directionaly is the `dependency -> dependant` relationship between some of the task nodes.
+Although the inputs in this excercise are arrays, they represent the edges of a directed graph, *i.e.* a graph in which nodes have a one-way or directional relationship to adjacent nodes. In this case the directionality is the `dependency -> dependant` relationship between some of the task nodes.
 
 According to [Wikipedia](https://en.wikipedia.org/wiki/Topological_sorting), topoligcal sorting of a directed graph can be described as
 
->a linear ordering of its vertices such that for every directed edge *uv* from vertex *u* to vertex *v*, *u* comes before *v* in the ordering. For instance, the vertices of the graph may represent tasks to be performed, and the edges may represent constraints that one task must be performed before another; in this application, a topological ordering is just a valid sequence for the tasks. A topological ordering is possible if and only if the graph has no directed cycles, that is, if it is a directed acyclic graph (DAG). Any DAG has at least one topological ordering, and algorithms are known for constructing a topological ordering of any DAG in linear time.
+>[...] a linear ordering of its vertices such that for every directed edge *uv* from vertex *u* to vertex *v*, *u* comes before *v* in the ordering. For instance, the vertices of the graph may represent tasks to be performed, and the edges may represent constraints that one task must be performed before another; in this application, a topological ordering is just a valid sequence for the tasks. A topological ordering is possible if and only if the graph has no directed cycles, that is, if it is a directed acyclic graph (DAG). Any DAG has at least one topological ordering, and algorithms are known for constructing a topological ordering of any DAG in linear time.
 
-Simple right? So how do we actually implement topological sorting and solve the problem at hand? Let's consider a sample data set.
-
-Lets say that we are given a list of projects and their respective dependency relationships in the following form:
+Simple right? So how do we actually implement topological sorting and solve the problem at hand? Lets say that we are given a list of projects and their respective dependency relationships in the following form:
 
 ```ruby
 tasks = ["a", "b", "c", "d", "e", "f", "g"]
@@ -40,7 +38,7 @@ dependencies = [["b", "e"], ["a", "e"], ["f", "b"],
                 ["b", "a"], ["d", "g"]]
 ```
 
-As a first step, let's see if we can interpret this data to more naturally visualize it as a graph. The each element in the dependencies array represents a directional connection from, for example, task `b` to task `e`. While we want to capture this representation programattically in Ruby let's start out by using the DOT graph description language to generate a graph diagram. The graph in this sample input can be described (with some tweaks for aesthetics and clarity) by the following DOT file:
+As a first step, let's see if we can interpret this data to more naturally visualize it as a graph. Each element in the dependencies array represents a directional connection from, for example, task `b` to task `e`. While we want to capture this representation programattically in our code let's start out by using the DOT graph description language to generate a graph diagram so we can better comprehend the data. The graph in this sample input can be described (with some tweaks for aesthetics and clarity) by the following DOT file:
 
 ```dot
 digraph G {
@@ -135,11 +133,11 @@ end
 ```
 Here is a quick overview of how this code functions:
 
-1. This solution starts out by parse the graph and transforming it it as a hash where each task is the key and the value is a nested hash with a `:dependants` key containing an array of dependant tasks and a `:dependencies` key containing a counter of that task's dependencies.
+1. This solution starts out by parsing the input graph and transforming it to a hash where each task is a key and each value is a nested hash with a `:dependants` key containing an array of dependant tasks and a `:dependencies` key containing a counter of that task's dependencies.
 2. The solution then performs a loop through the graph hash looking for root tasks which have no dependencies.
 3. The root tasks are then added to the `completion_order` array and removed from the graph hash.
 4. The removed task's dependants also have their `:dependencies` counter decremented.
-5. On the next loop around any new root task are identified and the cycle continues until either the each task in the graph has been added to the `completion_order` array or no new root task can be found and an error is raised.
+5. On the next loop around any new root tasks are identified and the cycle continues until either the each task in the graph has been added to the `completion_order` array or no new root task can be found and an error is raised.
 
 Given the sample input, the program returns:
 
@@ -147,11 +145,11 @@ Given the sample input, the program returns:
 => ["d", "f", "b", "c", "g", "a", "e"]
 ```
 
-What if we tweak the sample in put just a bit by adding a element `["b", "f"]` to the `dependencies` array input? Our graph now looks like this:
+Checking our diagram this appears to be one of the many possible valid orders of task completion for the specified graph. What if we tweak the sample input just a bit by adding an element `["b", "f"]` to the `dependencies` array input? This graph now looks like this:
 
 ![chart of invalid sample input](/assets/img/topologicalsort-1.svg)
 
-And now, when we run our program on this modified input we get the following output:
+When we run the program on this modified input we get the following output:
 
 ```console
 An error has occurred. No valid order detected.
@@ -159,7 +157,7 @@ An error has occurred. No valid order detected.
 
 As you can see, this small change creates a big problem! The newly added `b -> f` depency creates a bidirectional connection. In other words, without `f` there can be no `b` and without `b` there can be no `f`. Accordingly there is *no* valid order in which the tasks can be completed and the program correctly raises an error.
 
-This code a solid solution and although I imagine there are some improvemnts I could make in my approach, I must say that I'm quite pleased with it. I did, however, discover something interesting: Topological sort is actually an included module in the Ruby standard library! Using the `TSort` module and a custom class, we can accomplish the same outcome with far fewer lines of code:
+This code a solid solution and although I imagine there are some improvements I could make in my approach, I must say that I'm quite pleased with it. I did, however, discover something interesting: Topological sort is actually an included module in the Ruby standard library! Using the `TSort` module and a custom class, we can accomplish the same outcome with far fewer lines of code:
 
 ```ruby
 require 'tsort'
