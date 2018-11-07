@@ -9,18 +9,18 @@ tags:
   - Topological Search
   - Graphs
   - Algorithms
-img: william-felker-38344-unsplash.jpg
+img: raphael-koh-287327-unsplash.jpg
 fig-caption: # Add figcaption for img (optional)
 ---
 This week I spent some time working on a CS problem that required me to perform topological search of a graph.
 <!-- more -->
 The problem didn't seem so complicated at first glance:
 
-> Design a program which takes as input an array of tasks and an array containing pairs of dependency relationships. Each dependency relationship consists of a pair of tasks wherein the first task must be completed before the second task is completed. Your progam must must return an array consisting of a valid order in which each of the tasks may be completed or return an error if no valid order is possible.
+> Design a program which takes as input two parameters: an array of tasks and an array containing pairs of dependency relationships. Each dependency relationship consists of a pair of tasks wherein the first task must be completed before the second task is completed. Your progam must must return an array consisting of a valid order in which each of the tasks may be completed or return an error if no valid order is possible.
 
-Solving this problem, however, isn't quite so straightforward as many of the string and array manipulation questions I typically get confronted with on a day to day basis. The question really requires diving into the topic of Topological sorting of graphs. This question really excited me so I decided to sit down, put in the time, and work my way through a solution.
+Solving this problem, however, isn't quite so straightforward as many of the string and array manipulation questions I typically get confronted with on a day to day basis. The question really requires diving into the topic of topological sorting of graphs. This question really excited me so I decided to sit down, put in the time, and work my way through a solution.
 
-What captured my attention about this problem is that its application was immediatly clear to me: this is dependency resolution. In other words, the problem solved by this excercise is the same fundamental problem that many of the tools I rely on every single day address such as Bundler to install Ruby gem dependencies, Apt to manage package dependencies on my Debian GNU/Linux laptop, and Systemd to manage process initialization on my servers.
+What captured my attention about this problem is that its practical application was immediatly clear to me: this is dependency resolution. In other words, the problem solved by this excercise is the same fundamental problem that many of the tools I rely on every single day address such as Bundler to install Ruby gem dependencies, Apt to manage package dependencies on my Debian GNU/Linux laptop, and Systemd to manage process initialization on my servers.
 
 Although the inputs in this excercise are Arrays, they are ultimately describing the edges of a directed graph, *i.e.* a graph in which nodes have a one-way or directional relationship to adjacent nodes. In this case the directionaly is the `dependency -> dependant` relationship between some of the task nodes.
 
