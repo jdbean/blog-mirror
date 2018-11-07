@@ -77,51 +77,58 @@ From just a quick look at this image we can ascertain a few basic facts:
 def build_order(tasks, dependencies)
   # Converts graph data to hash representation
   deps = create_deps(tasks, dependencies)
-  build_stages = []
-
+  completion_order = []
+  # Loops through hash removing tasks which do not have
+  # dependencies and adding them to `completion_order`
   while !deps.empty? do
     processing = add_no_dependants(deps)
-    build_stages << processing
-
+    completion_order << processing
+    # decrement the dependencies key for all dependants
     processing.each do |t|
       if !deps[t][:dependants].empty?
         deps[t][:dependants].each do |d|
           deps[d][:dependencies] -= 1
         end
       end
+      # delete the task
       deps.delete(t)
     end
   end
-
-  return build_stages.flatten
+  # return the completion order array
+  return completion_order.flatten
 end
 
+# Parse graph and store in Hash datastructure
 def create_deps(tasks, dependencies)
   deps = Hash.new
-
+  # set the default deps hash value for each task
   tasks.each do |t|
     deps[t] = {dependencies: 0, dependants: []}
   end
 
   dependencies.each do |d|
+      # add each dependant to the dependency's :dependants array
       deps[d[0]][:dependants] << d[1]
+      # increment the dependant task's :dependencies counter
       deps[d[1]][:dependencies] += 1
   end
 
   return deps
 end
 
+# Iterate through the `deps` hash to find tasks with
+# no dependencies
 def add_no_dependants(deps)
   processing = []
-
+  # Find all tasks which have no dependencies
   deps.keys.each do |t|
     if deps[t][:dependencies] == 0
       processing << t
     end
   end
 
-  return processing if processing.length > 0
-
+  return processing if !processing.empty?
+  # if processing is empty than we have reached an irreconcilable cycle
   raise "An error has occurred. No valid order detected."
 end
 ```
