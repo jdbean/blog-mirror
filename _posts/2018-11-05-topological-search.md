@@ -3,7 +3,7 @@ layout: post
 title: Topological Search
 subtitle:  #add subtitle (optional)
 date: '2018-11-05'
-description: Solving a topoligcal search problem #(optional)
+description: Solving a topological search problem #(optional)
 tags:
   - Ruby
   - Topological Search
@@ -16,15 +16,15 @@ This week I spent some time working on a CS problem that required me to perform 
 <!-- more -->
 The problem didn't seem so complicated at first glance:
 
-> Design a program which takes as input two parameters: an array of tasks and an array containing pairs of dependency relationships. Each dependency relationship consists of a pair of tasks wherein the first task must be completed before the second task is completed. Your progam must must return an array consisting of a valid order in which each of the tasks may be completed or return an error if no valid order is possible.
+> Design a program which takes as input two parameters: an array of tasks and an array containing pairs of dependency relationships. Each dependency relationship consists of a pair of tasks wherein the first task must be completed before the second task is completed. Your program must must return an array consisting of a valid order in which each of the tasks may be completed or return an error if no valid order is possible.
 
 Solving this problem, however, isn't quite so straightforward as many of the string and array manipulation questions I typically get confronted with on a day to day basis. The question really requires diving into the topic of topological sorting of graphs. This question really excited me so I decided to sit down, put in the time, and work my way through a solution.
 
-What captured my attention about this problem is that its practical application was immediatly clear: this is dependency resolution. In other words, the problem solved by this excercise is the same fundamental problem that many of the tools I rely on every single day address such as Bundler to install Ruby gem dependencies, Apt to manage package dependencies on my Debian GNU/Linux laptop, and Systemd to manage process initialization on my servers.
+What captured my attention about this problem is that its practical application was immediately clear: this is dependency resolution. In other words, the problem solved by this exercise is the same fundamental problem that many of the tools I rely on every single day address such as Bundler to install Ruby gem dependencies, Apt to manage package dependencies on my Debian GNU/Linux laptop, and Systemd to manage process initialization on my servers.
 
-Although the inputs in this excercise are arrays, they represent the edges of a directed graph, *i.e.* a graph in which nodes have a one-way or directional relationship to adjacent nodes. In this case the directionality is the `dependency -> dependant` relationship between some of the task nodes.
+Although the inputs in this exercise are arrays, they represent the edges of a directed graph, *i.e.* a graph in which nodes have a one-way or directional relationship to adjacent nodes. In this case the directionality is the `dependency -> dependant` relationship between some of the task nodes.
 
-According to [Wikipedia](https://en.wikipedia.org/wiki/Topological_sorting), topoligcal sorting of a directed graph can be described as
+According to [Wikipedia](https://en.wikipedia.org/wiki/Topological_sorting), topological sorting of a directed graph can be described as
 
 >[...] a linear ordering of its vertices such that for every directed edge *uv* from vertex *u* to vertex *v*, *u* comes before *v* in the ordering. For instance, the vertices of the graph may represent tasks to be performed, and the edges may represent constraints that one task must be performed before another; in this application, a topological ordering is just a valid sequence for the tasks. A topological ordering is possible if and only if the graph has no directed cycles, that is, if it is a directed acyclic graph (DAG). Any DAG has at least one topological ordering, and algorithms are known for constructing a topological ordering of any DAG in linear time.
 
@@ -80,12 +80,12 @@ def build_order(tasks, dependencies)
   # Loops through hash removing tasks which do not have
   # dependencies and adding them to `completion_order`
   while !deps.empty? do
-    processing = add_no_dependants(deps)
+    processing = add_no_dependents(deps)
     completion_order << processing
-    # decrement the dependencies key for all dependants
+    # decrement the dependencies key for all dependents
     processing.each do |t|
-      if !deps[t][:dependants].empty?
-        deps[t][:dependants].each do |d|
+      if !deps[t][:dependents].empty?
+        deps[t][:dependents].each do |d|
           deps[d][:dependencies] -= 1
         end
       end
@@ -102,12 +102,12 @@ def create_deps(tasks, dependencies)
   deps = Hash.new
   # set the default deps hash value for each task
   tasks.each do |t|
-    deps[t] = {dependencies: 0, dependants: []}
+    deps[t] = {dependencies: 0, dependents: []}
   end
 
   dependencies.each do |d|
-      # add each dependant to the dependency's :dependants array
-      deps[d[0]][:dependants] << d[1]
+      # add each dependant to the dependency's :dependents array
+      deps[d[0]][:dependents] << d[1]
       # increment the dependant task's :dependencies counter
       deps[d[1]][:dependencies] += 1
   end
@@ -117,7 +117,7 @@ end
 
 # Iterate through the `deps` hash to find tasks with
 # no dependencies
-def add_no_dependants(deps)
+def add_no_dependents(deps)
   processing = []
   # Find all tasks which have no dependencies
   deps.keys.each do |t|
@@ -133,10 +133,10 @@ end
 ```
 Here is a quick overview of how this code functions:
 
-1. This solution starts out by parsing the input graph and transforming it to a hash where each task is a key and each value is a nested hash with a `:dependants` key containing an array of dependant tasks and a `:dependencies` key containing a counter of that task's dependencies.
+1. This solution starts out by parsing the input graph and transforming it to a hash where each task is a key and each value is a nested hash with a `:dependents` key containing an array of dependant tasks and a `:dependencies` key containing a counter of that task's dependencies.
 2. The solution then performs a loop through the graph hash looking for root tasks which have no dependencies.
 3. The root tasks are then added to the `completion_order` array and removed from the graph hash.
-4. The removed task's dependants also have their `:dependencies` counter decremented.
+4. The removed task's dependents also have their `:dependencies` counter decremented.
 5. On the next loop around any new root tasks are identified and the cycle continues until either the each task in the graph has been added to the `completion_order` array or no new root task can be found and an error is raised.
 
 Given the sample input, the program returns:
@@ -155,7 +155,7 @@ When we run the program on this modified input we get the following output:
 An error has occurred. No valid order detected.
 ```
 
-As you can see, this small change creates a big problem! The newly added `b -> f` depency creates a bidirectional connection. In other words, without `f` there can be no `b` and without `b` there can be no `f`. Accordingly there is *no* valid order in which the tasks can be completed and the program correctly raises an error.
+As you can see, this small change creates a big problem! The newly added `b -> f` dependency creates a bidirectional connection. In other words, without `f` there can be no `b` and without `b` there can be no `f`. Accordingly there is *no* valid order in which the tasks can be completed and the program correctly raises an error.
 
 This code a solid solution and although I imagine there are some improvements I could make in my approach, I must say that I'm quite pleased with it. I did, however, discover something interesting: Topological sort is actually an included module in the Ruby standard library! Using the `TSort` module and a custom class, we can accomplish the same outcome with far fewer lines of code:
 
