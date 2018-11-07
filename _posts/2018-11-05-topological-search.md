@@ -133,15 +133,33 @@ def add_no_dependants(deps)
   raise "An error has occurred. No valid order detected."
 end
 ```
+Here is a quick overview of how this code functions:
 
-This solution starts out by parse the graph and transforming it it as a hash where each task is the key and the value is a nested hash with a `:dependants` key containing an array of dependant tasks and a `:dependencies` key containing a counter of that task's dependencies. The solution then
-performs a loop through the graph hash looking for root tasks which have no dependencies. The root tasks are then added to the `completion_order` array and removed from the graph hash. The removed task's dependants also have their `:dependencies` counter decremented. On the next loop around any new root task are identified and the cycle continues until either the each task in the graph has been added to the `completion_order` array or no new root task can be found and an error is raised. Given the sample input, the program returns:
+1. This solution starts out by parse the graph and transforming it it as a hash where each task is the key and the value is a nested hash with a `:dependants` key containing an array of dependant tasks and a `:dependencies` key containing a counter of that task's dependencies.
+2. The solution then performs a loop through the graph hash looking for root tasks which have no dependencies.
+3. The root tasks are then added to the `completion_order` array and removed from the graph hash.
+4. The removed task's dependants also have their `:dependencies` counter decremented.
+5. On the next loop around any new root task are identified and the cycle continues until either the each task in the graph has been added to the `completion_order` array or no new root task can be found and an error is raised.
 
-```shell
+Given the sample input, the program returns:
+
+```console
 => ["d", "f", "b", "c", "g", "a", "e"]
 ```
 
-This is a solid functional solution and I must say that I'm quite pleased with it. I did, however, discover something interesting: Topological sort is actually an included module in the Ruby standard library! Using the `TSort` module, I can accomplish the same result with far fewer lines of code:
+What if we tweak the sample in put just a bit by adding a element `["b", "f"]` to the `dependencies` array input? Our graph now looks like this:
+
+![chart of invalid sample input](/assets/img/topologicalsort-1.svg)
+
+And now, when we run our program on this modified input we get the following output:
+
+```console
+An error has occurred. No valid order detected.
+```
+
+As you can see, this small change creates a big problem! The newly added `b -> f` depency creates a bidirectional connection. In other words, without `f` there can be no `b` and without `b` there can be no `f`. Accordingly there is *no* valid order in which the tasks can be completed and the program correctly raises an error.
+
+This code a solid solution and although I imagine there are some improvemnts I could make in my approach, I must say that I'm quite pleased with it. I did, however, discover something interesting: Topological sort is actually an included module in the Ruby standard library! Using the `TSort` module and a custom class, we can accomplish the same outcome with far fewer lines of code:
 
 ```ruby
 require 'tsort'
