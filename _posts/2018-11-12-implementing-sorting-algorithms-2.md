@@ -7,12 +7,12 @@ description: Implementing more sorting algorithms #(optional)
 tags:
   - Mergesort
   - Algorithms
-img: william-felker-38344-unsplash.jpg
+img: jan-mellstrom-242087-unsplash.jpg
 fig-caption: # Add figcaption for img (optional)
 ---
 This post is going to circle back to the topic of sorting algorithms.
 <!-- more -->
-In a recent post we looked at [bubblesort and quicksort of arrays](/implementing-sorting-algorithms). In this post I'd like to come back to the topic of array sorting algorithms. I don't want to sound like a broken record, but I've really been enjoying digging deeper into basic array sorting algorithms! These types of algorithms perform a ubiquitous function and I think it is really helpful to understand how they do their work. Moreover, they have been an excellent vehicle for understanding some of the nuance in algorithm performance: not only space and time complexity in the aggregate but also in the best and worst case scenarios. It is an absolute mistake to describe quicksort as "the best sorting algorithm". It is not the ideal search algorithm in every situation and its important to understand other search algorithms not only as an academic exercise but also as a practical option. I'd like to take this post, then, to consider mergesort, an alternative to quicksort.
+In a recent post we looked at [bubblesort and quicksort of arrays](/implementing-sorting-algorithms) and in this post I'd like to come back to the discussion of various array sorting algorithms. I don't want to sound like a broken record, but I've really been enjoying digging deeper into basic array sorting algorithms! These types of algorithms perform a ubiquitous function and I think it is really helpful to understand how they do their work. Moreover, they have been an excellent vehicle for understanding some of the nuance in algorithm performance: not only space and time complexity in the aggregate but also in the best and worst case scenarios. It is an absolute mistake to describe quicksort as "the best sorting algorithm". It is not the ideal search algorithm in every situation and its important to understand other search algorithms not only as an academic exercise but also as a practical option. I'd like to take this post, then, to consider mergesort, an alternative to quicksort.
 
 # Quicksort's Achillies Heels
 
@@ -142,4 +142,4 @@ This graphic uses a different style of visualization to demonstrate mergesort op
 
 # Conclusion
 
-Mergesort is a nice alternative to quicksort in some circumstances and learning about some of the differences and similarities between two has been a great way to suss out some of the finer points of not only sorting but of computer science algorithms more generally. As always, thanks for reading and please don't hesitate to reach out to me if you've enjoyed what you've read or have any other feedback you'd like to share.
+Mergesort is a nice alternative to quicksort in some circumstances and learning about some of the differences and similarities between the two has been a great way to suss out some of the finer points of not only sorting but of computer science algorithms more generally. As always, thanks for reading and please don't hesitate to reach out to me if you've enjoyed what you've read or have any other feedback you'd like to share.
