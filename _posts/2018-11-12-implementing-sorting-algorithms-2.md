@@ -89,7 +89,7 @@ end
 def merge(left, right)
   sorted = []
   until left.size == 0 || right.size == 0 do
-    result << (left.first <= right.first ? left.shift : right.shift)
+    sorted << (left.first <= right.first ? left.shift : right.shift)
   end
   return sorted + left + right
 end
