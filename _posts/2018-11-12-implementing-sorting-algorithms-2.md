@@ -117,7 +117,7 @@ def merge(left, right)
     # compare first value of each array,
     # removing the lesser value and pushing
     # it to sorted
-    result << (left.first <= right.first ? left.shift : right.shift)
+    sorted << (left.first <= right.first ? left.shift : right.shift)
   end
   # append the remainder of left and right arrays
   # (one of which is empty) to array and return
