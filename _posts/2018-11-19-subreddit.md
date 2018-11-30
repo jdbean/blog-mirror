@@ -6,9 +6,10 @@ date: '2018-11-26'
 description: Taking a look at my Python project SubReddit. #(optional)
 tags:
   - "Project Spotlight"
-  - Python
-  - Testing
-  - API
+  - CSS/SASS
+  - "Mobile Debugging"
+  - "Responsive Design"
+  - "ReactJS"
 img: neven-krcmarek-145603-unsplash.jpg
 fig-caption: # Add figcaption for img (optional)
 ---
@@ -30,4 +31,4 @@ Getting the hovers, transitions, and x translations of the "favorite" buttons fo
 
 I also did some testing on Firefox and Chrome for Android. At one point I hit a sticky problem getting something to render properly in both of these browsers and I got pretty frustrated trying to debug the issue on mobile without any of the browser tools I was accustomed to. I decided to finally spend a little time learning how to remote debug both [Firefox](https://developer.mozilla.org/en-US/docs/Tools/Remote_Debugging/Debugging_Firefox_for_Android_with_WebIDE) and [Chrome](https://developers.google.com/web/tools/chrome-devtools/remote-debugging/) for Android through their desktop counter parts. The process was fairly similar for both Firefox and Chrome. Both required ADB debugging to be enabled and configured (something I was already comfortable with) and once I got them running they both functioned incredibly smoothly. Getting remote debugging hooked up made such a difference and my issue was sorted out in no time. I can't wait to use remote debugging again!
 
-In the end, I'm really pleased with how this project turned out and more importantly with what I learned along the way. The project feels clean and professional without being too stark and best of all, I can comfortably say that I implemented all of the style elements myself from the ground up. I'm not so sure that will always be the best choice for every project I work on but I'm really glad to have given myself this opportunity to practice these skills!
+In the end, I'm really pleased with how this project turned out and more importantly with what I learned along the way. The project feels clean and professional without being too stark and best of all, I can comfortably say that I implemented all of the style elements myself from the ground up. I'm not so sure that will always be the best choice for every project I work on but I'm really glad to have given myself this opportunity to practice these skills! If you'd like, please feel free to take a look at the site which has been deployed [here](https://jdbean.github.io/subreddit/).
