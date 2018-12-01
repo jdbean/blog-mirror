@@ -8,6 +8,7 @@ tags1: ["Ruby", "Gem", "Jekyll", "Sinatra", "JavaScript", "React", "Redux", "Thu
 tags2: ["Ruby", "Rails", "Bootstrap", "Analytics", "CRUD", "Authentication", "Authorization", "PostgreSQL", CSS, HTML, "Responsive Design",  "Heroku", "Action Mailer", "Devise", "Letter Opener", "Mailgun"]
 tags3: ["JavaScript", "Ruby", "Rails", "PostgreSQL", "WebSockets", "Action Cable", "Fetch", "Google Translate API", "Authentication", "Authorization", "bcrypt", "HTML", "CSS"]
 tags4: ["HTML", "SCSS", "Gulp", "Ruby", "Liquid", "Jekyll", "Ex-Static", "Docker", " Git", "GitLab", "Flexible-Jekyll", "Testing", "Continuous Integration", "Responsive Design"]
+tags5: ["Python 3", "Flask", "REST", "API", "pytest", "Unit Testing", "Docker"]
 permalink: /projects/
 ---
 
@@ -82,6 +83,30 @@ Protocol is a real-time multi-party messaging application that automatically tra
   <div class="project-tag">
     <div class="tags">
       {% for tag in page.tags3 %}
+        <li class="tag">
+            {{ tag }}
+        </li>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+## RhymeTime
+
+![RhymeTime](/assets/img/RhymeTime_REST.png)
+
+RhymeTime is a REST API written in Python which helps writers select select rhyming words.
+Rhymetime can even identify words with multiple pronounciations and limit suggested rhymes accordingly.
+
+
+<div class="project-footer">
+  <div class="project-share">
+    <a href="https://github.com/jdbean/rhymetime" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
+    <a href="/rhymetime/" title="Spotlight"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
+  </div>
+  <div class="project-tag">
+    <div class="tags">
+      {% for tag in page.tags5 %}
         <li class="tag">
             {{ tag }}
         </li>
