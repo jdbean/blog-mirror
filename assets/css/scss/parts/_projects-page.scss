@@ -45,6 +45,7 @@
       padding: 5px;
       display: flex;
       flex-wrap: wrap;
+      justify-content: center;
     }
     .tag {
       text-decoration: none;
@@ -55,4 +56,13 @@
       border: 1px solid $dark-blue;
     }
   }
+}
+.project-note {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  text-align: center;
 }

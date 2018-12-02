@@ -1378,6 +1378,10 @@ a.newer-posts:hover {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .project-footer .project-tag .tag {
@@ -1387,6 +1391,16 @@ a.newer-posts:hover {
   color: #263959;
   text-transform: uppercase;
   border: 1px solid #263959;
+}
+
+.project-note {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  text-align: center;
 }
 
 /* - - - - - - - - - - Tag Styles - - - - - - - - - - */
