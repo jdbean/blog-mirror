@@ -19,7 +19,7 @@ permalink: /projects/
 ![Ex-Static](/assets/img/Ex-Static.png)
 
 Ex-Static instantly turns any Jekyll blog into a Content Management System with a user-friendly interface for authors and editors.
-*Live demo does not currently have WebSockets functionality enabled due to firewall issue.*{: class="project-note"}
+*WebSockets functionality of live demo is currently disabled due to firewall issue.*{: class="project-note"}
 
 <div class="project-footer">
   <div class="project-share">
