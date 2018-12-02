@@ -1,12 +1,10 @@
 .project-footer {
-  display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   padding-bottom: 30px;
   border-bottom: 1px solid $dark-gray;
   .project-share {
     text-align: center;
-    vertical-align: center;
+    vertical-align: middle;
     margin: 0px auto 20px auto;
     .credentials{
       li {
@@ -45,16 +43,26 @@
   .project-tag {
     .tags {
       padding: 5px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
     }
     .tag {
       text-decoration: none;
       font-size: 11px;
       padding: 5px 5px;
-      margin-left: 5px;
       color: $dark-blue;
       text-transform: uppercase;
       border: 1px solid $dark-blue;
-      white-space: nowrap;
     }
   }
+}
+.project-note {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  text-align: center;
 }

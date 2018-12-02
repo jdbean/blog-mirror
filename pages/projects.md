@@ -4,10 +4,12 @@ title: "Project Portfolio"
 # date:  2018-03-19
 description: My very first post on my brand new blog!
 # img: pen_and_paper.jpg
-tags1: ["Ruby", "Gem", "Jekyll", "Sinatra", "JavaScript", "React", "Redux", "Thunk", "Fetch", "WebSockets", "API", HTML, "SCSS", "Semantic UI", Self-hosted ]
-tags2: ["Ruby", "Rails", "Bootstrap", "Analytics", "CRUD", "Authentication", "Authorization", "PostgreSQL", CSS, HTML, "Responsive Design",  "Heroku", "Action Mailer", "Devise", "Letter Opener", "Mailgun"]
-tags3: ["JavaScript", "Ruby", "Rails", "PostgreSQL", "WebSockets", "Action Cable", "Fetch", "Google Translate API", "Authentication", "Authorization", "bcrypt", "HTML", "CSS"]
-tags4: ["HTML", "SCSS", "Gulp", "Ruby", "Liquid", "Jekyll", "Ex-Static", "Docker", " Git", "GitLab", "Flexible-Jekyll", "Testing", "Continuous Integration", "Responsive Design"]
+exstatic_tags: ["Full Stack", "Ruby", "Sinatra", "JavaScript", "ReactJS", "Redux", "Thunk", "Fetch", "WebSockets", "API", HTML, "SASS", "Semantic UI", Self-hosted, "Library", "Gem" ]
+lend-to-friend_tags: ["Full Stack", "Ruby", "Rails", "Bootstrap", "Analytics", "CRUD", "Authentication", "Authorization", "PostgreSQL", CSS, HTML, "Responsive Design",  "Heroku", "Action Mailer", "Devise", "Letter Opener", "Mailgun"]
+protocol_tags: ["Full Stack", "JavaScript", "Ruby", "Rails", "PostgreSQL", "WebSockets", "Action Cable", "Fetch", "Google Translate API", "Authentication", "Authorization", "bcrypt", "HTML", "CSS"]
+rhmetime_tags: ["Backend", "Python 3", "Flask", "REST", "API", "pytest", "Unit Testing", "Docker"]
+subreddit_tags: ["Frontend, ReactJS", "SASS", "SVG", "HTML5", "Axios", "Mobile-first design"]
+jdbean_tags: ["Frontend", "HTML", "SASS", "Gulp", "Ruby", "Liquid", "Jekyll", "Ex-Static", "Docker", " Git", "GitLab", "Flexible-Jekyll", "Testing", "Continuous Integration", "Responsive Design"]
 permalink: /projects/
 ---
 
@@ -16,9 +18,8 @@ permalink: /projects/
 
 ![Ex-Static](/assets/img/Ex-Static.png)
 
-Ex-Static instantly turns any Jekyll blog into a Content Management System with a user-friendly interface for authors and editors. *Live demo does not currently have WebSockets functionality enabled.*
-
-
+Ex-Static provides an intuitive interface for users to conveniently create and update content on their own websites. Users can preview their changes in Ex-Static's interface and watch in real-time as their website updates itself automatically. Packaged as a Ruby gem, Ex-Static turns any Jekyll blog into a full-fledged Content Management System with a user-friendly interface for authors and editors.
+*WebSockets functionality of live demo is currently disabled due to firewall issue.*{: class="project-note"}
 
 <div class="project-footer">
   <div class="project-share">
@@ -31,7 +32,7 @@ Ex-Static instantly turns any Jekyll blog into a Content Management System with 
   </div>
   <div class="project-tag">
     <div class="tags">
-      {% for tag in page.tags1 %}
+      {% for tag in page.exstatic_tags %}
         <li class="tag">
             {{ tag }}
         </li>
@@ -44,7 +45,8 @@ Ex-Static instantly turns any Jekyll blog into a Content Management System with 
 
 ![Lend-to-Friend](/assets/img/Lend-to-Friend.png)
 
-Lend-to-Friend provides a platform for peer-to-peer lending of items where users can post books, movies, music, clothing, or household items available for loan to other users and browse for items to borrow themselves. *Live demo may take a few moments to wake up on first load.*
+Lend-to-Friend provides a platform for peer-to-peer lending of items where users can post books, movies, music, clothing, or household items available for loan to other users and browse for items to borrow themselves.
+*Live demo may take a few moments to wake up on first load.*{: class="project-note"}
 
 <div class="project-footer">
   <div class="project-share">
@@ -57,7 +59,7 @@ Lend-to-Friend provides a platform for peer-to-peer lending of items where users
   </div>
   <div class="project-tag">
     <div class="tags">
-      {% for tag in page.tags2 %}
+      {% for tag in page.lend-to-friend_tags %}
         <li class="tag">
             {{ tag }}
         </li>
@@ -81,7 +83,7 @@ Protocol is a real-time multi-party messaging application that automatically tra
   </div>
   <div class="project-tag">
     <div class="tags">
-      {% for tag in page.tags3 %}
+      {% for tag in page.protocol_tags %}
         <li class="tag">
             {{ tag }}
         </li>
@@ -89,6 +91,53 @@ Protocol is a real-time multi-party messaging application that automatically tra
     </div>
   </div>
 </div>
+
+## RhymeTime
+
+![RhymeTime](/assets/img/RhymeTime_REST.png)
+
+RhymeTime is a REST API written in Python which helps writers select select rhyming words.
+RhymeTime can even identify words with multiple pronounciations and limit suggested rhymes accordingly.
+
+<div class="project-footer">
+  <div class="project-share">
+    <a href="https://github.com/jdbean/rhymetime" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
+    <a href="/rhymetime/" title="Spotlight"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
+  </div>
+  <div class="project-tag">
+    <div class="tags">
+      {% for tag in page.rhmetime_tags %}
+        <li class="tag">
+            {{ tag }}
+        </li>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+## SubReddit
+
+![SubReddit](/assets/img/cropped-box-10.gif)
+
+SubReddit provides a beautiful interface for browsing top-rated submissions in the film photography subreddit r/analog. Users can curate a collection of favorite posts which they can enjoy together in the favorites tab.
+*All styling for this project was written 100% from scratch*{: class="project-note"}
+<div class="project-footer">
+  <div class="project-share">
+    <a href="https://github.com/jdbean/subreddit" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
+    <a href="https://jdbean.github.io/subreddit" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
+    <a href="/subreddit/" title="Spotlight"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
+  </div>
+  <div class="project-tag">
+    <div class="tags">
+      {% for tag in page.subreddit_tags %}
+        <li class="tag">
+            {{ tag }}
+        </li>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
 
 ## JDBean.net
 
@@ -103,7 +152,7 @@ JDBean.net is a technical blog and portfolio site created using the Jekyll stati
   </div>
   <div class="project-tag">
     <div class="tags">
-      {% for tag in page.tags4 %}
+      {% for tag in page.jdbean_tags %}
         <li class="tag">
             {{ tag }}
         </li>
