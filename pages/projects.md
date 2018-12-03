@@ -18,8 +18,8 @@ permalink: /projects/
 
 ![Ex-Static](/assets/img/Ex-Static.png)
 
-Ex-Static instantly turns any Jekyll blog into a Content Management System with a user-friendly interface for authors and editors.
-*Live demo does not currently have WebSockets functionality enabled due to firewall issue.*{: class="project-note"}
+Ex-Static provides an intuitive interface for users to conveniently create and update content on their own websites. Users can preview their changes in Ex-Static's interface and watch in real-time as their website updates itself automatically. Packaged as a Ruby gem, Ex-Static turns any Jekyll blog into a full-fledged Content Management System with a user-friendly interface for authors and editors.
+*WebSockets functionality of live demo is currently disabled due to firewall issue.*{: class="project-note"}
 
 <div class="project-footer">
   <div class="project-share">
