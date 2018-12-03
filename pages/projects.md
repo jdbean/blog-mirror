@@ -242,8 +242,8 @@ Contributor to the open source GitLab project---a single product for the entire 
     <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21305" title="Merge Request 21305"  target="_blank"><i class="fa fa-gitlab" aria-hidden="true"></i> !21305</a>
     <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/22466" title="Merge Request 22466"  target="_blank"><i class="fa fa-gitlab" aria-hidden="true"></i> !22466</a>
     <br/>
-    <a href="http://localhost:4000/first-foss-contribution/" title="Spotlight (Part I)"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight (I)</a>
-    <a href="http://localhost:4000/first-foss-contribution-ptii/" title="Spotlight (Part II)"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight (II)</a>
+    <a href="/first-foss-contribution/" title="Spotlight (Part I)"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight (I)</a>
+    <a href="/first-foss-contribution-ptii/" title="Spotlight (Part II)"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight (II)</a>
   </div>
   <div class="project-tag">
     <div class="tags">
