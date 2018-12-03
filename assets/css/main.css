@@ -1334,7 +1334,7 @@ a.newer-posts:hover {
 }
 
 /* - - - - - - - - - - Project Page Styles - - - - - - - - - - */
-.project-footer {
+.project-container {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -1343,13 +1343,13 @@ a.newer-posts:hover {
   border-bottom: 1px solid #a0a0a0;
 }
 
-.project-footer .project-share {
+.project-container .project-share {
   text-align: center;
   vertical-align: middle;
   margin: 0px auto 20px auto;
 }
 
-.project-footer .project-share .credentials li {
+.project-container .project-share .credentials li {
   font-size: 10px;
   display: inline-block;
   margin-left: 3px;
@@ -1362,7 +1362,7 @@ a.newer-posts:hover {
   border: 1px solid #ecf0f1;
 }
 
-.project-footer .project-share a {
+.project-container .project-share a {
   display: inline-block;
   text-decoration: none;
   background-color: #fafafa;
@@ -1370,7 +1370,7 @@ a.newer-posts:hover {
   padding: 5px 10px;
   margin-left: 3px;
   margin-right: 3px;
-  margin-top: 5px;
+  margin-top: 7px;
   color: #263959;
   font-size: 13px;
   -webkit-transition: background-color .3s;
@@ -1378,15 +1378,15 @@ a.newer-posts:hover {
   transition: background-color .3s;
 }
 
-.project-footer .project-share a:hover {
+.project-container .project-share a:hover {
   background-color: #ecf0f1;
 }
 
-.project-footer .project-share a i {
+.project-container .project-share a i {
   margin-right: 2px;
 }
 
-.project-footer .project-tag .tags {
+.project-container .project-tag .tags {
   padding: 5px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1401,7 +1401,7 @@ a.newer-posts:hover {
           justify-content: center;
 }
 
-.project-footer .project-tag .tag {
+.project-container .project-tag .tag {
   text-decoration: none;
   font-size: 11px;
   padding: 5px 5px;
