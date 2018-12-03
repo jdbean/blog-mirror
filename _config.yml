@@ -12,9 +12,8 @@ author-img: avatar.jpg # add your photo
 about-author: >
     Lawyer turned full-stack developer. All around nerd
     with a hunger for learning. Passionate about open source,
-    distributed systems, and security.
-    <br/>Please enjoy my <a href="/projects" title="Portfolio">portfolio</a>
-    & <a href="/" title="Portfolio">blog</a>.
+    distributed systems, and security. Please enjoy my <a href="/projects"
+    title="Portfolio">portfolio</a>&nbsp;&amp;&nbsp;<a href="/" title="Portfolio">blog</a>.
 
     <br/><br/><em>Actively seeking opportunites.</em>
 social-twitter: bean_jd
