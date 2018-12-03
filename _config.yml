@@ -13,13 +13,14 @@ about-author: >
     Lawyer turned full-stack developer. All around nerd
     with a hunger for learning. Passionate about open source,
     distributed systems, and security.
-    <br/><br/>
-    Enjoy my <a href="/projects" title="Portfolio">portfolio</a>
+    <br/>Please enjoy my <a href="/projects" title="Portfolio">portfolio</a>
     & <a href="/" title="Portfolio">blog</a>.
-    <br/><em>Actively seeking opportunites.</em>
+
+    <br/><br/><em>Actively seeking opportunites.</em>
 social-twitter: bean_jd
 # social-facebook: # add your Facebook handle
-social-github: jdbean # add your Github handle
+social-github: jdbean # add your GitHub handle
+social-gitlab: jdbean # add your GitLab handle
 social-linkedin: bean-jonathan
 social-email: jdbean@jdbean.net
 social-resume: "/resume.pdf"

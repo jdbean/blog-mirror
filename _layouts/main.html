@@ -31,6 +31,9 @@ layout: default
         {% else %}
           <li class="github"><a href="http://github.com/" target="_blank" title="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a></li>
         {% endif %}
+        {% if site.social-gitlab %}
+        <li class="gitlab"><a href="http://gitlab.com/{{site.social-gitlab}}" title="GitLab" target="_blank"><i class="fa fa-gitlab"></i></a></li>
+        {% endif %}
         {% if site.social-linkedin %}
           <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.social-linkedin}}" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
         {% else %}

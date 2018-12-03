@@ -72,6 +72,7 @@
 }
 
 .contact {
+  margin: inherit;
   .contact-title {
     position: relative;
     color: $dark;
@@ -104,16 +105,17 @@
     }
   }
   ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 0;
     padding: 0;
     list-style: none;
     text-align: center;
     li {
       display: inline-block;
-      margin-left: 10px;
-      &:first-child {
-        margin-left: 0;
-      }
+      border: solid .15em transparent;
+      box-sizing: border-box;
       a {
         color: $body-color;
         display: block;

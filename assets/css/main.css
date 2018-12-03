@@ -981,6 +981,10 @@ table tfoot td {
           align-items: stretch;
 }
 
+.contact {
+  margin: inherit;
+}
+
 .contact .contact-title {
   position: relative;
   color: #333030;
@@ -1022,6 +1026,17 @@ table tfoot td {
 }
 
 .contact ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1030,11 +1045,9 @@ table tfoot td {
 
 .contact ul li {
   display: inline-block;
-  margin-left: 10px;
-}
-
-.contact ul li:first-child {
-  margin-left: 0;
+  border: solid .15em transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .contact ul li a {
@@ -1321,7 +1334,7 @@ a.newer-posts:hover {
 }
 
 /* - - - - - - - - - - Project Page Styles - - - - - - - - - - */
-.project-footer {
+.project-container {
   -webkit-box-pack: justify;
   -webkit-justify-content: space-between;
       -ms-flex-pack: justify;
@@ -1330,13 +1343,13 @@ a.newer-posts:hover {
   border-bottom: 1px solid #a0a0a0;
 }
 
-.project-footer .project-share {
+.project-container .project-share {
   text-align: center;
   vertical-align: middle;
   margin: 0px auto 20px auto;
 }
 
-.project-footer .project-share .credentials li {
+.project-container .project-share .credentials li {
   font-size: 10px;
   display: inline-block;
   margin-left: 3px;
@@ -1349,7 +1362,7 @@ a.newer-posts:hover {
   border: 1px solid #ecf0f1;
 }
 
-.project-footer .project-share a {
+.project-container .project-share a {
   display: inline-block;
   text-decoration: none;
   background-color: #fafafa;
@@ -1357,7 +1370,7 @@ a.newer-posts:hover {
   padding: 5px 10px;
   margin-left: 3px;
   margin-right: 3px;
-  margin-top: 5px;
+  margin-top: 7px;
   color: #263959;
   font-size: 13px;
   -webkit-transition: background-color .3s;
@@ -1365,15 +1378,15 @@ a.newer-posts:hover {
   transition: background-color .3s;
 }
 
-.project-footer .project-share a:hover {
+.project-container .project-share a:hover {
   background-color: #ecf0f1;
 }
 
-.project-footer .project-share a i {
+.project-container .project-share a i {
   margin-right: 2px;
 }
 
-.project-footer .project-tag .tags {
+.project-container .project-tag .tags {
   padding: 5px;
   display: -webkit-box;
   display: -webkit-flex;
@@ -1388,7 +1401,7 @@ a.newer-posts:hover {
           justify-content: center;
 }
 
-.project-footer .project-tag .tag {
+.project-container .project-tag .tag {
   text-decoration: none;
   font-size: 11px;
   padding: 5px 5px;
@@ -1578,5 +1591,12 @@ a.newer-posts:hover {
   }
   .post .post-content .post-title a {
     font-size: 21px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 345px) {
+  .contact {
+    margin: 0 74px;
   }
 }
