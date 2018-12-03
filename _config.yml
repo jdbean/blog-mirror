@@ -19,7 +19,8 @@ about-author: >
     <br/><em>Actively seeking opportunites.</em>
 social-twitter: bean_jd
 # social-facebook: # add your Facebook handle
-social-github: jdbean # add your Github handle
+social-github: jdbean # add your GitHub handle
+social-gitlab: jdbean # add your GitLab handle
 social-linkedin: bean-jonathan
 social-email: jdbean@jdbean.net
 social-resume: "/resume.pdf"

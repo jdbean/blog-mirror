@@ -981,6 +981,10 @@ table tfoot td {
           align-items: stretch;
 }
 
+.contact {
+  margin: inherit;
+}
+
 .contact .contact-title {
   position: relative;
   color: #333030;
@@ -1022,6 +1026,17 @@ table tfoot td {
 }
 
 .contact ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -1030,11 +1045,9 @@ table tfoot td {
 
 .contact ul li {
   display: inline-block;
-  margin-left: 10px;
-}
-
-.contact ul li:first-child {
-  margin-left: 0;
+  border: solid .15em transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .contact ul li a {
@@ -1578,5 +1591,12 @@ a.newer-posts:hover {
   }
   .post .post-content .post-title a {
     font-size: 21px;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 345px) {
+  .contact {
+    margin: 0 74px;
   }
 }
