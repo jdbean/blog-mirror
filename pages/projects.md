@@ -112,19 +112,19 @@ Ex-Static provides an intuitive interface for users to conveniently create and u
   <div class="project-share">
     <a href="https://github.com/jdbean/Ex-Static" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
     <a href="https://office.johannabearman.duckdns.org" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
-    <div class="credentials">
+    <ul class="credentials">
       <li>Demo Username: <em>user</em></li>
       <li>Demo Password: <em>exstatic-password</em></li>
-    </div>
+    </ul>
   </div>
   <div class="project-tag">
-    <div class="tags">
+    <ul class="tags">
       {% for tag in page.exstatic_tags %}
         <li class="tag">
-            {{ tag }}
+          {{ tag }}
         </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
 
@@ -142,13 +142,13 @@ Protocol is a real-time multi-party messaging application that automatically tra
     <a href="https://github.com/jdbean/protocol-backend" title="Back-End Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code (Back-End)</a>
   </div>
   <div class="project-tag">
-    <div class="tags">
+    <ul class="tags">
       {% for tag in page.protocol_tags %}
         <li class="tag">
-            {{ tag }}
+          {{ tag }}
         </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
 
@@ -163,19 +163,19 @@ Lend-to-Friend provides a platform for peer-to-peer lending of items where users
   <div class="project-share">
     <a href="https://github.com/jdbean/lend-to-friend" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
     <a href="https://pacific-earth-11787.herokuapp.com" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
-    <div class="credentials">
+    <ul class="credentials">
       <li>Demo Username: <em>lf@lf.com</em></li>
       <li>Demo Password: <em>password</em></li>
-    </div>
+    </ul>
   </div>
   <div class="project-tag">
-    <div class="tags">
+    <ul class="tags">
       {% for tag in page.lend-to-friend_tags %}
         <li class="tag">
-            {{ tag }}
+          {{ tag }}
         </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
 
@@ -192,13 +192,13 @@ RhymeTime can even identify words with multiple pronounciations and limit sugges
     <a href="/rhymetime/" title="Spotlight"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
   </div>
   <div class="project-tag">
-    <div class="tags">
+    <ul class="tags">
       {% for tag in page.rhymetime_tags %}
         <li class="tag">
-            {{ tag }}
+          {{ tag }}
         </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
 
@@ -215,13 +215,13 @@ SubReddit provides a beautiful interface for browsing top-rated submissions in t
     <a href="/subreddit/" title="Spotlight"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
   </div>
   <div class="project-tag">
-    <div class="tags">
+    <ul class="tags">
       {% for tag in page.subreddit_tags %}
         <li class="tag">
-            {{ tag }}
+          {{ tag }}
         </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
 
@@ -246,13 +246,13 @@ Contributor to the open source GitLab project---a single product for the entire 
     <a href="/first-foss-contribution-ptii/" title="Spotlight (Part II)"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight (II)</a>
   </div>
   <div class="project-tag">
-    <div class="tags">
+    <ul class="tags">
       {% for tag in page.gitlab_tags %}
         <li class="tag">
-            {{ tag }}
+          {{ tag }}
         </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
 
@@ -269,12 +269,12 @@ JDBean.net is a technical blog and portfolio site created using the Jekyll stati
     <a href="/blogging-workflow/" title="Spotlight"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
   </div>
   <div class="project-tag">
-    <div class="tags">
+    <ul class="tags">
       {% for tag in page.jdbean_tags %}
         <li class="tag">
-            {{ tag }}
+          {{ tag }}
         </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
