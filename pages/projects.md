@@ -179,12 +179,12 @@ Lend-to-Friend provides a platform for peer-to-peer lending of items where users
   </div>
 </div>
 
-## RhymeTime
+## Rhyme Time
 
-![RhymeTime](/assets/img/RhymeTime_REST.png)
+![Rhyme Time](/assets/img/RhymeTime_REST.png)
 
-RhymeTime is a REST API written in Python which helps writers select select rhyming words.
-RhymeTime can even identify words with multiple pronounciations and limit suggested rhymes accordingly.
+Rhyme Time is a REST API written in Python which helps writers select select rhyming words.
+Rhyme Time can even identify words with multiple pronounciations and limit suggested rhymes accordingly.
 
 <div class="project-container">
   <div class="project-share">
