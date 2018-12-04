@@ -179,12 +179,12 @@ Lend-to-Friend provides a platform for peer-to-peer lending of items where users
   </div>
 </div>
 
-## RhymeTime
+## Rhyme Time
 
-![RhymeTime](/assets/img/RhymeTime_REST.png)
+![Rhyme Time](/assets/img/RhymeTime_REST.png)
 
-RhymeTime is a REST API written in Python that helps writers discover rhyming word pairs.
-RhymeTime can even identify words with multiple pronounciations and limit suggested rhymes accordingly.
+Rhyme Time is a REST API written in Python that helps writers discover rhyming word pairs.
+Rhyme Time can even identify words with multiple pronounciations and limit suggested rhymes accordingly.
 
 <div class="project-container">
   <div class="project-share">
@@ -208,6 +208,7 @@ RhymeTime can even identify words with multiple pronounciations and limit sugges
 
 SubReddit provides a beautiful interface for browsing top-rated submissions in the film photography subreddit r/analog. Users can curate a collection of favorite posts which they can enjoy together in the favorites tab.
 *All styling for this project was written 100% from scratch*{: class="project-note"}
+
 <div class="project-container">
   <div class="project-share">
     <a href="https://github.com/jdbean/subreddit" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
