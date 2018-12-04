@@ -183,7 +183,7 @@ Lend-to-Friend provides a platform for peer-to-peer lending of items where users
 
 ![RhymeTime](/assets/img/RhymeTime_REST.png)
 
-RhymeTime is a REST API written in Python which helps writers select select rhyming words.
+RhymeTime is a REST API written in Python that helps writers discover rhyming word pairs.
 RhymeTime can even identify words with multiple pronounciations and limit suggested rhymes accordingly.
 
 <div class="project-container">
@@ -230,7 +230,6 @@ SubReddit provides a beautiful interface for browsing top-rated submissions in t
 ![GitLab](/assets/img/wm.svg)
 
 Contributor to the open source GitLab project---a single product for the entire DevOps lifecycle. Contributions include documentation, new and improved testing, bug fixes, and new features.
-
 *Click below to view some representative contributions accepted by the GitLab project*{: class="project-note"}
 
 <div class="project-container">
