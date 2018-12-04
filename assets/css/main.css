@@ -925,7 +925,7 @@ table tfoot td {
 }
 
 .about a {
-  color: #737373;
+  color: grey;
 }
 
 .about .author-name {
@@ -1349,25 +1349,7 @@ a.newer-posts:hover {
   margin: 0px auto 20px auto;
 }
 
-.project-container .project-share ul {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
-
-.project-container .project-share ul li {
+.project-container .project-share .credentials li {
   font-size: 10px;
   display: inline-block;
   margin-left: 3px;
@@ -1388,7 +1370,7 @@ a.newer-posts:hover {
   padding: 5px 10px;
   margin-left: 3px;
   margin-right: 3px;
-  margin-top: 9px;
+  margin-top: 7px;
   color: #263959;
   font-size: 13px;
   -webkit-transition: background-color .3s;
@@ -1492,63 +1474,6 @@ a.newer-posts:hover {
 .tag-list span a:hover {
   text-decoration: underline;
   opacity: .8;
-}
-
-/* - - - - - - - - - - Tag Styles - - - - - - - - - - */
-.update-toast {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 0 14px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #263959;
-  color: white;
-  height: 28px;
-  line-height: 28px;
-  text-align: center;
-  z-index: 999999;
-  opacity: 0;
-  -webkit-transform: translateY(-28px);
-      -ms-transform: translateY(-28px);
-          transform: translateY(-28px);
-  -webkit-transition: all .5s ease-in-out;
-  -o-transition: all .5s ease-in-out;
-  transition: all .5s ease-in-out;
-}
-
-.update-toast.show {
-  opacity: 1;
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
-}
-
-.update-toast .update-toast-text {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-}
-
-.update-toast .update-toast-refresh-btn {
-  display: inline-block;
-  width: 20px;
-  height: 20px;
-  background: url(../img/refresh.svg) no-repeat center;
-  -webkit-background-size: 100% 100%;
-          background-size: 100%;
 }
 
 /* - - - - - - - - - - Media Styles - - - - - - - - - - */

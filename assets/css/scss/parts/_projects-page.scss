@@ -6,14 +6,7 @@
     text-align: center;
     vertical-align: middle;
     margin: 0px auto 20px auto;
-    ul {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-      text-align: center;
+    .credentials{
       li {
         font-size: 10px;
         display: inline-block;
@@ -35,7 +28,7 @@
       padding: 5px 10px;
       margin-left: 3px;
       margin-right: 3px;
-      margin-top: 9px;
+      margin-top: 7px;
       color: $dark-blue;
       font-size: 13px;
       transition: background-color .3s;
