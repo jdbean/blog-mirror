@@ -183,7 +183,7 @@ Lend-to-Friend provides a platform for peer-to-peer lending of items where users
 
 ![Rhyme Time](/assets/img/RhymeTime_REST.png)
 
-Rhyme Time is a REST API written in Python which helps writers select select rhyming words.
+RhymeTime is a REST API written in Python that helps writers discover rhyming word pairs.
 Rhyme Time can even identify words with multiple pronounciations and limit suggested rhymes accordingly.
 
 <div class="project-container">
@@ -208,6 +208,7 @@ Rhyme Time can even identify words with multiple pronounciations and limit sugge
 
 SubReddit provides a beautiful interface for browsing top-rated submissions in the film photography subreddit r/analog. Users can curate a collection of favorite posts which they can enjoy together in the favorites tab.
 *All styling for this project was written 100% from scratch*{: class="project-note"}
+
 <div class="project-container">
   <div class="project-share">
     <a href="https://github.com/jdbean/subreddit" title="Source Code" target="_blank" rel="noopener"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
@@ -230,7 +231,6 @@ SubReddit provides a beautiful interface for browsing top-rated submissions in t
 ![GitLab](/assets/img/wm.svg)
 
 Contributor to the open source GitLab project---a single product for the entire DevOps lifecycle. Contributions include documentation, new and improved testing, bug fixes, and new features.
-
 *Click below to view some representative contributions accepted by the GitLab project*{: class="project-note"}
 
 <div class="project-container">
