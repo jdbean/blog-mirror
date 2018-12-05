@@ -1,41 +1,28 @@
 {
-  "name": "JDBean.net",
+  "name": "J.D. Bean",
   "short_name": "JDBean.net",
   "lang": "en-US",
-  "start_url": "/index.html",
+  "start_url": "/",
+  "scope": "/",
+  "orientation": "any",
   "display": "standalone",
   "theme_color": "#515151",
   "background_color": "#515151",
   "icons": [
     {
-      "src": "/assets/img/favicon/android-chrome-144x144.png",
-      "sizes": "144x144",
+      "src": "assets/img/favicon/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/favicon/android-chrome-512x512.png",
+      "sizes": "512x512",
       "type": "image/png"
     },
     {
       "src": "/assets/img/favicon/apple-touch-icon.png",
-      "sizes": "72x72",
+      "sizes": "180x180",
       "type": "image/png"
-
-    },
-    {
-      "src": "/assets/img/favicon/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
-    },
-    {
-      "src": "/assets/img/favicon/mstile-150x150.png",
-      "sizes": "150x150",
-      "type": "image/png"
-    },
-    {
-      "src": "/assets/img/favicon/favicon.ico",
-      "sizes": "16x16 32x32 48x48",
-      "type": "image/x-icon"
-    },
-    {
-      "src": "/assets/img/favicon/safari-pinned-tab.svg",
-      "sizes": "128x128 256x256 512x512"
     }
   ]
 }

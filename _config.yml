@@ -1,6 +1,6 @@
 title: J.D. Bean
 description: > # this means to ignore newlines until "baseurl:"
-  A blog covering the journey of a tech-lawyer studying software development.
+  The blog of J.D. Bean: Full-stack developer. Former lawyer for Open Source. Current nerd.
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://jdbean.net" # the base hostname & protocol for your site, e.g. http://example.com
@@ -48,20 +48,26 @@ paginate_path: "/page/:num"
 
 # PWA Settings
 pwa:
-  sw_src_filepath: service-worker.js # Optional
+  # sw_src_filepath: service-worker.js # Optional
   sw_dest_filename: service-worker.js # Optional
   dest_js_directory: assets/js # Required
-  precache_recent_posts_num: 10 # Optional
+  precache_recent_posts_num: 8 # Optional
   precache_glob_directory: / # Optional
   precache_glob_patterns: # Optional
-    - "/assets/{js,css,fonts}/**/*.{js,css,eot,svg,ttf,woff,woff2}"
-    - "/assets/img/favicon/*"
+    - "/assets/{js,css,fonts}/**/*.{js,css,woff}"
+    # - "/assets/img/favicon/*"
     - index.html
     - projects/index.html
     - resume.pdf
   precache_glob_ignores: # Optional
     - sw-register.js
-    - "fonts/**/*"
+    - "/assets/fonts/font-awesome/css/font-awesome.css"
+  # runtime_cache:
+  #   - route: /^
+  #   - route: /\.html$/
+  # strategy: networkFirst
+  #   - route: "'/api/pic'"
+  # strategy: cacheFirst
 
 exclude:
   - "node_modules"
