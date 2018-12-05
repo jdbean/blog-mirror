@@ -110,21 +110,21 @@ Ex-Static provides an intuitive interface for users to conveniently create and u
 
 <div class="project-container">
   <div class="project-share">
-    <a href="https://github.com/jdbean/Ex-Static" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
-    <a href="https://office.johannabearman.duckdns.org" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
-    <div class="credentials">
+    <a href="https://github.com/jdbean/Ex-Static" title="Source Code" target="_blank" rel="noopener"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
+    <a href="https://office.johannabearman.duckdns.org" title="Live Demo" target="_blank" rel="noopener"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
+    <ul class="credentials">
       <li>Demo Username: <em>user</em></li>
       <li>Demo Password: <em>exstatic-password</em></li>
-    </div>
+    </ul>
   </div>
   <div class="project-tag">
-    <div class="tags">
+    <ul class="tags">
       {% for tag in page.exstatic_tags %}
         <li class="tag">
-            {{ tag }}
+          {{ tag }}
         </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
 
@@ -138,17 +138,17 @@ Protocol is a real-time multi-party messaging application that automatically tra
 
 <div class="project-container">
   <div class="project-share">
-    <a href="https://github.com/jdbean/protocol-frontend" title="Front-End Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code (Front-End)</a>
-    <a href="https://github.com/jdbean/protocol-backend" title="Back-End Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code (Back-End)</a>
+    <a href="https://github.com/jdbean/protocol-frontend" title="Front-End Source Code" target="_blank" rel="noopener"><i class="fa fa-git" aria-hidden="true"></i> Source Code (Front-End)</a>
+    <a href="https://github.com/jdbean/protocol-backend" title="Back-End Source Code" target="_blank" rel="noopener"><i class="fa fa-git" aria-hidden="true"></i> Source Code (Back-End)</a>
   </div>
   <div class="project-tag">
-    <div class="tags">
+    <ul class="tags">
       {% for tag in page.protocol_tags %}
         <li class="tag">
-            {{ tag }}
+          {{ tag }}
         </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
 
@@ -161,23 +161,24 @@ Lend-to-Friend provides a platform for peer-to-peer lending of items where users
 
 <div class="project-container">
   <div class="project-share">
-    <a href="https://github.com/jdbean/lend-to-friend" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
-    <a href="https://pacific-earth-11787.herokuapp.com" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
-    <div class="credentials">
+    <a href="https://github.com/jdbean/lend-to-friend" title="Source Code" target="_blank" rel="noopener"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
+    <a href="https://pacific-earth-11787.herokuapp.com" title="Live Demo" target="_blank" rel="noopener"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
+    <ul class="credentials">
       <li>Demo Username: <em>lf@lf.com</em></li>
       <li>Demo Password: <em>password</em></li>
-    </div>
+    </ul>
   </div>
   <div class="project-tag">
-    <div class="tags">
+    <ul class="tags">
       {% for tag in page.lend-to-friend_tags %}
         <li class="tag">
-            {{ tag }}
+          {{ tag }}
         </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
+
 
 ## Rhyme Time
 
@@ -188,17 +189,17 @@ Rhyme Time can even identify words with multiple pronunciations and limit sugges
 
 <div class="project-container">
   <div class="project-share">
-    <a href="https://github.com/jdbean/rhymetime" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
-    <a href="/rhymetime/" title="Spotlight"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
+    <a href="https://github.com/jdbean/rhymetime" title="Source Code" target="_blank" rel="noopener"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
+    <a href="/rhymetime/" title="Spotlight"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
   </div>
   <div class="project-tag">
-    <div class="tags">
-      {% for tag in page.rhymetime_tags %}
-        <li class="tag">
-            {{ tag }}
-        </li>
-      {% endfor %}
-    </div>
+    <ul class="tags">
+     {% for tag in page.rhymetime_tags %}
+       <li class="tag">
+         {{ tag }}
+       </li>
+     {% endfor %}
+    </ul>
   </div>
 </div>
 
@@ -211,20 +212,21 @@ SubReddit provides a beautiful interface for browsing top-rated submissions in t
 
 <div class="project-container">
   <div class="project-share">
-    <a href="https://github.com/jdbean/subreddit" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
-    <a href="https://jdbean.github.io/subreddit" title="Live Demo"  target="_blank"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
-    <a href="/subreddit/" title="Spotlight"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
+    <a href="https://github.com/jdbean/subreddit" title="Source Code" target="_blank" rel="noopener"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
+    <a href="https://jdbean.github.io/subreddit" title="Live Demo" target="_blank" rel="noopener"><i class="fa fa-desktop" aria-hidden="true"></i> Live Demo</a>
+    <a href="/subreddit/" title="Spotlight" target="_blank" rel="noopener"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
   </div>
   <div class="project-tag">
-    <div class="tags">
+    <ul class="tags">
       {% for tag in page.subreddit_tags %}
         <li class="tag">
-            {{ tag }}
+          {{ tag }}
         </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
+
 
 ## GitLab
 
@@ -235,24 +237,24 @@ Contributor to the open source GitLab project---a single product for the entire 
 
 <div class="project-container">
   <div class="project-share">
-    <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21606" title="Merge Request 21606"  target="_blank"><i class="fa fa-gitlab" aria-hidden="true"></i> !21606</a>
-    <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21508" title="Merge Request 21508"  target="_blank"><i class="fa fa-gitlab" aria-hidden="true"></i> !21508</a>
-    <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21502" title="Merge Request 21502"  target="_blank"><i class="fa fa-gitlab" aria-hidden="true"></i> !21502</a>
-    <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21661" title="Merge Request 21661"  target="_blank"><i class="fa fa-gitlab" aria-hidden="true"></i> !21661</a>
-    <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21305" title="Merge Request 21305"  target="_blank"><i class="fa fa-gitlab" aria-hidden="true"></i> !21305</a>
-    <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/22466" title="Merge Request 22466"  target="_blank"><i class="fa fa-gitlab" aria-hidden="true"></i> !22466</a>
+    <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21606" title="Merge Request 21606" target="_blank" rel="noopener"><i class="fa fa-gitlab" aria-hidden="true"></i> !21606</a>
+    <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21508" title="Merge Request 21508" target="_blank" rel="noopener"><i class="fa fa-gitlab" aria-hidden="true"></i> !21508</a>
+    <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21502" title="Merge Request 21502" target="_blank" rel="noopener"><i class="fa fa-gitlab" aria-hidden="true"></i> !21502</a>
+    <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21661" title="Merge Request 21661" target="_blank" rel="noopener"><i class="fa fa-gitlab" aria-hidden="true"></i> !21661</a>
+    <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/21305" title="Merge Request 21305" target="_blank" rel="noopener"><i class="fa fa-gitlab" aria-hidden="true"></i> !21305</a>
+    <a href="https://gitlab.com/gitlab-org/gitlab-ce/merge_requests/22466" title="Merge Request 22466" target="_blank" rel="noopener"><i class="fa fa-gitlab" aria-hidden="true"></i> !22466</a>
     <br/>
-    <a href="/first-foss-contribution/" title="Spotlight (Part I)"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight (I)</a>
-    <a href="/first-foss-contribution-ptii/" title="Spotlight (Part II)"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight (II)</a>
+    <a href="/first-foss-contribution/" title="Spotlight (Part I)"><i class="fa fa-search" aria-hidden="true"></i> Spotlight (I)</a>
+    <a href="/first-foss-contribution-ptii/" title="Spotlight (Part II)"><i class="fa fa-search" aria-hidden="true"></i> Spotlight (II)</a>
   </div>
   <div class="project-tag">
-    <div class="tags">
+    <ul class="tags">
       {% for tag in page.gitlab_tags %}
         <li class="tag">
-            {{ tag }}
+          {{ tag }}
         </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
 
@@ -265,16 +267,16 @@ JDBean.net is a technical blog and portfolio site created using the Jekyll stati
 
 <div class="project-container">
   <div class="project-share">
-    <a href="https://gitlab.com/jdbean/blog-mirror" title="Source Code"  target="_blank"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
-    <a href="/blogging-workflow/" title="Spotlight"  target="_blank"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
+    <a href="https://gitlab.com/jdbean/blog-mirror" title="Source Code" target="_blank" rel="noopener" rel="noopener"><i class="fa fa-git" aria-hidden="true"></i> Source Code</a>
+    <a href="/blogging-workflow/" title="Spotlight"><i class="fa fa-search" aria-hidden="true"></i> Spotlight</a>
   </div>
   <div class="project-tag">
-    <div class="tags">
+    <ul class="tags">
       {% for tag in page.jdbean_tags %}
         <li class="tag">
-            {{ tag }}
+          {{ tag }}
         </li>
       {% endfor %}
-    </div>
+    </ul>
   </div>
 </div>
