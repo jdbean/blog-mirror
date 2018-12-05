@@ -1349,7 +1349,25 @@ a.newer-posts:hover {
   margin: 0px auto 20px auto;
 }
 
-.project-container .project-share .credentials li {
+.project-container .project-share ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+.project-container .project-share ul li {
   font-size: 10px;
   display: inline-block;
   margin-left: 3px;
@@ -1370,7 +1388,7 @@ a.newer-posts:hover {
   padding: 5px 10px;
   margin-left: 3px;
   margin-right: 3px;
-  margin-top: 7px;
+  margin-top: 9px;
   color: #263959;
   font-size: 13px;
   -webkit-transition: background-color .3s;
