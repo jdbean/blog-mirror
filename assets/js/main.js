@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function () {
     /**
      * Notify when site updates
      */
-
     window.addEventListener('sw.update', function() {
       console.log("UPDATED")
       var updateToast = document.querySelector('.update-toast');
