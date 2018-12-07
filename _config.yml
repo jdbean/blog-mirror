@@ -83,3 +83,4 @@ exclude:
   - "package-lock.json"
   - "config.ru"
   - ".vscode"
+  - "s3_website.yml"
