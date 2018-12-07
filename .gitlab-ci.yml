@@ -5,15 +5,14 @@ variables:
 
 cache:
   paths:
-   # - vendor/
+   - vendor/
    - var/lib/apt/
 
 build:
   stage: build
   before_script:
   - export JEKYLL_ENV=production
-  # - bundle install --path vendor
-  - bundle install
+  - bundle install --path vendor
   script:
   - bundle exec jekyll build -d _site
   artifacts:
@@ -27,8 +26,7 @@ build:
 test:
   stage: test
   before_script:
-  # - bundle install --path vendor
-  - bundle install
+  - bundle install --path vendor
   script:
   - bundle exec htmlproofer ./_site --http-status-ignore "999" --url-ignore "/office.johannabearman.duckdns.org/"
   artifacts:
