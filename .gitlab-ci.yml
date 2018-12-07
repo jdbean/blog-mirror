@@ -96,9 +96,3 @@ deploy_prod:
   - rsync -avz --delete -e ssh --progress -r _site/ "$PROD_SITE_USER_AND_ADDRESS"
   only:
   - master
-
-deploy_aws:
-  stage: deploy
-  environment: aws
-  only:
-  - aws
