@@ -5,14 +5,15 @@ variables:
 
 cache:
   paths:
-   - vendor/
+   # - vendor/
    - var/lib/apt/
 
 build:
   stage: build
   before_script:
   - export JEKYLL_ENV=production
-  - bundle install --path vendor
+  # - bundle install --path vendor
+  - bundle install
   script:
   - bundle exec jekyll build -d _site
   artifacts:
@@ -21,11 +22,13 @@ build:
   only:
   - master
   - develop
+  - aws
 
 test:
   stage: test
   before_script:
-  - bundle install --path vendor
+  # - bundle install --path vendor
+  - bundle install
   script:
   - bundle exec htmlproofer ./_site --http-status-ignore "999" --url-ignore "/office.johannabearman.duckdns.org/"
   artifacts:
@@ -34,6 +37,7 @@ test:
   only:
   - master
   - develop
+  - aws
   allow_failure: true
 
 deploy_staging:
@@ -41,20 +45,16 @@ deploy_staging:
   environment: staging
 
   before_script:
-
   ## Install ssh-agent if not already installed, it is required by Docker.
   ## (change apt-get to yum if you use an RPM-based image)
   ##
   - 'which ssh-agent || ( apt-get update -y && apt-get install openssh-client -y )'
-
   ## Install rysnc if not already installed
   - 'which rsync || ( apt-get update -y && apt-get install rsync -y )'
-
   ##
   ## Run ssh-agent (inside the build environment)
   ##
   - eval $(ssh-agent -s)
-
   ##
   ## Add the SSH key stored in SSH_PRIVATE_KEY variable to the agent store
   ## We're using tr to fix line endings which makes ed25519 keys work
@@ -62,26 +62,21 @@ deploy_staging:
   ## https://gitlab.com/gitlab-examples/ssh-private-key/issues/1#note_48526556
   ##
   - echo "$SSH_KEY" | tr -d '\r' | ssh-add - > /dev/null
-
   ##
   ## Create the SSH directory and give it the right permissions
   ##
   - mkdir -p ~/.ssh
   - chmod 700 ~/.ssh
-
   ##
   ## Add remote pub keys (SSH_KNOWN_HOSTS) to known_hosts
   ##
   - echo "$SSH_KNOWN_HOSTS" > ~/.ssh/known_hosts
   - chmod 644 ~/.ssh/known_hosts
-
   script:
-
   ##
   ## Deploy the staging directory to the staging server
   ##
   - rsync -avz --delete -e ssh --progress -r _site/ "$SITE_USER_AND_ADDRESS"
-
   only:
   - develop
 
@@ -101,3 +96,9 @@ deploy_prod:
   - rsync -avz --delete -e ssh --progress -r _site/ "$PROD_SITE_USER_AND_ADDRESS"
   only:
   - master
+
+deploy_aws:
+  stage: deploy
+  environment: aws
+  only:
+  - aws
