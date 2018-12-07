@@ -13,7 +13,7 @@ s3_bucket: <%= ENV['S3_BUCKET'] %>
 # See README for more detailed info on each of them.
 
 
-site: public/ # path-to-your-website
+site: _site # path-to-your-website
 
 
 
