@@ -17,7 +17,7 @@ site: _site # path-to-your-website
 
 
 
-# index_document: index.html
+index_document: index.html
 # error_document: error.html
 
 max_age:
