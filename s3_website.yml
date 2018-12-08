@@ -21,8 +21,8 @@ index_document: index.html
 # error_document: error.html
 
 max_age:
-  "css/*": 604800
-  "images/*": 604800
+  "assets/css/*": 604800
+  "assets/img/*": 604800
   "*": 300
 
 # max_age:
