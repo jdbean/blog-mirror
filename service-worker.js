@@ -24,12 +24,12 @@ workbox.routing.registerRoute(
     workbox.strategies.networkFirst()
 );
 
-// use 'networkFirst' for `*.css` and`*.js`
-workbox.routing.registerRoute(
-    // /\.(?:js|css)$/,
-    /assets\/(js|css)/,
-    workbox.strategies.staleWhileRevalidate()
-);
+// // use 'networkFirst' for `*.css` and`*.js`
+// workbox.routing.registerRoute(
+//     // /\.(?:js|css)$/,
+//     /assets\/(js|css)/,
+//     workbox.strategies.staleWhileRevalidate()
+// );
 
 // use `staleWhileRevalidate` strategy for images
 workbox.routing.registerRoute(

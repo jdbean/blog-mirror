@@ -55,7 +55,6 @@ pwa:
   precache_glob_directory: / # Optional
   precache_glob_patterns: # Optional
     - "/assets/{js,css,fonts}/**/*.{js,css,woff}"
-    # - "/assets/img/favicon/*"
     - index.html
     - projects/index.html
     - resume.pdf
