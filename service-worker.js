@@ -12,6 +12,9 @@ workbox.core.setCacheNameDetails({
 workbox.skipWaiting();
 workbox.clientsClaim();
 
+// enable off-line Google Analytics
+workbox.googleAnalytics.initialize();
+
 // let Workbox handle our precache list
 workbox.precaching.precacheAndRoute(self.__precacheManifest);
 
@@ -21,15 +24,17 @@ workbox.routing.registerRoute(
     workbox.strategies.networkFirst()
 );
 
-// use 'networkFirst' for `*.css` and`*.js`
-workbox.routing.registerRoute(
-    /\.(?:js|css)$/,
-    workbox.strategies.staleWhileRevalidate()
-);
+// // use 'networkFirst' for `*.css` and`*.js`
+// workbox.routing.registerRoute(
+//     // /\.(?:js|css)$/,
+//     /assets\/(js|css)/,
+//     workbox.strategies.staleWhileRevalidate()
+// );
 
 // use `staleWhileRevalidate` strategy for images
 workbox.routing.registerRoute(
-    /assets\/img/,
+    // /assets\/img/,
+    /\.(?:png|gif|jpg|jpeg|svg)$/,
     workbox.strategies.staleWhileRevalidate({
     cacheName: 'images',
     plugins: [

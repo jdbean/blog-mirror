@@ -99,7 +99,7 @@ PLATFORMS
 DEPENDENCIES
   html-proofer
   jekyll-paginate
-  jekyll-pwa-plugin
+  jekyll-pwa-plugin (~> 2.0)
   jekyll-sitemap
   jemoji
 

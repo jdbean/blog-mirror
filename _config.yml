@@ -55,10 +55,11 @@ pwa:
   precache_glob_directory: / # Optional
   precache_glob_patterns: # Optional
     - "/assets/{js,css,fonts}/**/*.{js,css,woff}"
-    # - "/assets/img/favicon/*"
     - index.html
-    - projects/index.html
+    - "/projects/index.html"
     - resume.pdf
+    - "/assets/img/portfolio/*"
+    - "/assets/img/favicon/*"
   precache_glob_ignores: # Optional
     - sw-register.js
     - "/assets/fonts/font-awesome/css/font-awesome.css"

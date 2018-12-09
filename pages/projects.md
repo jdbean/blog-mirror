@@ -103,7 +103,7 @@ permalink: /projects/
 
 ## Ex-Static
 
-![Ex-Static](/assets/img/Ex-Static.png)
+![Ex-Static](/assets/img/portfolio/Ex-Static.png)
 
 Ex-Static provides an intuitive interface for users to conveniently create and update content on their own websites. Users can preview their changes in Ex-Static's interface and watch in real-time as their website updates itself automatically. Packaged as a Ruby gem, Ex-Static turns any Jekyll blog into a full-fledged Content Management System with a user-friendly interface for authors and editors.
 *WebSockets functionality of live demo is currently disabled due to firewall issue.*{: class="project-note"}
@@ -154,7 +154,7 @@ Protocol is a real-time multi-party messaging application that automatically tra
 
 ## Lend-to-Friend
 
-![Lend-to-Friend](/assets/img/Lend-to-Friend.png)
+![Lend-to-Friend](/assets/img/portfolio/Lend-to-Friend.png)
 
 Lend-to-Friend provides a platform for peer-to-peer lending of items where users can post books, movies, music, clothing, or household items available for loan to other users and browse for items to borrow themselves.
 *Live demo may take a few moments to wake up on first load.*{: class="project-note"}
@@ -182,7 +182,7 @@ Lend-to-Friend provides a platform for peer-to-peer lending of items where users
 
 ## Rhyme Time
 
-![Rhyme Time](/assets/img/RhymeTime_REST.png)
+![Rhyme Time](/assets/img/portfolio/RhymeTime_REST.png)
 
 Rhyme Time is a REST API written in Python that helps writers discover rhyming word pairs.
 Rhyme Time can even identify words with multiple pronunciations and limit suggested rhymes accordingly.
@@ -205,7 +205,7 @@ Rhyme Time can even identify words with multiple pronunciations and limit sugges
 
 ## SubReddit
 
-![SubReddit](/assets/img/subreddit_boxed.gif)
+![SubReddit](/assets/img/portfolio/subreddit_boxed.gif)
 
 SubReddit provides a beautiful interface for browsing top-rated submissions in the film photography subreddit r/analog. Users can curate a collection of favorite posts which they can enjoy together in the favorites tab.
 *All styling for this project was written 100% from scratch*{: class="project-note"}
@@ -230,7 +230,7 @@ SubReddit provides a beautiful interface for browsing top-rated submissions in t
 
 ## GitLab
 
-![GitLab](/assets/img/wm.svg)
+![GitLab](/assets/img/portfolio/gitlab.svg)
 
 Contributor to the open source GitLab project---a single product for the entire DevOps lifecycle. Contributions include documentation, new and improved testing, bug fixes, and new features.
 *Click below to view some representative contributions accepted by the GitLab project*{: class="project-note"}
@@ -261,7 +261,7 @@ Contributor to the open source GitLab project---a single product for the entire 
 
 ## JDBean.net
 
-![JDBean.net](/assets/img/jdbean-net.png)
+![JDBean.net](/assets/img/portfolio/jdbean-net.png)
 
 JDBean.net is a technical blog and portfolio site created using the Jekyll static site builder. It is built, tested, and deployed using a custom implemented self-hosted GitLab CI system and is edited using Ex-Static.
 

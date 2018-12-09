@@ -4,5 +4,7 @@ group :jekyll_plugins do
   gem "jekyll-sitemap"
   gem "jekyll-paginate"
   gem "jemoji"
-  gem 'jekyll-pwa-plugin'
+  if ENV['JEKYLL_ENV'] == "production"
+    gem "jekyll-pwa-plugin", "~> 2.0"
+  end
 end
