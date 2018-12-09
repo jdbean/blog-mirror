@@ -23,7 +23,7 @@ social-gitlab: jdbean # add your GitLab handle
 social-linkedin: bean-jonathan
 social-email: jdbean@jdbean.net
 social-resume: "/resume.pdf"
-portfolio-page: "/projects"
+portfolio-page: "/projects/"
 
 # Disqus
 # discus-identifier: mr-brown # add your discus identifier
