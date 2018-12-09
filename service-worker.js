@@ -26,7 +26,8 @@ workbox.routing.registerRoute(
 
 // use 'networkFirst' for `*.css` and`*.js`
 workbox.routing.registerRoute(
-    /\.(?:js|css)$/,
+    // /\.(?:js|css)$/,
+    /assets\/(js|css)/,
     workbox.strategies.staleWhileRevalidate()
 );
 
