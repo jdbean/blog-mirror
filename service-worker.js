@@ -13,7 +13,7 @@ workbox.skipWaiting();
 workbox.clientsClaim();
 
 // enable off-line Google Analytics
-// workbox.googleAnalytics.initialize();
+workbox.googleAnalytics.initialize();
 
 // let Workbox handle our precache list
 workbox.precaching.precacheAndRoute(self.__precacheManifest);
