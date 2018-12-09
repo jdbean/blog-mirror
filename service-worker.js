@@ -13,7 +13,7 @@ workbox.skipWaiting();
 workbox.clientsClaim();
 
 // enable off-line Google Analytics
-workbox.googleAnalytics.initialize();
+// workbox.googleAnalytics.initialize();
 
 // let Workbox handle our precache list
 workbox.precaching.precacheAndRoute(self.__precacheManifest);
@@ -33,7 +33,8 @@ workbox.routing.registerRoute(
 
 // use `staleWhileRevalidate` strategy for images
 workbox.routing.registerRoute(
-    /assets\/img/,
+    // /assets\/img/,
+    /\.(?:png|gif|jpg|jpeg|svg)$/,
     workbox.strategies.staleWhileRevalidate({
     cacheName: 'images',
     plugins: [
