@@ -55,10 +55,10 @@ pwa:
   precache_glob_directory: / # Optional
   precache_glob_patterns: # Optional
     - "/assets/{js,css}/**/*.{js,css}"
-    - index.html
-    - /projects/index.html
-    - resume.pdf
-    - /assets/img/avatar.jpg
+    - "index.html"
+    - "/projects/index.html"
+    - "resume.pdf"
+    - "/assets/img/avatar.jpg"
     - "/assets/img/portfolio/*"
     - "/assets/img/favicon/*"
   precache_glob_ignores: # Optional
