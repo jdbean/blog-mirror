@@ -58,7 +58,7 @@ pwa:
     - index.html
     - /projects/index.html
     - resume.pdf
-    - /asssets/img/avatar.jpg
+    - /assets/img/avatar.jpg
     - "/assets/img/portfolio/*"
     - "/assets/img/favicon/*"
   precache_glob_ignores: # Optional
