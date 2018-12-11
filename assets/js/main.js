@@ -24,3 +24,14 @@ function toggleClass(element, toggleClass){
  }
  element.className = newClass.trim();
 }
+
+// async function addToCache(urls) {
+//   const myCache = await window.caches.open('jdbean-html');
+//   await myCache.addAll(urls);
+// }
+
+// // Call addToCache whenever you'd like. E.g. to add to cache after a page load:
+// window.addEventListener('load', () => {
+//   // ...determine the list of related URLs for the current page...
+//   addToCache(['index.html', '/']);
+// });

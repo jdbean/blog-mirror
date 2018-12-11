@@ -15,20 +15,24 @@ workbox.clientsClaim();
 // enable off-line Google Analytics
 workbox.googleAnalytics.initialize();
 
-workbox.routing.registerRoute(
-  /^\/$/,
-  workbox.strategies.networkFirst()
-);
-
 // let Workbox handle our precache list
 workbox.precaching.precacheAndRoute(self.__precacheManifest);
 
 
-// use `networkFirst` strategy for `*.html`, like all my posts
-workbox.routing.registerRoute(
-    /\.html$/,
-    workbox.strategies.networkFirst()
-);
+// // use `networkFirst` strategy for paths ending in `\`, i.e. posts and pages
+// workbox.routing.registerRoute(
+//     /\/$/,
+//     workbox.strategies.networkFirst()
+// );
+
+// // use `networkFirst` strategy for paths ending in `\`, i.e. posts and pages
+// workbox.routing.registerRoute(
+//   /^https?:\/\/[^\/]*\/$/,
+//   workbox.strategies.networkFirst({
+//     networkTimeoutSeconds: 3,
+//     cacheName: 'jdbean-html'
+//   })
+// );
 
 // // use 'networkFirst' for `*.css` and`*.js`
 // workbox.routing.registerRoute(
@@ -42,7 +46,7 @@ workbox.routing.registerRoute(
     // /assets\/img/,
     /\.(?:png|gif|jpg|jpeg|svg)$/,
     workbox.strategies.staleWhileRevalidate({
-    cacheName: 'images',
+    cacheName: 'jdbean-images',
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 60,
@@ -56,13 +60,13 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   /^https:\/\/fonts\.googleapis\.com/,
   workbox.strategies.staleWhileRevalidate({
-    cacheName: 'google-fonts-stylesheets',
+    cacheName: 'jdbean-google-fonts-stylesheets',
   })
 );
 workbox.routing.registerRoute(
   /^https:\/\/use\.fontawesome\.com.*\.css/,
   workbox.strategies.staleWhileRevalidate({
-    cacheName: 'fontawesome-stylesheets',
+    cacheName: 'jdbean-fontawesome-stylesheets',
   })
 );
 
@@ -70,7 +74,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   /^https:\/\/fonts\.gstatic\.com/,
   workbox.strategies.cacheFirst({
-    cacheName: 'google-fonts-webfonts',
+    cacheName: 'jdbean-google-fonts-webfonts',
     plugins: [
       new workbox.cacheableResponse.Plugin({
         statuses: [0, 200],
@@ -85,7 +89,7 @@ workbox.routing.registerRoute(
 workbox.routing.registerRoute(
   /^https:\/\/use\.fontawesome\.com.*\.(?:ttf|svg|woff|woff2|eot)/,
   workbox.strategies.cacheFirst({
-    cacheName: 'fontawesome-webfonts',
+    cacheName: 'jdbean-fontawesome-webfonts',
     plugins: [
       new workbox.cacheableResponse.Plugin({
         statuses: [0, 200],
