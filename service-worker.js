@@ -15,8 +15,14 @@ workbox.clientsClaim();
 // enable off-line Google Analytics
 workbox.googleAnalytics.initialize();
 
+workbox.routing.registerRoute(
+  /\//,
+  workbox.strategies.networkFirst()
+);
+
 // let Workbox handle our precache list
 workbox.precaching.precacheAndRoute(self.__precacheManifest);
+
 
 // use `networkFirst` strategy for `*.html`, like all my posts
 workbox.routing.registerRoute(

@@ -58,17 +58,11 @@ pwa:
     - index.html
     - /projects/index.html
     - resume.pdf
+    - /asssets/img/avatar.jpg
     - "/assets/img/portfolio/*"
     - "/assets/img/favicon/*"
   precache_glob_ignores: # Optional
     - sw-register.js
-    - "/assets/fonts/font-awesome/css/font-awesome.css"
-  # runtime_cache:
-  #   - route: /^
-  #   - route: /\.html$/
-  # strategy: networkFirst
-  #   - route: "'/api/pic'"
-  # strategy: cacheFirst
 
 exclude:
   - "node_modules"
